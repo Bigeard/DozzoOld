@@ -21,7 +21,7 @@ class Unite = {
 	}
 
 	//Classes
-	setMage() {
+	public setMage() {
 		this.classe = "Mage";
 
 		this.sante += 30;
@@ -32,7 +32,7 @@ class Unite = {
 		this.resistance += 4;
 		this.competance = "Incantation";
 	}
-	setGuerrier() {
+	public setGuerrier() {
 		this.classe = "Guerrier";
 
 		this.sante += 50;
@@ -43,7 +43,7 @@ class Unite = {
 		this.resistance += 1;
 		this.competance = "Rage";
 	}
-	setAssassin() {
+	public setAssassin() {
 		this.classe = "Assassin";
 
 		this.sante += 30;
@@ -54,7 +54,7 @@ class Unite = {
 		this.resistance += 2;
 		this.competance = "Camouflage";
 	}
-	setAbomination() {
+	public setAbomination() {
 		this.classe = "Abomination";
 
 		this.sante += 50;
@@ -65,7 +65,7 @@ class Unite = {
 		this.resistance += 4;
 		this.competance = "Empoisonnement";
 	}
-	setMageNoir() {
+	public setMageNoir() {
 		this.classe = "Mage noir";
 
 		this.sante += 40;
@@ -77,8 +77,11 @@ class Unite = {
 		this.competance = "Entrave";
 	}
 
-	get nom(nom) {
+	public get nom(nom) {
 		return this.nom;
+	}
+	public set nom(nom) {
+		this.nom = nom;
 	}
 
 	method(...) {}
