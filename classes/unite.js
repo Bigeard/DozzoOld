@@ -84,6 +84,83 @@ class Unite = {
 		this.nom = nom;
 	}
 
+	public get niveau(niveau) {
+		return this.niveau;
+	}
+	public set niveau(niveau) {
+		this.niveau = niveau;
+	}
+
+	public get experience(experience) {
+		return this.experience;
+	}
+	public set experience(experience) {
+		this.experience = experience;
+	}
+
+	public get concentration(concentration) {
+		return this.concentration;
+	}
+	public set concentration(concentration) {
+		this.concentration = concentration;
+	}
+
+	public get classe(classe) {
+		return this.classe;
+	}
+	public set classe(classe) {
+		this.classe = classe;
+	}
+
+	public get sante(sante) {
+		return this.sante;
+	}
+	public set sante(sante) {
+		this.sante = sante;
+	}
+
+	public get mana(mana) {
+		return this.mana;
+	}
+	public set mana(mana) {
+		this.mana = mana;
+	}
+
+	public get attaque(attaque) {
+		return this.attaque;
+	}
+	public set attaque(attaque) {
+		this.attaque = attaque;
+	}
+
+	public get magie(magie) {
+		return this.magie;
+	}
+	public set magie(magie) {
+		this.magie = magie;
+	}
+
+	public get defense(defense) {
+		return this.defense;
+	}
+	public set defense(defense) {
+		this.defense = defense;
+	}
+
+	public get resistance(resistance) {
+		return this.resistance;
+	}
+	public set resistance(resistance) {
+		this.resistance = resistance;
+	}
+
+	public get competance(competance) {
+		return this.competance;
+	}
+	public set competance(competance) {
+		this.competance = competance;
+	}
+
 	method(...) {}
 	get something(...) {}
 	set something(...) {}
