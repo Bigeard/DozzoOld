@@ -1,16 +1,13 @@
+
+//INIT
+
 var select = 1
 
-
-
+//DISPLAY
 
 function start(select) {
     console.clear()
-    if (select >= 4) {
-        select = 1
-    }
-    if (select <= 0) {
-        select = 3
-    }
+    
     document.getElementById('select').innerHTML = select
     var chn = ' - Comencer [1]              - Obtion [2]              - Credit [3]'
     var nouvChn = chn.replace(select, '*');
@@ -23,31 +20,29 @@ function start(select) {
     console.log(nouvChn)
 }
 
-//--------------------------------- Controle Des Touche ( Detection ) -----------------------------------
+//KEY DETECTION
+
 'use strict';
+
 document.addEventListener('keydown', (event) => {
     const keyName = event.key;
     document.getElementById('key').innerHTML = 'Keypress: ' + keyName
 
-    //--------------------------------- Touche Clée ---------------------------------------------------------
+    //INPUTS
 
     if (keyName == 'Enter') {
         start()
     }
-    else if (keyName == 'ArrowUp') {
-        start(select = select + 1)
+    else if (keyName == 'ArrowUp' && select != 3) {
+        start(select += 1)
     }
-    else if (keyName == 'ArrowDown') {
-        start(select = select - 1)
+    else if (keyName == 'ArrowDown' && select != 1) {
+        start(select -= 1)
     }
-    else if (keyName == 'ArrowLeft') {
-        start(select = select + 1)
+    else if (keyName == 'ArrowLeft' && select != 1) {
+        start(select -= 1)
     }
-    else if (keyName == 'ArrowRight') {
-        start(select = select - 1)
-    }
-    else {
-        document.getElementById('error').innerHTML = '~ Error ~'
-        document.getElementById('error').style.display = 'block'
+    else if (keyName == 'ArrowRight' && select != 3) {
+        start(select += 1)
     }
 });
