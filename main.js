@@ -5,11 +5,11 @@ var select = 1
 
 //DISPLAY
 
-function start(select) {
+function menu(select) {
     console.clear()
     
     document.getElementById('select').innerHTML = select
-    var chn = ' - Comencer [1]              - Obtion [2]              - Credit [3]'
+    var chn = ' - Comencer [1]              - Obtion [2]              - A propos [3]'
     var nouvChn = chn.replace(select, '*');
 
     console.log('Bienvenu Sur')
@@ -22,8 +22,6 @@ function start(select) {
 
 //KEY DETECTION
 
-'use strict';
-
 document.addEventListener('keydown', (event) => {
     const keyName = event.key;
     document.getElementById('key').innerHTML = 'Keypress: ' + keyName
@@ -31,18 +29,18 @@ document.addEventListener('keydown', (event) => {
     //INPUTS
 
     if (keyName == 'Enter') {
-        start()
+        menu()
     }
     else if (keyName == 'ArrowUp' && select != 3) {
-        start(select += 1)
+        menu(select += 1)
     }
     else if (keyName == 'ArrowDown' && select != 1) {
-        start(select -= 1)
+        menu(select -= 1)
     }
     else if (keyName == 'ArrowLeft' && select != 1) {
-        start(select -= 1)
+        menu(select -= 1)
     }
     else if (keyName == 'ArrowRight' && select != 3) {
-        start(select += 1)
+        menu(select += 1)
     }
 });
