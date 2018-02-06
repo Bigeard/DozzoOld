@@ -1,24 +1,28 @@
 class Unite = {
 
-	constructor(nom, niveau, experience, concentration, classe,
-		sante, mana, attaque, magie, defense, resistance, competance) {
+	constructor(nom, niveau, experience, ptsVie, ptsMana, concentration, classe,
+		ptsVieMax, ptsManaMax, attaque, magie, defense, resistance, competance) {
 
 		//Identification
 		this.nom = nom;
 		this.niveau = niveau;
 		this.experience = experience;
+		this.ptsVie = ptsVie;
+		this.ptsMana = ptsMana;
 		this.concentration = concentration;
 		this.classe = classe;
 
-		//Statistiques de base
-		this.sante = sante;
-		this.mana = mana;
+		//Statistiques
+		this.ptsVieMax = ptsVieMax;
+		this.ptsManaMax = ptsManaMax;
 		this.attaque = attaque;
 		this.magie = magie;
 		this.defense = defense;
 		this.resistance = resistance;
 		this.competance = competance;
 	}
+
+	//Identification
 
 	public get nom(nom) {
 		return this.nom;
@@ -44,6 +48,22 @@ class Unite = {
 	}
 
 
+	public get ptsVie(ptsVie) {
+		return this.ptsVie;
+	}
+	public set ptsVie(ptsVie) {
+		this.ptsVie = ptsVie;
+	}
+
+
+	public get ptsMana(ptsMana) {
+		return this.ptsMana;
+	}
+	public set ptsMana(ptsMana) {
+		this.ptsMana = ptsMana;
+	}
+
+
 	public get concentration(concentration) {
 		return this.concentration;
 	}
@@ -59,8 +79,8 @@ class Unite = {
 		if (classe === "Mage") {
 		this.classe = "Mage"
 
-		this.sante += 30;
-		this.mana += 25;
+		this.ptsVieMax += 30;
+		this.ptsManaMax += 25;
 		this.attaque += 1;
 		this.magie += 8;
 		this.defense += 2;
@@ -70,8 +90,8 @@ class Unite = {
 		else if (classe === "Guerrier") {
 		this.classe = "Guerrier"
 
-		this.sante += 50;
-		this.mana += 5;
+		this.ptsVieMax += 50;
+		this.ptsManaMax += 5;
 		this.attaque += 10;
 		this.magie += 0;
 		this.defense += 5;
@@ -81,8 +101,8 @@ class Unite = {
 		else if (classe === "Assassin") {
 		this.classe = "Assassin"
 
-		this.sante += 30;
-		this.mana += 10;
+		this.ptsVieMax += 30;
+		this.ptsManaMax += 10;
 		this.attaque += 15;
 		this.magie += 5;
 		this.defense += 2;
@@ -92,8 +112,8 @@ class Unite = {
 		else if (classe === "Abomination") {
 		this.classe = "Abomination"
 
-		this.sante += 50;
-		this.mana += 0;
+		this.ptsVieMax += 50;
+		this.ptsManaMax += 0;
 		this.attaque += 12;
 		this.magie += 0;
 		this.defense += 7;
@@ -103,8 +123,8 @@ class Unite = {
 		else if (classe === "Mage noir") {
 		this.classe = "Mage noir"
 
-		this.sante += 40;
-		this.mana += 30;
+		this.ptsVieMax += 40;
+		this.ptsManaMax += 30;
 		this.attaque += 0;
 		this.magie += 10;
 		this.defense += 5;
@@ -113,20 +133,21 @@ class Unite = {
 		}
 	}
 
+	//Statistiques
 
-	public get sante(sante) {
-		return this.sante;
+	public get ptsVieMax(ptsVieMax) {
+		return this.ptsVieMax;
 	}
-	public set sante(sante) {
-		this.sante = sante;
+	public set ptsVieMax(ptsVieMax) {
+		this.ptsVieMax = ptsVieMax;
 	}
 
 
-	public get mana(mana) {
-		return this.mana;
+	public get ptsManaMax(ptsManaMax) {
+		return this.ptsManaMax;
 	}
-	public set mana(mana) {
-		this.mana = mana;
+	public set ptsManaMax(ptsManaMax) {
+		this.ptsManaMax = ptsManaMax;
 	}
 
 
@@ -167,6 +188,14 @@ class Unite = {
 	}
 	public set competance(competance) {
 		this.competance = competance;
+	}
+
+	recoitDegat() {
+
+	}
+
+	recoitSoin() {
+
 	}
 
 	method(...) {}
