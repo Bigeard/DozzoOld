@@ -7,23 +7,30 @@ document.addEventListener('keydown', (event, page) => {
     
 
     var selectTotal = 3;
-
+    if(selectTotal%2 == 0 ){
+        var colone = 2;
+        console.log(colone)
+    }
+    else{
+        var colone = 3;
+        console.log(colone)
+    }
 
     //INPUTS
 
     if (keyName == 'Enter') {
         menu()
     }
-    else if (keyName == 'ArrowUp' && select != 1 && select != 2 && select != 3) {
-        menu(select -= 3)
+    else if (keyName == 'ArrowUp' && select != colone && select != colone-1 && select != colone-2 ) {
+        menu(select -= colone)
     }
-    else if (keyName == 'ArrowDown' && select != selectTotal && select != selectTotal-1 && select != selectTotal-2) {
-        menu(select += 3)
+    else if (keyName == 'ArrowDown' && select != selectTotal && select != selectTotal-1 && select != selectTotal-(colone-1)) {
+        menu(select += colone)
     }
     else if (keyName == 'ArrowLeft' && select != 1 ) {
         menu(select -= 1)
     }
-    else if (keyName == 'ArrowRight' && select != selectTotal) {
+    else if (keyName == 'ArrowRight' && select != selectTotal ) {
         menu(select += 1)
     }
 });
