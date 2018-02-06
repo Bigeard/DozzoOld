@@ -1,17 +1,15 @@
-class Unite = {
+var Unite = {
 
-	constructor(nom, niveau, experience, ptsVie, ptsMana, concentration, classe,
+	init: function (nom, niveau, experience, concentration, classe,
 		ptsVieMax, ptsManaMax, attaque, magie, defense, resistance, competance) {
 
 		//Identification
 		this.nom = nom;
 		this.niveau = niveau;
 		this.experience = experience;
-		this.ptsVie = ptsVie;
-		this.ptsMana = ptsMana;
 		this.concentration = concentration;
-		this.classe = classe;
-
+		this.classe = undefined;
+	
 		//Statistiques
 		this.ptsVieMax = ptsVieMax;
 		this.ptsManaMax = ptsManaMax;
@@ -20,62 +18,62 @@ class Unite = {
 		this.defense = defense;
 		this.resistance = resistance;
 		this.competance = competance;
-	}
+	},
 
 	//Identification
 
-	public get nom(nom) {
+	getNom: function(nom) {
 		return this.nom;
-	}
-	public set nom(nom) {
+	},
+	setNom: function(nom) {
 		this.nom = nom;
-	}
+	},
 
 
-	public get niveau(niveau) {
+	getNiveau: function(niveau) {
 		return this.niveau;
-	}
-	public set niveau(niveau) {
+	},
+	setNiveau: function(niveau) {
 		this.niveau = niveau;
-	}
+	},
 
 
-	public get experience(experience) {
+	getExperience: function(experience) {
 		return this.experience;
-	}
-	public set experience(experience) {
+	},
+	setExperience: function(experience) {
 		this.experience = experience;
-	}
+	},
 
 
-	public get ptsVie(ptsVie) {
+	getPtsVie: function(ptsVie) {
 		return this.ptsVie;
-	}
-	public set ptsVie(ptsVie) {
+	},
+	setPtsVie: function(ptsVie) {
 		this.ptsVie = ptsVie;
-	}
+	},
 
 
-	public get ptsMana(ptsMana) {
+	getPtsMana: function(ptsMana) {
 		return this.ptsMana;
-	}
-	public set ptsMana(ptsMana) {
+	},
+	setPtsMana: function(ptsMana) {
 		this.ptsMana = ptsMana;
-	}
+	},
 
 
-	public get concentration(concentration) {
+	getConcentration: function(concentration) {
 		return this.concentration;
-	}
-	public set concentration(concentration) {
+	},
+	setConcentration: function(concentration) {
 		this.concentration = concentration;
-	}
+	},
 
 
-	public get classe(classe) {
+	getClasse: function(classe) {
 		return this.classe;
-	}
-	public set classe(classe) {
+	},
+	setClasse: function(classe) {
 		if (classe === "Mage") {
 		this.classe = "Mage"
 
@@ -131,75 +129,77 @@ class Unite = {
 		this.resistance += 8;
 		this.competance = "Entrave";
 		}
-	}
+	},
 
 	//Statistiques
 
-	public get ptsVieMax(ptsVieMax) {
+	getPtsVieMax: function(ptsVieMax) {
 		return this.ptsVieMax;
-	}
-	public set ptsVieMax(ptsVieMax) {
+	},
+	setPtsVieMax: function(ptsVieMax) {
+		this.ptsVieMax = ptsVieMax;
+	},
+
+
+	getptsManaMax: function(ptsManaMax) {
+		return this.ptsManaMax;
+	},
+	setptsManaMax: function(ptsManaMax) {
+		this.ptsManaMax = ptsManaMax;
+	},
+
+
+	getAttaque: function(ptsVieMax) {
+		return this.ptsVieMax;
+	},
+	setAttaque: function(ptsVieMax) {
+		this.ptsVieMax = ptsVieMax;
+	},
+
+
+	getMagie: function(ptsVieMax) {
+		return this.ptsVieMax;
+	},
+	setMagie: function(ptsVieMax) {
+		this.ptsVieMax = ptsVieMax;
+	},
+
+
+	getDefense: function(ptsVieMax) {
+		return this.ptsVieMax;
+	},
+	setDefense: function(ptsVieMax) {
+		this.ptsVieMax = ptsVieMax;
+	},
+
+
+	getResistance: function(ptsVieMax) {
+		return this.ptsVieMax;
+	},
+	setResistance: function(ptsVieMax) {
+		this.ptsVieMax = ptsVieMax;
+	},
+
+
+	getCompetance: function(ptsVieMax) {
+		return this.ptsVieMax;
+	},
+	setCompetance: function(ptsVieMax) {
 		this.ptsVieMax = ptsVieMax;
 	}
+};
 
+var herotest = Object.create(Unite);
+herotest.init("undefined", 1, 0, 0, "undefined", 10, 5, 0, 0, 0, 0, "undefined");
 
-	public get ptsManaMax(ptsManaMax) {
-		return this.ptsManaMax;
-	}
-	public set ptsManaMax(ptsManaMax) {
-		this.ptsManaMax = ptsManaMax;
-	}
+herotest.setClasse("Mage");
+herotest.setNom(prompt("Entrez un nom : "));
 
-
-	public get attaque(attaque) {
-		return this.attaque;
-	}
-	public set attaque(attaque) {
-		this.attaque = attaque;
-	}
-
-
-	public get magie(magie) {
-		return this.magie;
-	}
-	public set magie(magie) {
-		this.magie = magie;
-	}
-
-
-	public get defense(defense) {
-		return this.defense;
-	}
-	public set defense(defense) {
-		this.defense = defense;
-	}
-
-
-	public get resistance(resistance) {
-		return this.resistance;
-	}
-	public set resistance(resistance) {
-		this.resistance = resistance;
-	}
-
-
-	public get competance(competance) {
-		return this.competance;
-	}
-	public set competance(competance) {
-		this.competance = competance;
-	}
-
-	recoitDegat() {
-
-	}
-
-	recoitSoin() {
-
-	}
-
-	method(...) {}
-	get something(...) {}
-	set something(...) {}
-	static staticmethod(...) {}
+function decrire(personnage) {
+    var description ="Nom : " + personnage.nom + " Niveau : " + personnage.niveau + " Exp : " + personnage.experience + " Super : " + personnage.concentration + " Classe : " +
+    personnage.classe + " PV : " + personnage.ptsVieMax + " PM : " + personnage.ptsManaMax + " ATK : " + personnage.attaque + " MAG : " + personnage.magie + " DEF : " +
+    personnage.defense + " RES : " + personnage.resistance + " Competance : " + personnage.competance;
+    return description;
 }
+
+console.log(decrire(herotest));
