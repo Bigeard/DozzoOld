@@ -4,16 +4,14 @@
 document.addEventListener('keydown', (event, page) => {
     const keyName = event.key;
     document.getElementById('key').innerHTML = 'Keypress: ' + keyName
-    
+    document.getElementById('select').innerHTML = select
 
-    var selectTotal = 3;
+    var selectTotal = 4;
     if(selectTotal%2 == 0 ){
         var colone = 2;
-        console.log(colone)
     }
     else{
         var colone = 3;
-        console.log(colone)
     }
 
     //INPUTS
