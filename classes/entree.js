@@ -23,14 +23,21 @@ document.addEventListener('keydown', (event, page) => {
     }
     else if (keyName == 'ArrowUp' && select != colone && select != colone-1 && select != colone-2 ) {
         menu(select -= colone)
+        document.getElementById('error').style.display = "none"
     }
     else if (keyName == 'ArrowDown' && select != selectTotal && select != selectTotal-1 && select != selectTotal-(colone-1)) {
         menu(select += colone)
+        document.getElementById('error').style.display = "none"
     }
     else if (keyName == 'ArrowLeft' && select != 1 ) {
         menu(select -= 1)
+        document.getElementById('error').style.display = "none"
     }
     else if (keyName == 'ArrowRight' && select != selectTotal ) {
         menu(select += 1)
+        document.getElementById('error').style.display = "none"
+    }
+    else if(keyName != 'Enter' && keyName != 'ArrowUp' && keyName != 'ArrowDown' && keyName != 'ArrowLeft' && keyName != 'ArrowRight' ) {
+        document.getElementById('error').style.display = "block"
     }
 });

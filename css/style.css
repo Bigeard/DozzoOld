@@ -20,5 +20,5 @@ kbd {
 }
 
 #error{
-    color: red;
+    display: none;
 }
