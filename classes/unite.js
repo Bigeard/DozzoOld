@@ -189,17 +189,20 @@ var Unite = {
 	}
 };
 
-var herotest = Object.create(Unite);
-herotest.init("undefined", 1, 0, 0, "undefined", 10, 5, 0, 0, 0, 0, "undefined");
-
-herotest.setClasse("Mage");
-herotest.setNom(prompt("Entrez un nom : "));
-
-function decrire(personnage) {
-    var description ="Nom : " + personnage.nom + " Niveau : " + personnage.niveau + " Exp : " + personnage.experience + " Super : " + personnage.concentration + " Classe : " +
-    personnage.classe + " PV : " + personnage.ptsVieMax + " PM : " + personnage.ptsManaMax + " ATK : " + personnage.attaque + " MAG : " + personnage.magie + " DEF : " +
-    personnage.defense + " RES : " + personnage.resistance + " Competance : " + personnage.competance;
-    return description;
+function testUnite() {
+	var herotest = Object.create(Unite);
+	herotest.init("undefined", 1, 0, 0, "undefined", 10, 5, 0, 0, 0, 0, "undefined");
+	
+	herotest.setClasse("Mage");
+	herotest.setNom(prompt("Entrez un nom : "));
+	
+	function decrire(personnage) {
+	    var description ="Nom : " + personnage.nom + " Niveau : " + personnage.niveau + " Exp : " + personnage.experience + " Super : " + personnage.concentration + " Classe : " +
+	    personnage.classe + " PV : " + personnage.ptsVieMax + " PM : " + personnage.ptsManaMax + " ATK : " + personnage.attaque + " MAG : " + personnage.magie + " DEF : " +
+	    personnage.defense + " RES : " + personnage.resistance + " Competance : " + personnage.competance;
+	    return description;
+	}
+	console.log(decrire(herotest));
 }
 
-console.log(decrire(herotest));
+//testUnite();
