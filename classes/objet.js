@@ -1,30 +1,32 @@
 class objet{
 
-   constructor(nom) {
-       this.nom = nom;
-       this.effet = effet;
-       this.quantite = quantite;
+   constructor(nom, effet, quantite) {
+       this.nom = nom
+       this.effet = effet
+       this.quantite = quantite
 
    }
 
    get nom(nom){
-       return this.effet;
+       return this.nom
    }
 
     get effet(effet){
-        return this.effet;
+        return this.effet
     }
     get quantite(quantite){
-        return this.effet;
+        return this.quantite
     }
 
     set nom(nom){
-        return this.effet;
+        return this.nom
     }
     set effet(effet){
-        return this.effet;
+        return this.effet
     }
     set quantite(quantite){
-        return this.effet;
+        return this.quantite
     }
+
+   
 }

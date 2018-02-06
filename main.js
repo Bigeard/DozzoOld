@@ -9,7 +9,7 @@ function menu(select) {
     console.clear()
     
     document.getElementById('select').innerHTML = select
-    var chn = ' - Comencer [1]              - Obtion [2]              - A propos [3]'
+    var chn = ' - Commencer [1]              - Option [2]              - A propos [3]'
     var nouvChn = chn.replace(select, '*');
 
     console.log('Bienvenu Sur')
