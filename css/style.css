@@ -23,6 +23,10 @@ kbd {
     display: none;
 }
 
+.champion{
+    height: 100px;
+}
+
 .tooltip {
     position: relative;
     display: inline-block;
