@@ -1,9 +1,21 @@
+@font-face {
+    font-family: 'Disposable';
+    src: url('../font/DisposableDroidBB.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
 html, body{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Disposable;
     width: 100%;
     height: 100%;
     margin: 0;
+}
+
+.dozzo{
+    padding: 40px;
+    padding-top: 100px;
 }
 
 kbd {
@@ -11,10 +23,9 @@ kbd {
     background-color: #eee;
     border-radius: 3px;
     border: 1px solid #b4b4b4;
-    box-shadow: 0 1px 1px rgba(0,0,0,.2),0 2px 0 0 rgba(255,255,255,.7) inset;
+    /* box-shadow: 0 1px 1px rgba(0,0,0,.2),0 2px 0 0 rgba(255,255,255,.7) inset; */
     color: #333;
     display: inline-block;
-    font-family: consolas,"Liberation Mono",courier,monospace;
     font-size: .85em;
     font-weight: 700;
     line-height: 1;
@@ -24,18 +35,22 @@ kbd {
 
 #error{
     display: none;
-    background-color: #f7ce76;
+    background-color: gray;
     color: white;
     padding: 10px;
 }
 
-.champion{
+.img-class{
     height: 100px;
 }
 
 .tooltip {
     position: relative;
     display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 15px; 
+    margin: 10px;
 }
 
 .tooltip .tooltiptext {
@@ -70,3 +85,20 @@ kbd {
     visibility: visible;
     opacity: 1;
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+.container{
+    margin: auto;
+}
+  
+  /* .flex-container > div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  } */

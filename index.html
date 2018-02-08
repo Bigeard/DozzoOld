@@ -4,100 +4,109 @@
     <meta charset="UTF-8">
     <title>Dozzo</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="img/favicon.svg" />
     <script src="main.js"></script>
     <script src="classes/entree.js"></script>
 </head>
 
 <body onload="menu()">
     <p id="error" role="alert">Les touche utilisable sont :&nbsp; &nbsp; ↑ &nbsp; &nbsp; ↓ &nbsp; &nbsp; ← &nbsp; &nbsp; → &nbsp; &nbsp; Enter</p>
-    <p>Bienvenu sur le mini RPG !
-        <br/> Ouvre la console pour commencer l'aventure !</p>
 
-    <p>Raccourci Firefox :</p>
-    <kbd>Ctrl</kbd>
-    <kbd>Maj</kbd>
-    <kbd>K</kbd>
-    <p>Raccourci Chrome :</p>
-    <kbd>Ctrl</kbd>
-    <kbd>Maj</kbd>
-    <kbd>J</kbd>
+    <div class="flex-container">
+        <div class="container dozzo">
+            <img src="img/dozzo.svg" alt="BIENVENUE DANS LE DONJON DU DOZZO!">
+            <p><br/><br/> Ouvre la console pour commencer l'aventure !</p>
+             
 
-    <p id="key"></p>
-    <p id="select"></p>
+            <p>Classes :</p>
+            <div class="tooltip">Mage
+                <span class="tooltiptext">
+                    <p>Mage
+                        <br>
+                        <img class="img-class" src="img/mage.gif">
+                        <br> PV : 30
+                        <br> Mana : 25
+                        <br> ATK : 1
+                        <br> MAG : 8
+                        <br> DEF : 2
+                        <br> RES : 4
+                        <br>               
+                        <br> Capacité :
+                        <br> Incantation
+                    </p>
+                </span>
+            </div>
 
-    <p>Classes :</p>
+            <div class="tooltip">Guerrier
+                <span class="tooltiptext">
+                    <p>Guerrier
+                        <br>
+                        <img class="img-class" src="img/guerrier.gif">
+                        <br> PV : ?
+                        <br> Mana : ?
+                        <br> ATK : ?
+                        <br> MAG : ?
+                        <br> DEF : ?
+                        <br> RES : ?
+                        <br>               
+                        <br> Capacité :
+                        <br> ?
+                    </p>
+                </span>
+            </div>
 
-    <kbd class="tooltip">Mage
-        <span class="tooltiptext">
-            <p>Mage
-                <br>
-                <img class="champion" src="img/mage.gif">
-                <br> PV : 30
-                <br> Mana : 25
-                <br> ATK : 1
-                <br> MAG : 8
-                <br> DEF : 2
-                <br> RES : 4
-                <br>                 
-                <br> Capacité :
-                <br> Incantation
-            </p>
-        </span>
-    </kbd>
+            <div class="tooltip">Assassin
+                <span class="tooltiptext">
+                    <p>Assassin
+                        <br>
+                        <img class="img-class" src="img/assassin.gif">
+                        <br> PV : ?
+                        <br> Mana : ?
+                        <br> ATK : ?
+                        <br> MAG : ?
+                        <br> DEF : ?
+                        <br> RES : ?
+                        <br>               
+                        <br> Capacité :
+                        <br> ?
+                    </p>
+                </span>
+            </div>
 
-    <kbd class="tooltip">Guerrier
-        <span class="tooltiptext">
-            <p>Guerrier
-                <br>
-                <img class="champion" src="img/guerrier.gif">
-                <br> PV : ?
-                <br> Mana : ?
-                <br> ATK : ?
-                <br> MAG : ?
-                <br> DEF : ?
-                <br> RES : ?
-                <br>                 
-                <br> Capacité :
-                <br> ?
-            </p>
-        </span>
-    </kbd>
+            <div class="tooltip">Mage noir
+                <span class="tooltiptext">
+                    <p>Mage noir
+                        <br>
+                        <img class="img-class" src="img/mage noir.gif">
+                        <br> PV : ?
+                        <br> Mana : ?
+                        <br> ATK : ?
+                        <br> MAG : ?
+                        <br> DEF : ?
+                        <br> RES : ?
+                        <br>               
+                        <br> Capacité :
+                        <br> ?
+                    </p>
+                </span>
+            </div>
+        </div>
 
-    <kbd class="tooltip">Assassin
-        <span class="tooltiptext">
-            <p>Assassin
-                <br>
-                <img class="champion" src="img/assassin.gif">
-                <br> PV : ?
-                <br> Mana : ?
-                <br> ATK : ?
-                <br> MAG : ?
-                <br> DEF : ?
-                <br> RES : ?
-                <br>                 
-                <br> Capacité :
-                <br> ?
-            </p>
-        </span>
-    </kbd>
+        <div class="container">
+                <p>Raccourci Firefox :</p>
+                <kbd>Ctrl</kbd>
+                <kbd>Maj</kbd>
+                <kbd>K</kbd>
+                <p>Raccourci Chrome :</p>
+                <kbd>Ctrl</kbd>
+                <kbd>Maj</kbd>
+                <kbd>J</kbd>
+    
+                <p id="key"></p>
+                <p id="select"></p>
+            </div>
 
-    <kbd class="tooltip">Mage noir
-        <span class="tooltiptext">
-            <p>Mage noir
-                <br>
-                <img class="champion" src="img/mage noir.gif">
-                <br> PV : ?
-                <br> Mana : ?
-                <br> ATK : ?
-                <br> MAG : ?
-                <br> DEF : ?
-                <br> RES : ?
-                <br>                 
-                <br> Capacité :
-                <br> ?
-            </p>
-        </span>
-    </kbd>
+    </div>
 
 </body>
 

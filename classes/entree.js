@@ -9,11 +9,9 @@ document.addEventListener('keydown', (event, page) => {
     var selectTotal = 3;
     if(selectTotal%2 == 0 ){
         var colone = 2;
-        console.log(colone)
     }
     else{
         var colone = 3;
-        console.log(colone)
     }
 
     //INPUTS
