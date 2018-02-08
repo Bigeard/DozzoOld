@@ -6,7 +6,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="img/favicon.svg" />
     <script src="main.js"></script>
+    <script src="classes/attaque.js"></script>
+    <script src="classes/competence.js"></script>
     <script src="classes/entree.js"></script>
+    <script src="classes/inventaire.js"></script>
+    <script src="classes/objet.js"></script>
+    <script src="classes/selection.js"></script>
+    <script src="classes/unite.js"></script>
 </head>
 
 <body onload="menu()">
@@ -21,73 +27,25 @@
             <p>Classes :</p>
             <div class="tooltip">Mage
                 <span class="tooltiptext">
-                    <p>Mage
-                        <br>
-                        <img class="img-class" src="img/mage.gif">
-                        <br> PV : 30
-                        <br> Mana : 25
-                        <br> ATK : 1
-                        <br> MAG : 8
-                        <br> DEF : 2
-                        <br> RES : 4
-                        <br>               
-                        <br> Capacité :
-                        <br> Incantation
-                    </p>
+                    <p id="classe-mage"></p>
                 </span>
             </div>
 
             <div class="tooltip">Guerrier
                 <span class="tooltiptext">
-                    <p>Guerrier
-                        <br>
-                        <img class="img-class" src="img/guerrier.gif">
-                        <br> PV : ?
-                        <br> Mana : ?
-                        <br> ATK : ?
-                        <br> MAG : ?
-                        <br> DEF : ?
-                        <br> RES : ?
-                        <br>               
-                        <br> Capacité :
-                        <br> ?
-                    </p>
+                        <p id="classe-guerrier"></p>
                 </span>
             </div>
 
             <div class="tooltip">Assassin
                 <span class="tooltiptext">
-                    <p>Assassin
-                        <br>
-                        <img class="img-class" src="img/assassin.gif">
-                        <br> PV : ?
-                        <br> Mana : ?
-                        <br> ATK : ?
-                        <br> MAG : ?
-                        <br> DEF : ?
-                        <br> RES : ?
-                        <br>               
-                        <br> Capacité :
-                        <br> ?
-                    </p>
+                        <p id="classe-assassin"></p>
                 </span>
             </div>
 
             <div class="tooltip">Mage noir
                 <span class="tooltiptext">
-                    <p>Mage noir
-                        <br>
-                        <img class="img-class" src="img/mage noir.gif">
-                        <br> PV : ?
-                        <br> Mana : ?
-                        <br> ATK : ?
-                        <br> MAG : ?
-                        <br> DEF : ?
-                        <br> RES : ?
-                        <br>               
-                        <br> Capacité :
-                        <br> ?
-                    </p>
+                        <p id="classe-mage-noir"></p>
                 </span>
             </div>
         </div>
@@ -111,3 +69,18 @@
 </body>
 
 </html>
+
+<!-- 
+<p>Mage
+        <br>
+
+        <br> PV : 30
+        <br> Mana : 25
+        <br> ATK : 1
+        <br> MAG : 8
+        <br> DEF : 2
+        <br> RES : 4
+        <br>               
+        <br> Capacité :
+        <br> Incantation
+    </p> -->

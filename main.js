@@ -5,6 +5,11 @@ var select = 1
 //DISPLAY
 
 function menu(select) {
+
+    document.getElementById("classe-mage").innerHTML = Unite.classe + "<br><img class=\"img-class\" src=\"img/mage.gif\">" + "<br> PV : " + Unite.classe + "<br> Mana : " + Unite.classe + "<br> ATK : " + Unite.classe + "<br> MAG : " + Unite.classe + "<br> DEF : " + Unite.classe + "<br> RES : " + Unite.classe + "<br>               " + "<br> Capacité :<br>" + Unite.classe;
+    document.getElementById("classe-guerrier").innerHTML = Unite.classe + "<br><img class=\"img-class\" src=\"img/guerrier.gif\">" + "<br> PV : " + Unite.classe + "<br> Mana : " + Unite.classe + "<br> ATK : " + Unite.classe + "<br> MAG : " + Unite.classe + "<br> DEF : " + Unite.classe + "<br> RES : " + Unite.classe + "<br>               " + "<br> Capacité :<br>" + Unite.classe;
+    document.getElementById("classe-assassin").innerHTML = Unite.classe + "<br><img class=\"img-class\" src=\"img/assassin.gif\">" + "<br> PV : " + Unite.classe + "<br> Mana : " + Unite.classe + "<br> ATK : " + Unite.classe + "<br> MAG : " + Unite.classe + "<br> DEF : " + Unite.classe + "<br> RES : " + Unite.classe + "<br>               " + "<br> Capacité :<br>" + Unite.classe;
+    document.getElementById("classe-mage-noir").innerHTML = Unite.classe + "<br><img class=\"img-class\" src=\"img/mage-noir.gif\">" + "<br> PV : " + Unite.classe + "<br> Mana : " + Unite.classe + "<br> ATK : " + Unite.classe + "<br> MAG : " + Unite.classe + "<br> DEF : " + Unite.classe + "<br> RES : " + Unite.classe + "<br>               " + "<br> Capacité :<br>" + Unite.classe;
     var page = 'menu'
     console.clear()
 
@@ -27,4 +32,5 @@ function menu(select) {
     console.log('                                                                                              ')
     console.log(nouvChn)
 }
+
 
