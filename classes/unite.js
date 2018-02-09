@@ -1,7 +1,8 @@
 var Unite = {
 
-	init: function (nom, niveau, experience, concentration, classe,
-		ptsVieMax, ptsManaMax, attaque, magie, defense, resistance, competance) {
+	init: function (nom, niveau, experience, concentration, classe, competance,
+		ptsVie, ptsMana, attaque, magie, defense, resistance, 
+		ptsVieMax, ptsManaMax, attaqueMax, magieMax, defenseMax, resistanceMax) {
 
 		//Identification
 		this.nom = nom;
@@ -9,15 +10,24 @@ var Unite = {
 		this.experience = experience;
 		this.concentration = concentration;
 		this.classe = undefined;
+		this.competance = competance;
 	
 		//Statistiques
-		this.ptsVieMax = ptsVieMax;
-		this.ptsManaMax = ptsManaMax;
+
+		this.ptsVie = ptsVie;
+		this.ptsMana = ptsMana;
 		this.attaque = attaque;
 		this.magie = magie;
 		this.defense = defense;
 		this.resistance = resistance;
-		this.competance = competance;
+
+		//StatistiquesMax
+		this.ptsVieMax = ptsVieMax;
+		this.ptsManaMax = ptsManaMax;
+		this.attaqueMax = attaqueMax;
+		this.magieMax = magieMax;
+		this.defenseMax = defenseMax;
+		this.resistanceMax = resistanceMax;
 	},
 
 	//Identification
@@ -46,22 +56,6 @@ var Unite = {
 	},
 
 
-	getPtsVie: function(ptsVie) {
-		return this.ptsVie;
-	},
-	setPtsVie: function(ptsVie) {
-		this.ptsVie = ptsVie;
-	},
-
-
-	getPtsMana: function(ptsMana) {
-		return this.ptsMana;
-	},
-	setPtsMana: function(ptsMana) {
-		this.ptsMana = ptsMana;
-	},
-
-
 	getConcentration: function(concentration) {
 		return this.concentration;
 	},
@@ -79,10 +73,10 @@ var Unite = {
 
 		this.ptsVieMax += 30;
 		this.ptsManaMax += 25;
-		this.attaque += 1;
-		this.magie += 8;
-		this.defense += 2;
-		this.resistance += 4;
+		this.attaqueMax += 1;
+		this.magieMax += 8;
+		this.defenseMax += 2;
+		this.resistanceMax += 4;
 		this.competance = "Incantation";
 		}
 		else if (classe === "Guerrier") {
@@ -90,10 +84,10 @@ var Unite = {
 
 		this.ptsVieMax += 50;
 		this.ptsManaMax += 5;
-		this.attaque += 10;
-		this.magie += 0;
-		this.defense += 5;
-		this.resistance += 1;
+		this.attaqueMax += 10;
+		this.magieMax += 0;
+		this.defenseMax += 5;
+		this.resistanceMax += 1;
 		this.competance = "Rage";
 		}
 		else if (classe === "Assassin") {
@@ -101,10 +95,10 @@ var Unite = {
 
 		this.ptsVieMax += 30;
 		this.ptsManaMax += 10;
-		this.attaque += 15;
-		this.magie += 5;
-		this.defense += 2;
-		this.resistance += 2;
+		this.attaqueMax += 15;
+		this.magieMax += 5;
+		this.defenseMax += 2;
+		this.resistanceMax += 2;
 		this.competance = "Camouflage";
 		}
 		else if (classe === "Mage noir") {
@@ -112,10 +106,10 @@ var Unite = {
 
 		this.ptsVieMax += 40;
 		this.ptsManaMax += 30;
-		this.attaque += 0;
-		this.magie += 10;
-		this.defense += 5;
-		this.resistance += 8;
+		this.attaqueMax += 0;
+		this.magieMax += 10;
+		this.defenseMax += 5;
+		this.resistanceMax += 8;
 		this.competance = "Entrave";
 		}
 		else if (classe === "Abomination") {
@@ -123,15 +117,72 @@ var Unite = {
 
 		this.ptsVieMax += 50;
 		this.ptsManaMax += 0;
-		this.attaque += 12;
-		this.magie += 0;
-		this.defense += 7;
-		this.resistance += 4;
+		this.attaqueMax += 12;
+		this.magieMax += 0;
+		this.defenseMax += 7;
+		this.resistanceMax += 4;
 		this.competance = "Empoisonnement";
 		}
 	},
 
+
+	getPtsVie: function(competance) {
+		return this.competance;
+	},
+	setPtsVie: function(competance) {
+		this.competance = competance;
+	},
+
 	//Statistiques
+
+	getPtsVieMax: function(ptsVie) {
+		return this.ptsVie;
+	},
+	setPtsVieMax: function(ptsVie) {
+		this.ptsVie = ptsVie;
+	},
+
+
+	getptsManaMax: function(ptsMana) {
+		return this.ptsMana;
+	},
+	setptsManaMax: function(ptsMana) {
+		this.ptsMana = ptsMana;
+	},
+
+
+	getAttaque: function(attaque) {
+		return this.attaque;
+	},
+	setAttaque: function(attaque) {
+		this.attaque = attaque;
+	},
+
+
+	getMagie: function(magie) {
+		return this.magie;
+	},
+	setMagie: function(magie) {
+		this.magie = magie;
+	},
+
+
+	getDefense: function(defense) {
+		return this.defense;
+	},
+	setDefense: function(defense) {
+		this.defense = defense;
+	},
+
+
+	getResistance: function(resistance) {
+		return this.resistance;
+	},
+	setResistance: function(resistance) {
+		this.resistance = resistance;
+	},
+
+	//StatistiquesMax
 
 	getPtsVieMax: function(ptsVieMax) {
 		return this.ptsVieMax;
@@ -149,57 +200,49 @@ var Unite = {
 	},
 
 
-	getAttaque: function(ptsVieMax) {
-		return this.ptsVieMax;
+	getAttaque: function(attaqueMax) {
+		return this.attaqueMax;
 	},
-	setAttaque: function(ptsVieMax) {
-		this.ptsVieMax = ptsVieMax;
-	},
-
-
-	getMagie: function(ptsVieMax) {
-		return this.ptsVieMax;
-	},
-	setMagie: function(ptsVieMax) {
-		this.ptsVieMax = ptsVieMax;
+	setAttaque: function(attaqueMax) {
+		this.attaqueMax = attaqueMax;
 	},
 
 
-	getDefense: function(ptsVieMax) {
-		return this.ptsVieMax;
+	getMagie: function(magieMax) {
+		return this.magieMax;
 	},
-	setDefense: function(ptsVieMax) {
-		this.ptsVieMax = ptsVieMax;
-	},
-
-
-	getResistance: function(ptsVieMax) {
-		return this.ptsVieMax;
-	},
-	setResistance: function(ptsVieMax) {
-		this.ptsVieMax = ptsVieMax;
+	setMagie: function(magieMax) {
+		this.magieMax = magieMax;
 	},
 
 
-	getCompetance: function(ptsVieMax) {
-		return this.ptsVieMax;
+	getDefense: function(defenseMax) {
+		return this.defenseMax;
 	},
-	setCompetance: function(ptsVieMax) {
-		this.ptsVieMax = ptsVieMax;
+	setDefense: function(defenseMax) {
+		this.defenseMax = defenseMax;
+	},
+
+
+	getResistance: function(resistanceMax) {
+		return this.resistanceMax;
+	},
+	setResistance: function(resistanceMax) {
+		this.resistanceMax = resistanceMax;
 	}
 };
 
 function testUnite() {
 	var herotest = Object.create(Unite);
-	herotest.init("undefined", 1, 0, 0, "undefined", 10, 5, 0, 0, 0, 0, "undefined");
+	herotest.init("undefined", 0, 0, 0, "undefined", "undefined", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 	
 	herotest.setClasse("Mage");
 	herotest.setNom(prompt("Entrez un nom : "));
 	
 	function decrire(personnage) {
 	    var description ="Nom : " + personnage.nom + " Niveau : " + personnage.niveau + " Exp : " + personnage.experience + " Super : " + personnage.concentration + " Classe : " +
-	    personnage.classe + " PV : " + personnage.ptsVieMax + " PM : " + personnage.ptsManaMax + " ATK : " + personnage.attaque + " MAG : " + personnage.magie + " DEF : " +
-	    personnage.defense + " RES : " + personnage.resistance + " Competance : " + personnage.competance;
+	    personnage.classe + " PV : " + personnage.ptsVieMax + " PM : " + personnage.ptsManaMax + " ATK : " + personnage.attaque + " MAG : " + personnage.magieMax + " DEF : " +
+	    personnage.defenseMax + " RES : " + personnage.resistanceMax + " Competance : " + personnage.competance;
 	    return description;
 	}
 	console.log(decrire(herotest));

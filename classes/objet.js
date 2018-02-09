@@ -1,32 +1,32 @@
-class objet{
+var Objet = {
 
-   constructor(nom, effet, quantite) {
-       this.nom = nom
-       this.effet = effet
-       this.quantite = quantite
+  init: function (nom, action, type, quantite) {
 
-   }
+    this.nom = nom;
+    this.niveau = niveau;
+    this.experience = experience;
+  },
 
-   get nom(nom){
-       return this.nom
-   }
+  getNom: function(nom) {
+    return this.nom;
+  },
+  setNom: function(nom) {
+    this.nom = nom;
+  },
 
-    get effet(effet){
-        return this.effet
-    }
-    get quantite(quantite){
-        return this.quantite
-    }
 
-    set nom(nom){
-        return this.nom
-    }
-    set effet(effet){
-        return this.effet
-    }
-    set quantite(quantite){
-        return this.quantite
-    }
+  getNiveau: function(niveau) {
+    return this.niveau;
+  },
+  setNiveau: function(niveau) {
+    this.niveau = niveau;
+  },
 
-   
-}
+
+  getExperience: function(experience) {
+    return this.experience;
+  },
+  setExperience: function(experience) {
+    this.experience = experience;
+  }
+};

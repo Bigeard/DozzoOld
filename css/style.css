@@ -11,6 +11,13 @@ html, body{
     width: 100%;
     height: 100%;
     margin: 0;
+    image-rendering: pixelated;
+}
+
+@media (max-width: 640px) {
+    .keyboard {
+        display: none;
+    }
 }
 
 .dozzo{
@@ -40,7 +47,7 @@ kbd {
 }
 
 .img-class{
-    height: 100px;
+    height: 114px;
 }
 
 .tooltip {
