@@ -107,17 +107,6 @@ var Unite = {
 		this.resistance += 2;
 		this.competance = "Camouflage";
 		}
-		else if (classe === "Abomination") {
-		this.classe = "Abomination"
-
-		this.ptsVieMax += 50;
-		this.ptsManaMax += 0;
-		this.attaque += 12;
-		this.magie += 0;
-		this.defense += 7;
-		this.resistance += 4;
-		this.competance = "Empoisonnement";
-		}
 		else if (classe === "Mage noir") {
 		this.classe = "Mage noir"
 
@@ -128,6 +117,17 @@ var Unite = {
 		this.defense += 5;
 		this.resistance += 8;
 		this.competance = "Entrave";
+		}
+		else if (classe === "Abomination") {
+		this.classe = "Abomination"
+
+		this.ptsVieMax += 50;
+		this.ptsManaMax += 0;
+		this.attaque += 12;
+		this.magie += 0;
+		this.defense += 7;
+		this.resistance += 4;
+		this.competance = "Empoisonnement";
 		}
 	},
 

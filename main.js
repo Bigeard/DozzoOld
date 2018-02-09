@@ -6,12 +6,18 @@ var select = 1
 
 function menu(select) {
 
-    document.getElementById("classe-mage").innerHTML = Unite.classe + "<br><img class=\"img-class\" src=\"img/mage.gif\">" + "<br> PV : " + Unite.classe + "<br> Mana : " + Unite.classe + "<br> ATK : " + Unite.classe + "<br> MAG : " + Unite.classe + "<br> DEF : " + Unite.classe + "<br> RES : " + Unite.classe + "<br>               " + "<br> Capacité :<br>" + Unite.classe;
-    document.getElementById("classe-guerrier").innerHTML = Unite.classe + "<br><img class=\"img-class\" src=\"img/guerrier.gif\">" + "<br> PV : " + Unite.classe + "<br> Mana : " + Unite.classe + "<br> ATK : " + Unite.classe + "<br> MAG : " + Unite.classe + "<br> DEF : " + Unite.classe + "<br> RES : " + Unite.classe + "<br>               " + "<br> Capacité :<br>" + Unite.classe;
-    document.getElementById("classe-assassin").innerHTML = Unite.classe + "<br><img class=\"img-class\" src=\"img/assassin.gif\">" + "<br> PV : " + Unite.classe + "<br> Mana : " + Unite.classe + "<br> ATK : " + Unite.classe + "<br> MAG : " + Unite.classe + "<br> DEF : " + Unite.classe + "<br> RES : " + Unite.classe + "<br>               " + "<br> Capacité :<br>" + Unite.classe;
-    document.getElementById("classe-mage-noir").innerHTML = Unite.classe + "<br><img class=\"img-class\" src=\"img/mage-noir.gif\">" + "<br> PV : " + Unite.classe + "<br> Mana : " + Unite.classe + "<br> ATK : " + Unite.classe + "<br> MAG : " + Unite.classe + "<br> DEF : " + Unite.classe + "<br> RES : " + Unite.classe + "<br>               " + "<br> Capacité :<br>" + Unite.classe;
+    var chowStats = Object.create(Unite)
+    
+    var changeClasse = ["Guerrier", "Mage", "Assassin", "Mage noir"]
+
     var page = 'menu'
     console.clear()
+
+    for (var x = 0; x < changeClasse.length; x++) {
+        chowStats.init("undefined", 0, 0, 0, "undefined", 0, 0, 0, 0, 0, 0, "undefined")
+        chowStats.setClasse(changeClasse[x])
+        document.getElementById("classe-"+ x).innerHTML = chowStats.classe + "<br><img class=\"img-class\" src=\"img/" + chowStats.classe + ".gif\">" + "<br> PV : " + chowStats.ptsVieMax + "<br> Mana : " + chowStats.ptsManaMax + "<br> ATK : " + chowStats.attaque + "<br> MAG : " + chowStats.magie + "<br> DEF : " + chowStats.defense + "<br> RES : " + chowStats.resistance + "<br>               " + "<br> Capacité :<br>" + chowStats.competance;
+    }
 
     document.getElementById('select').innerHTML = select
     var chn = '  - Commencer [1]              - Option [2]              - A propos [3]'
