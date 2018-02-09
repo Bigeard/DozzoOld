@@ -5,6 +5,13 @@
     font-style: normal;
     }
 
+@media (max-width: 640px) {
+    .keyboard {
+        display: none;
+    }
+}
+    
+
 html, body{
     text-align: center;
     font-family: Disposable;
@@ -14,11 +21,6 @@ html, body{
     image-rendering: pixelated;
 }
 
-@media (max-width: 640px) {
-    .keyboard {
-        display: none;
-    }
-}
 
 .dozzo{
     padding: 40px;
@@ -26,7 +28,6 @@ html, body{
 }
 
 kbd {
-
     background-color: #eee;
     border-radius: 3px;
     border: 1px solid #b4b4b4;
@@ -36,7 +37,6 @@ kbd {
     font-weight: 700;
     line-height: 1;
     padding: 6px 8px;
-    white-space: nowrap;
 }
 
 #error{
