@@ -7,8 +7,7 @@ var select = 1
 function menu(select) {
 
     var chowStats = Object.create(Unite)
-    
-    var changeClasse = ["Guerrier", "Mage", "Assassin", "Mage noir"]
+    var changeClasse = ["Guerrier", "Mage", "Assassin", "Mage noir", "Abomination"]
 
     var page = 'menu'
     console.clear()
@@ -16,7 +15,16 @@ function menu(select) {
     for (var x = 0; x < changeClasse.length; x++) {
         chowStats.init("undefined", 0, 0, 0, "undefined", 0, 0, 0, 0, 0, 0, "undefined")
         chowStats.setClasse(changeClasse[x])
-        document.getElementById("classe-"+ x).innerHTML = chowStats.classe + "<br><img class=\"img-class\" src=\"img/" + chowStats.classe + ".gif\">" + "<br> PV : " + chowStats.ptsVieMax + "<br> Mana : " + chowStats.ptsManaMax + "<br> ATK : " + chowStats.attaque + "<br> MAG : " + chowStats.magie + "<br> DEF : " + chowStats.defense + "<br> RES : " + chowStats.resistance + "<br>               " + "<br> Capacité :<br>" + chowStats.competance;
+        document.getElementById("hero-"+x).innerHTML = chowStats.classe + "<span class=\"tooltiptext\">" + 
+        chowStats.classe +
+        "<br><img class=\"img-class\" src=\"img/" + chowStats.classe + ".gif\">" + 
+        "<br> PV : " + chowStats.ptsVieMax + 
+        "<br> Mana : " + chowStats.ptsManaMax + 
+        "<br> ATK : " + chowStats.attaque +
+        "<br> MAG : " + chowStats.magie +
+        "<br> DEF : " + chowStats.defense +
+        "<br> RES : " + chowStats.resistance +
+        "<br>               " + "<br> Capacité :<br>" + chowStats.competance + "</p></span>" ;
     }
 
     document.getElementById('select').innerHTML = select
