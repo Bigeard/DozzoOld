@@ -13,7 +13,7 @@ function menu(select) {
     console.clear()
 
     for (var x = 0; x < changeClasse.length; x++) {
-        chowStats.init("undefined", 0, 0, 0, "undefined", "undefined", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        chowStats.init("undefined", 0, 0, 0, "undefined", "undefined", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
         chowStats.setClasse(changeClasse[x])
         document.getElementById("hero-"+x).innerHTML = chowStats.classe + "<span class=\"tooltiptext\">" + 
         chowStats.classe +
