@@ -1,6 +1,6 @@
 var Unite = {
 
-	init: function (nom, niveau, experience, concentration, classe, competance,
+	init: function (nom, niveau, experience, concentration, classe, maitriseTypeEquipement, competance,
 		ptsVie, ptsMana, attaque, magie, defense, resistance, 
 		ptsVieMax, ptsManaMax, attaqueMax, magieMax, defenseMax, resistanceMax) {
 
@@ -22,6 +22,7 @@ var Unite = {
 		this.resistance = resistance;
 
 		//StatistiquesMax
+		
 		this.ptsVieMax = ptsVieMax;
 		this.ptsManaMax = ptsManaMax;
 		this.attaqueMax = attaqueMax;
@@ -123,6 +124,14 @@ var Unite = {
 		this.resistanceMax += 4;
 		this.competance = "Empoisonnement";
 		}
+	},
+
+
+	getPtsVie: function(maitriseTypeEquipement) {
+		return this.maitriseTypeEquipement;
+	},
+	setPtsVie: function(maitriseTypeEquipement) {
+		this.maitriseTypeEquipement = maitriseTypeEquipement;
 	},
 
 
