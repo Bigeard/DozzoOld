@@ -27,4 +27,3 @@ function menu(select) {
     console.log('                                                                                              ')
     console.log(nouvChn)
 }
-
