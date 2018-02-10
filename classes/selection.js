@@ -1,24 +1,19 @@
 var Selection = {
 
-    init: function (nom, id, nbSelection, Selection1, Selection2, Selection3) {
+    init: function (nom, nombreDeSlot, Slot1, Slot2, Slot3, Slot4, Slot5, Slot6) {
 
         //Identification
         this.nom = nom;
-        this.id = id;
-        this.nbSelection = nbSelection;
-        this.Selection1 = Selection1;
-        this.Selection2 = Selection2;
-        this.Selection3 = Selection3;
+        this.nombreDeSlot = nombreDeSlot;
+        this.Slot1 = Slot1;
+        this.Slot2 = Slot2;
+        this.Slot3 = Slot3;
+        this.Slot4 = Slot4;
+        this.Slot5 = Slot5;
+        this.Slot6 = Slot6;
     },
 
     //Identification
-
-    getId: function (id) {
-        return this.id;
-    },
-    setId: function (id) {
-        this.id = id;
-    },
 
     getNom: function (nom) {
         return this.nom;
@@ -27,102 +22,65 @@ var Selection = {
         this.nom = nom;
     },
 
-    getAction: function (nbSelection) {
-        return this.nbSelection;
-    },
-    setAction: function (nbSelection) {
-        this.nbSelection = nbSelection;
-    },
-
-    getAction: function (Selection1) {
-        return this.Selection1;
-    },
-    setAction: function (Selection1) {
-        this.Selection1 = Selection1;
-    },
-
-    getAction: function (Selection2) {
-        return this.Selection2;
-    },
-    setAction: function (Selection2) {
-        this.Selection2 = Selection2;
-    },
-
-    getAction: function (Selection3) {
-        return this.Selection3;
-    },
-    setAction: function (Selection3) {
-        this.Selection3 = Selection3;
-    },
-
-
-    setClasse: function (classe) {
-        if (classe === "Menu") {
+    setPage: function (page) {
+        if (page === "Menu") {
             this.nom = "Menu"
-            this.id = 0;
-            this.nbSelection = 3
-            this.Selection1 = "Commencer"
-            this.Selection2 = "Option"
-            this.Selection3 = "A propos"
+            this.nombreDeSlot = 3
+            this.Slot1 = "Commencer"
+            this.Slot2 = "Option"
+            this.Slot3 = "A propos"
         }
-        else if (classe === "Commencer") {
+        else if (page === "Commencer") {
             this.nom = "Combat"
-            this.id = 1;
-            this.nbSelection = 4
-            this.Selection1 = "Attaque"
-            this.Selection2 = "Concentration"
-            this.Selection3 = "Capaciter"
-            this.Selection4 = "Inventaire"
+            this.nombreDeSlot = 4
+            this.Slot1 = "Attaque"
+            this.Slot2 = "Concentration"
+            this.Slot3 = "Capaciter"
+            this.Slot4 = "Inventaire"
         }
-        else if (classe === "Option") {
+        else if (page === "Option") {
             this.nom = "Option"
-            this.id = 2;
-            this.nbSelection = 3
-            this.Selection1 = "Difficulter"
-            this.Selection2 = "Son"
-            this.Selection3 = "Retour"
+            this.nombreDeSlot = 3
+            this.Slot1 = "Difficulter"
+            this.Slot2 = "Son"
+            this.Slot3 = "Retour"
         }
-        else if (classe === "A propos") {
+        else if (page === "A propos") {
             this.nom = "A propos"
-            this.id = 3;
-            this.nbSelection = 1
-            this.Selection1 = "Retour"
+            this.nombreDeSlot = 1
+            this.Slot1 = "Retour"
         }
-        else if (classe === "Attaque") {
+        else if (page === "Attaque") {
             this.nom = "Attaque"
-            this.id = 4;
-            this.nbSelection = 5
-            this.Selection1 = "Attaque1"
-            this.Selection2 = "Attaque2"
-            this.Selection3 = "Attaque3"
-            this.Selection4 = "Attaque4"
-            this.Selection5 = "Attaque5"
-            this.Selection6 = "Attaque6"
+            this.nombreDeSlot = 5
+            this.Slot1 = "Attaque"
+            this.Slot2 = "Attaque"
+            this.Slot3 = "Attaque"
+            this.Slot4 = "Attaque"
+            this.Slot5 = "Attaque"
+            this.Slot6 = "Attaque"
         }
-        else if (classe === "Inventaire") {
+        else if (page === "Inventaire") {
             this.nom = "Inventaire"
-            this.id = 5;
-            this.nbSelection = 2
-            this.Selection1 = "Equipement"
-            this.Selection2 = "Objet"
+            this.nombreDeSlot = 2
+            this.Slot1 = "Equipement"
+            this.Slot2 = "Objet"
         }
-        else if (classe === "Equipement") {
+        else if (page === "Equipement") {
             this.nom = "Equipement"
-            this.id = 6;
-            this.nbSelection = 4
-            this.Selection1 = "Equipement1"
-            this.Selection2 = "Equipement2"
-            this.Selection3 = "Equipement3"
-            this.Selection4 = "Equipement4"
+            this.nombreDeSlot = 4
+            this.Slot1 = "Equipement"
+            this.Slot2 = "Equipement"
+            this.Slot3 = "Equipement"
+            this.Slot4 = "Equipement"
         }
-        else if (classe === "Objet") {
+        else if (page === "Objet") {
             this.nom = "Objet"
-            this.id = 7;
-            this.nbSelection = 4
-            this.Selection1 = "Objet1"
-            this.Selection2 = "Objet2"
-            this.Selection3 = "Objet3"
-            this.Selection4 = "Objet4"
+            this.nombreDeSlot = 4
+            this.Slot1 = "Objet1"
+            this.Slot2 = "Objet2"
+            this.Slot3 = "Objet3"
+            this.Slot4 = "Objet4"
         }
-    },
+    }
 }

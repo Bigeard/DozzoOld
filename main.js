@@ -1,10 +1,109 @@
-//INIT
+//INITIALISATION DU JEU
 
-var select = 1
-var page = "Menu"
-var pageDavant = "Menu"
-var enJeu
-var selection = function classeSelect(condition) {
+var currentPage = Object.create(Selection)
+    currentPage.init(undefined, 0, undefined, undefined, undefined, undefined, undefined, undefined)
+var currentSlotName = undefined;
+
+var positionCurseur = 1;
+
+var page = "Menu";
+var pageRetour = "Menu";
+currentPage.setPage(page)
+
+//MAIN
+
+function pageAffichageCurseur(positionCurseur) {
+
+    //1 ON RECUPERE LE SLOT
+
+    var listeSlot =
+    [currentPage.Slot1, currentPage.Slot2, currentPage.Slot3,
+    currentPage.Slot4, currentPage.Slot5, currentPage.Slot6];
+
+    currentSlotName = listeSlot[positionCurseur - 1];
+
+    //2 ON CREE L'AFFICHAGE
+
+    var affichagePage = ''
+    for (let i = 1; i < currentPage.nombreDeSlot + 1; i++) {
+        affichagePage += '         - ' + listeSlot[i-1] + '[' + i + ']'
+    }
+    var affichagePageAvecCurseur = affichagePage.replace(positionCurseur, '*');
+
+    //3 ON CHOISI LA PAGE A AFFICHER                                             (a refaire avec une fonction et des if)
+
+    if (page == "Commencer") {
+        affichageCombat(affichagePageAvecCurseur)
+    }
+    else if (page == "Menu") {
+        affichageMenu(affichagePageAvecCurseur)
+    }
+
+    //AFFICHAGE DE LA POSITION DU CURSEUR DANS LE HTML
+
+    document.getElementById('select').innerHTML = "[posCurseur : " +positionCurseur + "] [nomPage : " + currentPage.nom + "] [nonSlot : " + currentSlotName + "]";
+    return currentSlotName
+} 
+
+function pageSelected(currentSlotName) {
+
+    //1 ON PREPARE LA PROCHAINE PAGE A AFFICHER
+
+    if (currentSlotName == "Retour") {
+        page = pageRetour
+    }
+    else {
+        pageRetour = page
+        page = currentSlotName
+    }
+
+    currentPage.setPage(page)
+}
+
+//AFFICHAGE TYPE
+
+function affichageMenu(affichagePageAvecCurseur) {
+
+    console.clear()
+    console.log('          ▀█████████▄  BINVENUE DANS LE DONJON DU ...')
+    console.log('            ██▒     █▄                                        ᚐ ᚐ ᚐ  ')
+    console.log('            ██       █▄  ▒█████  ▒███████▒▒███████▒ ▒█████')
+    console.log('           ░██       ░█ ▒██▒  ██▒▒ ▒ ▒ ▄▀░▒ ▒ ▒ ▄▀░▒██▒  ██▒')
+    console.log('           ░██      ░█▀ ▒██░  ██▒░ ▒ ▄▀▒░ ░ ▒ ▄▀▒░ ▒██░  ██▒')
+    console.log('           ▒██     ░█▀░ ▒██   ██░  ▄▀▒   ░  ▄▀▒   ░▒██   ██░')
+    console.log('          ▄█████████▀▒  ░ ████▓▒░▒███████▒▒███████▒░ ████▓▒░')
+    console.log('              ▒░ ▒  ▒   ░ ▒ ▒░ ░░▒ ▒ ░ ▒░░▒ ▒ ░ ▒  ░ ▒ ▒░')
+    console.log('               ░          ░ ░     ▒      ░ ░  ▒     ░')
+    console.log('                           ░               ░')
+    console.log('                                             ' + currentPage.nom + '                                             ')
+    console.log()
+    console.log(affichagePageAvecCurseur)
+    console.log(positionCurseur)
+}
+
+function affichageCombat(affichagePageAvecCurseur) {
+
+    console.clear()
+    console.log('\n\n\n')
+    console.log('[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓]PV[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓]')
+    console.log('')
+    console.log('')
+    console.log('             [ Bigeard ]                           [ Zombie ]             ')
+    console.log('               ______                                 _____               ')
+    console.log('              ( ͡° ͜ʖ ͡°)/                             \\(✖╭╮✖)              ')
+    console.log('                                                                             ')
+    console.log('               /    \\                                 /    \\              ')
+    console.log('')
+    console.log('')
+    console.log('                                             ' + currentPage.nom + '                                             ')
+    console.log()
+    console.log(affichagePageAvecCurseur)
+    console.log(positionCurseur)
+}
+
+//HTML PAGE CLASSE
+
+function chowClasse() {
 
     var chowStats = Object.create(Unite)
     var changeClasse = ["Guerrier", "Mage", "Assassin", "Mage noir"]
@@ -23,92 +122,4 @@ var selection = function classeSelect(condition) {
         "<br> RES : " + chowStats.resistanceMax +
         "<br>               " + "<br> Capacité :<br>" + chowStats.competance + "</p></span>" ;
     }
-
-    //IMPOTATION DE LA CLASSE SELECTION
-    var classeSelection = Object.create(Selection)
-    classeSelection.init("undifined", 0, 0, "undifined", "undifined", "undifined")
-    classeSelection.setClasse(page)
-
-    var trans = [classeSelection.Selection1, classeSelection.Selection2, classeSelection.Selection3, classeSelection.Selection4]
-    var nomSelection = trans[select - 1]
-    var v = 0
-    var chn = ' '
-    var colone
-    var selectTotal = classeSelection.nbSelection;
-
-    if (condition === true) {
-        if (nomSelection === "Retour") {
-            page = pageDavant
-        }
-        else {
-            pageDavant = page
-            page = nomSelection
-        }
-    }
-
-    //DISERNATION DE 3 COLONE OU 2 COLONE
-    if (selectTotal % 2 == 0) {
-        colone = 2;
-    }
-    else {
-        colone = 3;
-    }
-    for (let i = 1; i < classeSelection.nbSelection + 1; i++) {
-        if (i == colone + 1) {
-            chn += '\n'
-        }
-        chn += '         - ' + trans[v] + '[' + i + ']'
-        v++
-    }
-    var nouvChn = chn.replace(select, '*');
-    if (nomSelection === "Attaque") {
-        enJeu = true
-    }
-    if (enJeu === true) {
-        affichageCombat(nouvChn, page)
-    }
-    else {
-        affichageMenu(nouvChn, page)
-    }
-
-    return [colone, selectTotal, nomSelection]
-}
-
-//DISPLAY
-
-function affichageMenu(nouvChn, page) {
-
-    console.clear()
-    console.log('          ▀█████████▄  BINVENUE DANS LE DONJON DU ...')
-    console.log('            ██▒     █▄                                        ᚐ ᚐ ᚐ  ')
-    console.log('            ██       █▄  ▒█████  ▒███████▒▒███████▒ ▒█████')
-    console.log('           ░██       ░█ ▒██▒  ██▒▒ ▒ ▒ ▄▀░▒ ▒ ▒ ▄▀░▒██▒  ██▒')
-    console.log('           ░██      ░█▀ ▒██░  ██▒░ ▒ ▄▀▒░ ░ ▒ ▄▀▒░ ▒██░  ██▒')
-    console.log('           ▒██     ░█▀░ ▒██   ██░  ▄▀▒   ░  ▄▀▒   ░▒██   ██░')
-    console.log('          ▄█████████▀▒  ░ ████▓▒░▒███████▒▒███████▒░ ████▓▒░')
-    console.log('              ▒░ ▒  ▒   ░ ▒ ▒░ ░░▒ ▒ ░ ▒░░▒ ▒ ░ ▒  ░ ▒ ▒░')
-    console.log('               ░          ░ ░     ▒      ░ ░  ▒     ░')
-    console.log('                           ░               ░')
-    console.log('                                             ' + page + '                                             ')
-    console.log()
-    console.log(nouvChn)
-}
-
-function affichageCombat(nouvChn, page) {
-
-    console.clear()
-    console.log('\n\n\n')
-    console.log('[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓]PV[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓]')
-    console.log('')
-    console.log('')
-    console.log('             [ Bigeard ]                           [ Zombie ]             ')
-    console.log('               ______                                 _____               ')
-    console.log('              ( ͡° ͜ʖ ͡°)/                             \\(✖╭╮✖)              ')
-    console.log('                                                                             ')
-    console.log('               /    \\                                 /    \\              ')
-    console.log('')
-    console.log('')
-    console.log('                                             ' + page + '                                             ')
-    console.log()
-    console.log(nouvChn)
 }

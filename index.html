@@ -5,26 +5,26 @@
     <title>Dozzo</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="img/favicon.svg" />
-    <script src="main.js"></script>
+
     <script src="classes/attaque.js"></script>
-    <script src="classes/competence.js"></script>
     <script src="classes/entree.js"></script>
-    <script src="classes/inventaire.js"></script>
-<!--     <script src="classes/objet.js"></script> -->
+    <script src="classes/objet.js"></script>
     <script src="classes/selection.js"></script>
     <script src="classes/unite.js"></script>
+    
+    <script src="main.js"></script>
 </head>
 
-<body onload="selection()">
-    <p id="error" role="alert">Les touche utilisable sont :  &nbsp;<kbd>▲</kbd> <kbd>▼</kbd> <kbd>◄</kbd> <kbd>►</kbd> <kbd>Enter</kbd></p>
+<body onload="chowClasse(); pageAffichageCurseur(1)">
+    <p id="error" role="alert">Les touches utilisables sont :  &nbsp;<kbd>▲</kbd> <kbd>▼</kbd> <kbd>◄</kbd> <kbd>►</kbd> <kbd>Enter</kbd></p>
 
     <div class="flex-container">
         <div class="container dozzo">
 
-            <img src="img/dozzo.svg" alt="BIENVENUE DANS LE DONJON DU DOZZO!">
-            <p><br/><br/> Ouvre la console pour commencer l'aventure !</p>
+            <img src="img/dozzo.svg" alt="BIENVENUE DANS LE DONJON DU DOZZO!" style="display: none;">
+            <p><br/><br/> Ouvrez la console pour commencer l'aventure !</p>
 
-            <p>Classes :</p>
+            <p>Classes disponibles :</p>
 
             <div class="tooltip" id="hero-0">
             </div>
@@ -51,9 +51,7 @@
             <p id="key"></p>
             <p id="select"></p>
         </div>
-
     </div>
-
 </body>
 
 </html>
