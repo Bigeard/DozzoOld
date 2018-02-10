@@ -38,6 +38,11 @@ function pageAffichageCurseur(positionCurseur) {
     else if (page == "Menu") {
         affichageMenu(affichagePageAvecCurseur)
     }
+    else {
+        console.clear()
+        console.log('Affichage inexistant')
+        console.log(affichagePageAvecCurseur)
+    }
 
     //AFFICHAGE DE LA POSITION DU CURSEUR DANS LE HTML
 
@@ -78,7 +83,6 @@ function affichageMenu(affichagePageAvecCurseur) {
     console.log('                                             ' + currentPage.nom + '                                             ')
     console.log()
     console.log(affichagePageAvecCurseur)
-    console.log(positionCurseur)
 }
 
 function affichageCombat(affichagePageAvecCurseur) {
@@ -98,7 +102,6 @@ function affichageCombat(affichagePageAvecCurseur) {
     console.log('                                             ' + currentPage.nom + '                                             ')
     console.log()
     console.log(affichagePageAvecCurseur)
-    console.log(positionCurseur)
 }
 
 //HTML PAGE CLASSE
