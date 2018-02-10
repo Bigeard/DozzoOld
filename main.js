@@ -69,6 +69,13 @@ function affichage(affichagePageAvecCurseur) {
         /* Cette fonction permet d"afficher dans la console
         la page de Menu */
 
+        document.getElementById("Dozzo").innerHTML = 
+        "<img class=\"dozzo\" src=\"img/dozzo.svg\"><br>" +
+        "                                             " + currentPage.nom + "                                             <br><br>" +
+        affichagePageAvecCurseur ;
+
+
+
         console.log("          ▀█████████▄  BINVENUE DANS LE DONJON DU ...")
         console.log("            ██▒     █▄                                        ᚐ ᚐ ᚐ  ")
         console.log("            ██       █▄  ▒█████  ▒███████▒▒███████▒ ▒█████")
@@ -89,6 +96,11 @@ function affichage(affichagePageAvecCurseur) {
         la scène de combat en fonction des PV de l'héro, du monstre,
         du nom de la sélection de la page, sélection disponible, etc... */
 
+        document.getElementById("Dozzo").innerHTML = 
+        "<img class=\"dozzo\" src=\"img/dozzo.svg\"><br>" +
+        "                                             " + currentPage.nom + "                                             <br><br>" +
+        affichagePageAvecCurseur ;
+
         console.log("[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓]PV[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓]")
         console.log("")
         console.log("")
@@ -106,6 +118,11 @@ function affichage(affichagePageAvecCurseur) {
     else {
         console.log('Affichage inexistant')
         console.log(affichagePageAvecCurseur)
+
+        document.getElementById("Dozzo").innerHTML = 
+        "<img class=\"dozzo\" src=\"img/dozzo.svg\"><br>" +
+        "                                             " + currentPage.nom + "                                             <br><br>" +
+        affichagePageAvecCurseur ;
     }
 }
 
