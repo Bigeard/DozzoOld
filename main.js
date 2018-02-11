@@ -32,12 +32,9 @@ function pageAffichageCurseur(positionCurseur) {
         affichagePage += '<button class=\"selection\" id=\"' + listeSlot[i-1] + '\">' + listeSlot[i-1] + '</button>'
     }
 
-    var affichagePageAvecCurseur = affichagePage.replace(positionCurseur, '■');
-
-
     //3 ON CHOISI LA PAGE A AFFICHER
 
-    affichage(affichagePageAvecCurseur);
+    affichage(affichagePage);
     document.getElementById(currentSlotName).style.backgroundColor = "black"
     //AFFICHAGE DE LA POSITION DU CURSEUR DANS LE HTML
 
@@ -75,6 +72,18 @@ function affichage(affichagePageAvecCurseur) {
         "                                             " + currentPage.nom + "                                             <br><br>" +
         affichagePageAvecCurseur ;
     }
+    else if (page == "Option") {
+        document.getElementById("Dozzo").innerHTML = 
+        "<br><img class=\"dozzo\" src=\"img/bannerDozzo.png\"><br>" +
+        "                                             " + currentPage.nom + "                                             <br><br>" +
+        affichagePageAvecCurseur ;
+    }
+    else if (page == "A propos") {
+        document.getElementById("Dozzo").innerHTML = 
+        "<br><p class=\"a-propos\" ><br><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>" +
+        "                                             " + currentPage.nom + "                                             <br><br>" +
+        affichagePageAvecCurseur ;
+    }
     else if (page == "Commencer") {
 
         /* Cette fonction permet de d"afficher dans la console
@@ -82,7 +91,9 @@ function affichage(affichagePageAvecCurseur) {
         du nom de la sélection de la page, sélection disponible, etc... */
 
         document.getElementById("Dozzo").innerHTML = 
-        "<br><img class=\"dozzo\" src=\"img/bannerDozzo.png\"><br>" +
+        "<br>[◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙] PV [◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙]"+
+        "<br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
+        "<img class=\"combat-img\" src=\"img/abomination.gif\"><br>" +
         "                                             " + currentPage.nom + "                                             <br><br>" +
         affichagePageAvecCurseur ;
     }

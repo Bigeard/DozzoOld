@@ -109,3 +109,15 @@ kbd {
     margin: auto;
     width: 50%;
 }
+
+.combat-img{
+    width: 100px;
+    margin: 74px 110px 74px 111px;
+}
+
+.a-propos{
+    background-color: black;
+    color: white;
+    width: 60%;
+    margin: auto;
+}
