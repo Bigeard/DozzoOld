@@ -26,6 +26,19 @@ html, body{
     padding: 40px;
 }
 
+.selection {
+    background-color: grey;
+    color: white;
+    padding: 10px 15px; 
+    margin: 15px;
+    border: none;
+    font-family: Disposable;
+}
+
+.selection:hover{
+    background-color: black;
+}
+
 kbd {
     background-color: #eee;
     border-radius: 3px;

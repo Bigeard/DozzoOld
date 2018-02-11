@@ -29,9 +29,10 @@ function pageAffichageCurseur(positionCurseur) {
 
     var affichagePage = ''
     for (let i = 1; i < currentPage.nombreDeSlot + 1; i++) {
-        affichagePage += '         - ' + listeSlot[i-1] + '[' + i + ']'
+        affichagePage += '<button class=\"selection\" id=\"' + listeSlot[i-1] + '\">' + listeSlot[i-1] + '</button>'
+        //document.getElementById('' + listeSlot[i-1] + '').style.backgroundColor = black
     }
-    var affichagePageAvecCurseur = affichagePage.replace(positionCurseur, '*');
+    var affichagePageAvecCurseur = affichagePage.replace(positionCurseur, '■');
 
     //3 ON CHOISI LA PAGE A AFFICHER
 
