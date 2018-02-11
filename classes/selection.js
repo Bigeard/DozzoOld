@@ -27,22 +27,22 @@ var Selection = {
         if (page === "Menu") {
             this.nom = "Menu"
             this.nombreDeSlot = 3
-            this.Slot1 = "Commencer"
-            this.Slot2 = "Option"
+            this.Slot1 = "Nouvelle partie"
+            this.Slot2 = "Options"
             this.Slot3 = "A propos"
             this.LastSlot = "Menu"
         }
-        else if (page === "Commencer") {
+        else if (page === "Nouvelle partie") {
             this.nom = "Combat"
             this.nombreDeSlot = 4
             this.Slot1 = "Attaque"
             this.Slot2 = "Concentration"
             this.Slot3 = "Capacité"
             this.Slot4 = "Inventaire"
-            this.LastSlot = "Commencer"
+            this.LastSlot = "Menu"
         }
-        else if (page === "Option") {
-            this.nom = "Option"
+        else if (page === "Options") {
+            this.nom = "Options"
             this.nombreDeSlot = 3
             this.Slot1 = "Difficulter"
             this.Slot2 = "Son"
@@ -64,7 +64,7 @@ var Selection = {
             this.Slot4 = "Attaqued"
             this.Slot5 = "Attaquee"
             this.Slot6 = "Retour"
-            this.LastSlot = "Commencer"
+            this.LastSlot = "Nouvelle partie"
         }
         else if (page === "Inventaire") {
             this.nom = "Inventaire"
@@ -72,7 +72,7 @@ var Selection = {
             this.Slot1 = "Equipement"
             this.Slot2 = "Objet"
             this.Slot3 = "Retour"
-            this.LastSlot = "Commencer"
+            this.LastSlot = "Nouvelle partie"
         }
         else if (page === "Equipement") {
             this.nom = "Equipement"

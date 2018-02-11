@@ -17,10 +17,10 @@ document.addEventListener('keydown', (event) => {
         pageSelected(currentSlotName)
         pageAffichageCurseur(1)
     }
-    else if (keyName == 'ArrowUp' && positionCurseur != selectTotal) {
+    else if (keyName == 'ArrowDown' && positionCurseur != selectTotal) {
         pageAffichageCurseur(positionCurseur += 1)
     }
-    else if (keyName == 'ArrowDown' && positionCurseur != 1) {
+    else if (keyName == 'ArrowUp' && positionCurseur != 1) {
         pageAffichageCurseur(positionCurseur -= 1)
     }
     else if (keyName == 'ArrowLeft' && positionCurseur != 1) {

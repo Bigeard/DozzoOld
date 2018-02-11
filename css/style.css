@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Disposable';
-    src: url('../font/DisposableDroidBB.otf') format('truetype');
+    src: url('../font/Pixel_NES.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
     }
@@ -20,11 +20,12 @@ html, body{
     margin: 0;
     image-rendering: pixelated;
     background-color: #607EA5;
+    color: white;
 }
 
 .selection {
-    background-color: grey;
-    color: white;
+    background-color: black;
+    color: grey;
     padding: 10px 15px; 
     margin: 15px;
     border: none;
@@ -32,7 +33,7 @@ html, body{
 }
 
 .selection:hover{
-    background-color: black;
+    color: white;
 }
 
 kbd {
@@ -49,9 +50,12 @@ kbd {
 
 #error{
     display: none;
-    background-color: gray;
+    background-color: #607EA5;
     color: white;
-    padding: 10px;
+    padding: 12px;
+    margin-top: 0;
+    position: fixed;
+    width: 100%;
 }
 
 .img-class{
@@ -69,8 +73,8 @@ kbd {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
-    background-color: #555;
+    width: 150px;
+    background-color: #000;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -92,7 +96,7 @@ kbd {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: #000 transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
@@ -101,25 +105,20 @@ kbd {
 }
 
 .flex-container {
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
-
   }
-.container{
-    margin: auto;
-    width: 100%;
-}
 .gameInfo {
-    width: 40%;
-}
-.gameBorder {
-    width: 10%;
+    width: 25%;
+    padding-top: 100px;
+    margin: auto;
 }
 
 #Dozzo {
-    background-color: #fff;
-    height: 300px;
-    width: 40%;
+    background-color: #000;
+    height: 512px;
+    width: 480px;
 }
 
 .combat-img{

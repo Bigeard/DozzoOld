@@ -35,7 +35,7 @@ function pageAffichageCurseur(positionCurseur) {
     //3 ON CHOISI LA PAGE A AFFICHER
 
     affichage(affichagePage);
-    document.getElementById(currentSlotName).style.backgroundColor = "black"
+    document.getElementById(currentSlotName).style.color = "white"
     //AFFICHAGE DE LA POSITION DU CURSEUR DANS LE HTML
 
     document.getElementById('select').innerHTML = "[posCurseur : " +positionCurseur + "] [nomPage : " + currentPage.nom + "] [nonSlot : " + currentSlotName + "]";
@@ -63,13 +63,7 @@ function pageSelected(currentSlotName) {
 function affichage(affichagePageAvecCurseur) {
 
     if (page == "Menu") {
-
-        /* Cette fonction permet d"afficher dans la console
-        la page de Menu */
-
-        document.getElementById("Dozzo").innerHTML = 
-        "                                   " + currentPage.nom + "                                   <br><br>" +
-        affichagePageAvecCurseur ;
+        document.getElementById("Dozzo").innerHTML = "<img src=\"img/BannerDozzo.png\"><br>" + affichagePageAvecCurseur;
     }
     else if (page == "Option") {
         var son = "ON"
@@ -77,16 +71,16 @@ function affichage(affichagePageAvecCurseur) {
         document.getElementById("Dozzo").innerHTML = 
         "<div class=\"option\"><br><p class\"son-option\" >Son : " + son + " &nbsp;&nbsp;<label class=\"switch\"><input type=\"checkbox\"><span class=\"slider\"></span></label></p>" +
         "<p class\"\" >Difficulter : " + difficulter + " &nbsp;&nbsp;</p></div>" +
-        "                                   " + currentPage.nom + "                                   <br><br>" +
+        "                         " + currentPage.nom + "                         <br><br>" +
         affichagePageAvecCurseur ;
     }
     else if (page == "A propos") {
         document.getElementById("Dozzo").innerHTML = 
         "<br><p class=\"a-propos\" ><br><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>" +
-        "                                   " + currentPage.nom + "                                   <br><br>" +
+        "                         " + currentPage.nom + "                         <br><br>" +
         affichagePageAvecCurseur ;
     }
-    else if (page == "Commencer") {
+    else if (page == "Nouvelle partie") {
 
         /* Cette fonction permet de d"afficher dans la console
         la scène de combat en fonction des PV de l'héro, du monstre,
@@ -103,12 +97,12 @@ function affichage(affichagePageAvecCurseur) {
         "<br>" + healthBar + " VS " + healthBar +
         "<br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
         "<img class=\"combat-img\" src=\"img/abomination.gif\"><br>" +
-        "                                   " + currentPage.nom + "                                   <br><br>" +
+        "                         " + currentPage.nom + "                         <br><br>" +
         affichagePageAvecCurseur ;
     }
     else {
         document.getElementById("Dozzo").innerHTML = 
-        "                                   " + currentPage.nom + "                                   <br><br>" +
+        "                         " + currentPage.nom + "                         <br><br>" +
         affichagePageAvecCurseur ;
     }
 }
@@ -125,13 +119,13 @@ function affichageHero() {
         chowStats.setClasse(changeClasse[x])
         document.getElementById("hero-"+x).innerHTML = chowStats.classe + "<span class=\"tooltiptext\">" + 
         chowStats.classe +
-        "<br><img class=\"img-class\" src=\"img/" + chowStats.classe + ".gif\">" + 
+        "<br><img class=\"img-class\" src=\"img/" + chowStats.classe + ".gif\">" +
         "<br> PV : " + chowStats.ptsVieMax + 
         "<br> Mana : " + chowStats.ptsManaMax + 
         "<br> ATK : " + chowStats.attaqueMax +
         "<br> MAG : " + chowStats.magieMax +
         "<br> DEF : " + chowStats.defenseMax +
         "<br> RES : " + chowStats.resistanceMax +
-        "<br>               " + "<br> Capacité :<br>" + chowStats.competance + "</p></span>" ;
+        "<br>---------------" + "<br> Capacité :<br>" + chowStats.competance + "</p></span>" ;
     }
 }

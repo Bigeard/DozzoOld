@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="img/favicon.svg" />
 
-    <script src="classes/attaque.js"></script>
     <script src="classes/entree.js"></script>
     <script src="classes/objet.js"></script>
     <script src="classes/selection.js"></script>
@@ -21,29 +20,24 @@
 
     <div class="flex-container">
 
-        <div class="container">
-            <p></p>
-            <img src="img/bannerDozzo.png">
-            <p></p>
+        <div class="gameInfo">
+            <p id="key"></p>
+            <p id="select"></p>
         </div>
 
-        <div class="container flex-container"> 
+        <div class="gameBorder"></div>
 
-            <div class="gameBorder"></div>
-            <div id="Dozzo"></div>
-            <div class="gameBorder"></div>
-            <div class="gameInfo">
+        <div id="Dozzo"></div>
 
-            <p>Informations :</p>
+        <div class="gameBorder"></div>
 
-            <p>Classes disponibles :</p>
+        <div class="gameInfo">
+            <p>Informations :</p><br>
+            <p>Classes disponibles :</p><br>
             <div class="tooltip" id="hero-0"></div>
             <div class="tooltip" id="hero-1"></div>
             <div class="tooltip" id="hero-2"></div>
             <div class="tooltip" id="hero-3"></div>
-            <p id="key"></p>
-            <p id="select"></p>
-            </div>
         </div>
     </div>
 </body>
