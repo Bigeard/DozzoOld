@@ -29,18 +29,20 @@ function pageAffichageCurseur(positionCurseur) {
 
     var affichagePage = ''
     for (let i = 1; i < currentPage.nombreDeSlot + 1; i++) {
-        affichagePage += '<button class=\"selection\" id=\"' + listeSlot[i-1] + '\">' + listeSlot[i-1] + '</button>'
-        //document.getElementById('' + listeSlot[i-1] + '').style.backgroundColor = black
+        affichagePage += '<button class=\"selection\" id=\"' + listeSlot[i-1] + '\" onclick="">' + listeSlot[i-1] + '</button>'
     }
+
     var affichagePageAvecCurseur = affichagePage.replace(positionCurseur, '■');
+
 
     //3 ON CHOISI LA PAGE A AFFICHER
 
     affichage(affichagePageAvecCurseur);
-
+    document.getElementById(currentSlotName).style.backgroundColor = "black"
     //AFFICHAGE DE LA POSITION DU CURSEUR DANS LE HTML
 
     document.getElementById('select').innerHTML = "[posCurseur : " +positionCurseur + "] [nomPage : " + currentPage.nom + "] [nonSlot : " + currentSlotName + "]";
+
     return currentSlotName
 }
 
