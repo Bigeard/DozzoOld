@@ -19,11 +19,7 @@ html, body{
     height: 100%;
     margin: 0;
     image-rendering: pixelated;
-}
-
-
-.dozzo{
-    padding: 40px;
+    background-color: #FFCAC5;
 }
 
 .selection {
@@ -111,4 +107,5 @@ kbd {
   }
 .container{
     margin: auto;
+    width: 50%;
 }

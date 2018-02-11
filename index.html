@@ -16,39 +16,23 @@
 </head>
 
 <body onload="affichageHero(); main()">
+
     <p id="error" role="alert">Les touches utilisables sont :  &nbsp;<kbd>▲</kbd> <kbd>▼</kbd> <kbd>◄</kbd> <kbd>►</kbd> <kbd>Enter</kbd></p>
 
     <div class="flex-container">
-        <div class="container dozzo">
+        <div class="container">
 
-            <img src="img/dozzo.svg" alt="BIENVENUE DANS LE DONJON DU DOZZO!" style="display: none;">
             <div id="Dozzo"></div>
-            <p><br/><br/> Ouvrez la console pour commencer l'aventure !</p>
 
             <p>Classes disponibles :</p>
-
-            <div class="tooltip" id="hero-0">
-            </div>
-            <div class="tooltip" id="hero-1">
-            </div>
-            <div class="tooltip" id="hero-2">
-            </div>
-            <div class="tooltip" id="hero-3">
-            </div>
+            <div class="tooltip" id="hero-0"></div>
+            <div class="tooltip" id="hero-1"></div>
+            <div class="tooltip" id="hero-2"></div>
+            <div class="tooltip" id="hero-3"></div>
 
         </div>
 
-        <div class="container keyboard">
-
-            <p>Raccourci Firefox :</p>
-            <kbd>Ctrl</kbd>
-            <kbd>Maj</kbd>
-            <kbd>K</kbd>
-            <p>Raccourci Chrome :</p>
-            <kbd>Ctrl</kbd>
-            <kbd>Maj</kbd>
-            <kbd>J</kbd>
-
+        <div class="container">
             <p id="key"></p>
             <p id="select"></p>
         </div>

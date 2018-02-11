@@ -37,7 +37,7 @@ var Selection = {
             this.nombreDeSlot = 4
             this.Slot1 = "Attaque"
             this.Slot2 = "Concentration"
-            this.Slot3 = "Capaciter"
+            this.Slot3 = "Capacité"
             this.Slot4 = "Inventaire"
             this.LastSlot = "Commencer"
         }
@@ -58,11 +58,11 @@ var Selection = {
         else if (page === "Attaque") {
             this.nom = "Attaque"
             this.nombreDeSlot = 6
-            this.Slot1 = "Attaque"
-            this.Slot2 = "Attaque"
-            this.Slot3 = "Attaque"
-            this.Slot4 = "Attaque"
-            this.Slot5 = "Attaque"
+            this.Slot1 = "Attaquea"
+            this.Slot2 = "Attaqueb"
+            this.Slot3 = "Attaquec"
+            this.Slot4 = "Attaqued"
+            this.Slot5 = "Attaquee"
             this.Slot6 = "Retour"
             this.LastSlot = "Commencer"
         }
@@ -77,20 +77,20 @@ var Selection = {
         else if (page === "Equipement") {
             this.nom = "Equipement"
             this.nombreDeSlot = 5
-            this.Slot1 = "Equipement"
-            this.Slot2 = "Equipement"
-            this.Slot3 = "Equipement"
-            this.Slot4 = "Equipement"
+            this.Slot1 = "Equipementa"
+            this.Slot2 = "Equipementb"
+            this.Slot3 = "Equipementc"
+            this.Slot4 = "Equipementd"
             this.Slot5 = "Retour"
             this.LastSlot = "Inventaire"
         }
         else if (page === "Objet") {
             this.nom = "Objet"
             this.nombreDeSlot = 5
-            this.Slot1 = "Objet1"
-            this.Slot2 = "Objet2"
-            this.Slot3 = "Objet3"
-            this.Slot4 = "Objet4"
+            this.Slot1 = "Objeta"
+            this.Slot2 = "Objetb"
+            this.Slot3 = "Objetc"
+            this.Slot4 = "Objetd"
             this.Slot5 = "Retour"
             this.LastSlot = "Inventaire"
 

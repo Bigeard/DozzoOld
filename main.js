@@ -29,7 +29,7 @@ function pageAffichageCurseur(positionCurseur) {
 
     var affichagePage = ''
     for (let i = 1; i < currentPage.nombreDeSlot + 1; i++) {
-        affichagePage += '<button class=\"selection\" id=\"' + listeSlot[i-1] + '\" onclick="">' + listeSlot[i-1] + '</button>'
+        affichagePage += '<button class=\"selection\" id=\"' + listeSlot[i-1] + '\">' + listeSlot[i-1] + '</button>'
     }
 
     var affichagePageAvecCurseur = affichagePage.replace(positionCurseur, '■');
@@ -64,8 +64,6 @@ function pageSelected(currentSlotName) {
 //AFFICHAGE TYPE
 
 function affichage(affichagePageAvecCurseur) {
-    console.log("\n\n")
-    console.clear()
 
     if (page == "Menu") {
 
@@ -73,25 +71,9 @@ function affichage(affichagePageAvecCurseur) {
         la page de Menu */
 
         document.getElementById("Dozzo").innerHTML = 
-        "<img class=\"dozzo\" src=\"img/dozzo.svg\"><br>" +
+        "<br><img class=\"dozzo\" src=\"img/bannerDozzo.png\"><br>" +
         "                                             " + currentPage.nom + "                                             <br><br>" +
         affichagePageAvecCurseur ;
-
-
-
-        console.log("          ▀█████████▄  BINVENUE DANS LE DONJON DU ...")
-        console.log("            ██▒     █▄                                        ᚐ ᚐ ᚐ  ")
-        console.log("            ██       █▄  ▒█████  ▒███████▒▒███████▒ ▒█████")
-        console.log("           ░██       ░█ ▒██▒  ██▒▒ ▒ ▒ ▄▀░▒ ▒ ▒ ▄▀░▒██▒  ██▒")
-        console.log("           ░██      ░█▀ ▒██░  ██▒░ ▒ ▄▀▒░ ░ ▒ ▄▀▒░ ▒██░  ██▒")
-        console.log("           ▒██     ░█▀░ ▒██   ██░  ▄▀▒   ░  ▄▀▒   ░▒██   ██░")
-        console.log("          ▄█████████▀▒  ░ ████▓▒░▒███████▒▒███████▒░ ████▓▒░")
-        console.log("              ▒░ ▒  ▒   ░ ▒ ▒░ ░░▒ ▒ ░ ▒░░▒ ▒ ░ ▒  ░ ▒ ▒░")
-        console.log("               ░          ░ ░     ▒      ░ ░  ▒     ░")
-        console.log("                           ░               ░")
-        console.log("                                             " + currentPage.nom + "                                             ")
-        console.log()
-        console.log(affichagePageAvecCurseur)
     }
     else if (page == "Commencer") {
 
@@ -100,30 +82,13 @@ function affichage(affichagePageAvecCurseur) {
         du nom de la sélection de la page, sélection disponible, etc... */
 
         document.getElementById("Dozzo").innerHTML = 
-        "<img class=\"dozzo\" src=\"img/dozzo.svg\"><br>" +
+        "<br><img class=\"dozzo\" src=\"img/bannerDozzo.png\"><br>" +
         "                                             " + currentPage.nom + "                                             <br><br>" +
         affichagePageAvecCurseur ;
-
-        console.log("[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓]PV[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓]")
-        console.log("")
-        console.log("")
-        console.log("             [ Bigeard ]                           [ Zombie ]             ")
-        console.log("               ______                                 _____               ")
-        console.log("              ( ͡° ͜ʖ ͡°)/                             \\(✖╭╮✖)              ")
-        console.log("                                                                             ")
-        console.log("               /    \\                                 /    \\              ")
-        console.log("")
-        console.log("")
-        console.log("                                             " + currentPage.nom + "                                             ")
-        console.log()
-        console.log(affichagePageAvecCurseur)
     }
     else {
-        console.log('Affichage inexistant')
-        console.log(affichagePageAvecCurseur)
-
         document.getElementById("Dozzo").innerHTML = 
-        "<img class=\"dozzo\" src=\"img/dozzo.svg\"><br>" +
+        "<br><img class=\"dozzo\" src=\"img/bannerDozzo.png\"><br>" +
         "                                             " + currentPage.nom + "                                             <br><br>" +
         affichagePageAvecCurseur ;
     }
