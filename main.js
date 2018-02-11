@@ -92,8 +92,15 @@ function affichage(affichagePageAvecCurseur) {
         la scène de combat en fonction des PV de l'héro, du monstre,
         du nom de la sélection de la page, sélection disponible, etc... */
 
+        var healthBar = '';
+        healthBar += "<img src=\"img/barLeft.png\">"
+        for (var i = 0; i < 50; i++) {
+            healthBar += "<img src=\"img/barMiddle.png\">"
+        }
+        healthBar += "<img src=\"img/barRight.png\">"
+
         document.getElementById("Dozzo").innerHTML = 
-        "<br>[◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙]PV[◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙]"+
+        "<br>" + healthBar + " VS " + healthBar +
         "<br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
         "<img class=\"combat-img\" src=\"img/abomination.gif\"><br>" +
         "                                   " + currentPage.nom + "                                   <br><br>" +
