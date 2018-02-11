@@ -19,7 +19,7 @@ html, body{
     height: 100%;
     margin: 0;
     image-rendering: pixelated;
-    background-color: #FFCAC5;
+    background-color: #607EA5;
 }
 
 .selection {
@@ -107,17 +107,10 @@ kbd {
   }
 .container{
     margin: auto;
-    width: 50%;}
-
-.gameHeader {
-    background-color: #FFCAC5;
+    width: 100%;
 }
 .gameInfo {
-    background-color: #FFCAC5;
-}
-.gameContent {
-    background-color: #FFCAC5;
-    width: 80%;
+    width: 40%;
 }
 .gameBorder {
     width: 10%;
@@ -126,6 +119,7 @@ kbd {
 #Dozzo {
     background-color: #fff;
     height: 300px;
+    width: 40%;
 }
 
 .combat-img{
@@ -137,11 +131,11 @@ kbd {
     background-color: black;
     color: white;
     width: 60%;
-    margin: 105px auto auto;
+    margin: auto auto auto;
 }
 
 .option{
-    margin: 224px auto auto;
+    margin: 50px auto auto;
 }
 
 .son-option{
