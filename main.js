@@ -73,8 +73,11 @@ function affichage(affichagePageAvecCurseur) {
         affichagePageAvecCurseur ;
     }
     else if (page == "Option") {
+        var son = "ON"
+        var difficulter = "Normal"
         document.getElementById("Dozzo").innerHTML = 
-        "<br><img class=\"dozzo\" src=\"img/bannerDozzo.png\"><br>" +
+        "<div class=\"option\"><br><p class\"son-option\" >Son : " + son + " &nbsp;&nbsp;<label class=\"switch\"><input type=\"checkbox\"><span class=\"slider\"></span></label></p>" +
+        "<p class\"\" >Difficulter : " + difficulter + " &nbsp;&nbsp;</p></div>" +
         "                                             " + currentPage.nom + "                                             <br><br>" +
         affichagePageAvecCurseur ;
     }

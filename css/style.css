@@ -22,6 +22,10 @@ html, body{
     background-color: #FFCAC5;
 }
 
+.dozzo{
+    margin-top: 100px;
+}
+
 .selection {
     background-color: grey;
     color: white;
@@ -119,5 +123,56 @@ kbd {
     background-color: black;
     color: white;
     width: 60%;
-    margin: auto;
+    margin: 105px auto auto;
 }
+
+.option{
+    margin: 224px auto auto;
+}
+
+.son-option{
+    margin: 0px 0px 0px 0px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: black;
+  }
+  
+  
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
