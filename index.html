@@ -20,19 +20,32 @@
     <p id="error" role="alert">Les touches utilisables sont :  &nbsp;<kbd>▲</kbd> <kbd>▼</kbd> <kbd>◄</kbd> <kbd>►</kbd> <kbd>Enter</kbd></p>
 
     <div class="flex-container">
-        <div class="container">
 
-            <div id="Dozzo"></div>
+        <div class="container gameHeader">
+            <p></p>
+            <img src="img/bannerDozzo.png">
+            <p></p>
+        </div>
 
+        <div class="container gameInfo">
+            <p>Informations :</p>
+        </div>
+    </div>
+
+    <div class="flex-container">
+
+        <div class="container flex-container">
+            <div class="gameBorder"></div>
+            <div class="gameContent" id="Dozzo"></div>
+            <div class="gameBorder"></div>
+        </div>
+
+        <div class="container gameInfo">
             <p>Classes disponibles :</p>
             <div class="tooltip" id="hero-0"></div>
             <div class="tooltip" id="hero-1"></div>
             <div class="tooltip" id="hero-2"></div>
             <div class="tooltip" id="hero-3"></div>
-
-        </div>
-
-        <div class="container">
             <p id="key"></p>
             <p id="select"></p>
         </div>

@@ -68,8 +68,7 @@ function affichage(affichagePageAvecCurseur) {
         la page de Menu */
 
         document.getElementById("Dozzo").innerHTML = 
-        "<br><img class=\"dozzo\" src=\"img/bannerDozzo.png\"><br>" +
-        "                                             " + currentPage.nom + "                                             <br><br>" +
+        "                                   " + currentPage.nom + "                                   <br><br>" +
         affichagePageAvecCurseur ;
     }
     else if (page == "Option") {
@@ -78,13 +77,13 @@ function affichage(affichagePageAvecCurseur) {
         document.getElementById("Dozzo").innerHTML = 
         "<div class=\"option\"><br><p class\"son-option\" >Son : " + son + " &nbsp;&nbsp;<label class=\"switch\"><input type=\"checkbox\"><span class=\"slider\"></span></label></p>" +
         "<p class\"\" >Difficulter : " + difficulter + " &nbsp;&nbsp;</p></div>" +
-        "                                             " + currentPage.nom + "                                             <br><br>" +
+        "                                   " + currentPage.nom + "                                   <br><br>" +
         affichagePageAvecCurseur ;
     }
     else if (page == "A propos") {
         document.getElementById("Dozzo").innerHTML = 
         "<br><p class=\"a-propos\" ><br><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>" +
-        "                                             " + currentPage.nom + "                                             <br><br>" +
+        "                                   " + currentPage.nom + "                                   <br><br>" +
         affichagePageAvecCurseur ;
     }
     else if (page == "Commencer") {
@@ -94,16 +93,15 @@ function affichage(affichagePageAvecCurseur) {
         du nom de la sélection de la page, sélection disponible, etc... */
 
         document.getElementById("Dozzo").innerHTML = 
-        "<br>[◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙] PV [◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙]"+
+        "<br>[◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙]PV[◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙]"+
         "<br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
         "<img class=\"combat-img\" src=\"img/abomination.gif\"><br>" +
-        "                                             " + currentPage.nom + "                                             <br><br>" +
+        "                                   " + currentPage.nom + "                                   <br><br>" +
         affichagePageAvecCurseur ;
     }
     else {
         document.getElementById("Dozzo").innerHTML = 
-        "<br><img class=\"dozzo\" src=\"img/bannerDozzo.png\"><br>" +
-        "                                             " + currentPage.nom + "                                             <br><br>" +
+        "                                   " + currentPage.nom + "                                   <br><br>" +
         affichagePageAvecCurseur ;
     }
 }
