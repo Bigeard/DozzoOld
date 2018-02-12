@@ -15,7 +15,6 @@ var Selection = {
     },
 
     //Identification
-
     getNom: function (nom) {
         return this.nom;
     },
@@ -44,7 +43,7 @@ var Selection = {
         else if (page === "Options") {
             this.nom = "Options"
             this.nombreDeSlot = 3
-            this.Slot1 = "Difficulter"
+            this.Slot1 = "Difficulté"
             this.Slot2 = "Son"
             this.Slot3 = "Retour"
             this.LastSlot = "Menu"
@@ -75,8 +74,9 @@ var Selection = {
             this.LastSlot = "Nouvelle partie"
         }
         else if (page === "Equipement") {
-            this.nom = "Equipement"
             this.nombreDeSlot = 5
+            this.nom = "Equipement"
+            OuvrirInventaire(InventaireEquipement);
             this.Slot1 = "Equipementa"
             this.Slot2 = "Equipementb"
             this.Slot3 = "Equipementc"
@@ -85,6 +85,7 @@ var Selection = {
             this.LastSlot = "Inventaire"
         }
         else if (page === "Objet") {
+            OuvrirInventaire(InventaireConsommable);
             this.nom = "Objet"
             this.nombreDeSlot = 5
             this.Slot1 = "Objeta"

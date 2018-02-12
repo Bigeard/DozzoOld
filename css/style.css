@@ -3,7 +3,7 @@
     src: url('../font/Pixel_NES.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    }
+}
 
 @media (max-width: 1230px) {
     .gameInfo {
@@ -109,7 +109,8 @@ kbd {
     padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
-  }
+}
+
 .gameInfo {
     width: 25%;
     padding-top: 100px;
@@ -150,9 +151,9 @@ kbd {
     display: inline-block;
     width: 60px;
     height: 20px;
-  }
+}
   
-  .slider {
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -162,9 +163,9 @@ kbd {
     background-color: grey;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
   
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 12px;
@@ -174,22 +175,22 @@ kbd {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
   
-  input:checked + .slider {
+input:checked + .slider {
     background-color: black;
-  }
+}
   
   
   
-  input:checked + .slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
+}
 
-  .nesBox {
+.nesBox {
     background-color: black;
     border: 40px solid transparent;
     border-image:  url('../img/nesBox.png') 40 40 repeat;
-  }
+}

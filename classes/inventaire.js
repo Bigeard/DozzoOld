@@ -3,21 +3,26 @@ function Inventaire(Objet) {
 }
 
 Inventaire.prototype = Object.create(Inventaire.prototype);
-
 Inventaire.prototype.constructor = Inventaire;
 
-var InventaireJoueur = new Inventaire([PotionDeSoin, Rapiere]);
+var InventaireConsommable = new Inventaire([PotionDeSoin]);
+var InventaireEquipement = new Inventaire([Rapiere]);
 
-
-function OuvrirInventaire() {
+function OuvrirInventaire(Inventaire) {
     
-    for(i = 0; i < InventaireJoueur.Objet.length; i++) {
-        console.log("["+ (i+1) +"] " + InventaireJoueur.Objet[i].nom + ", " + InventaireJoueur.Objet[i].description);
+    for(i = 0; i < Inventaire.Objet.length; i++) {
+        console.log(Inventaire.Objet[i].nom)
     }
+
 }
 
 function AjouterObjet(Inventaire, Objet){
-    InventaireJoueur.Objet[InventaireJoueur.Objet.length ++] = Objet;
+    if (Inventaire.length < 5){
+    Inventaire.Objet[Inventaire.Objet.length ++] = Objet;
+    }
+    /*else{
+        afficher un message du style "trop d'objet dans l'inventaire"
+    }*/
 }
 
     
