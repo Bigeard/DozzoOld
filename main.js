@@ -1,6 +1,6 @@
 //INITIALISATION DU JEU
 
-var currentPage = Object.create(Selection)
+var currentPage = new Menu([NouvellePartie, Options, Apropos]);
     currentPage.init(undefined, 0, undefined, undefined, undefined, undefined, undefined, undefined, undefined)
 var currentSlotName = undefined;
 
