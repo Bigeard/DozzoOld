@@ -29,6 +29,9 @@ function pageAffichageCurseur(positionCurseur) {
 
     var affichagePage = ''
     for (let i = 1; i < currentPage.nombreDeSlot + 1; i++) {
+        if (page == "Menu"){
+            affichagePage += "<br>"
+        } 
         affichagePage += '<button class=\"selection\" id=\"' + listeSlot[i-1] + '\">' + listeSlot[i-1] + '</button>'
     }
 
