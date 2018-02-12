@@ -13,7 +13,7 @@ document.addEventListener('keydown', (event) => {
     var currentSlotName = pageAffichageCurseur(positionCurseur);
     var selectTotal = currentPage.nombreDeSlot;
 
-    if (keyName == 'Enter') {
+    if (keyName == 'Enter' || keyName == 'w' || keyName == ' ') {
         pageSelected(currentSlotName)
         pageAffichageCurseur(1)
     }

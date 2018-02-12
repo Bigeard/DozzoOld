@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Dozzo</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" href="img/favicon.svg" />
+    <link rel="icon" href="img/favicon.ico" />
 
     <script src="classes/entree.js"></script>
     <script src="classes/objet.js"></script>
@@ -15,17 +15,25 @@
     <script src="main.js"></script>
 </head>
 
-<body onload="affichageHero(); main()">
+<body onload="affichageHero(); main(); affichageStats()">
 
-    <p id="error" role="alert">Les touches utilisables sont :  &nbsp;<kbd>▲</kbd> <kbd>▼</kbd> <kbd>◄</kbd> <kbd>►</kbd> <kbd>Enter</kbd></p>
+    <p id="error" role="alert">Les touches utilisables sont :  &nbsp;<kbd>▲</kbd> <kbd>▼</kbd> <kbd>◄</kbd> <kbd>►</kbd> <kbd>Enter</kbd> <kbd>Espace</kbd> <kbd>w</kbd></p>
 
     <div class="flex-container">
 
         <div class="gameInfo">
-        <div class="nesBox">
-            <p id="key"></p>
-            <p id="select"></p>
-        </div>
+            <div class="nesBox">
+                <p id="key"></p>
+                <p id="select"></p>
+            </div>
+
+            <div class="nesBox">
+                <p>Classes disponibles :</p><br>
+                <div class="tooltip" id="hero-0"></div>
+                <div class="tooltip" id="hero-1"></div>
+                <div class="tooltip" id="hero-2"></div>
+                <div class="tooltip" id="hero-3"></div>
+            </div>   
         </div>
 
         <div class="gameBorder"></div>
@@ -38,16 +46,13 @@
 
         <div class="nesBox">
             <p>Informations :</p><br>
+            <div class="flex-container">
+                <div class="nesBoxContainer" id="unit-0"></div>
+                <div class="nesBoxContainer" id="unit-1"></div>
+            </div>
         </div>
             
 
-        <div class="nesBox">
-            <p>Classes disponibles :</p><br>
-            <div class="tooltip" id="hero-0"></div>
-            <br><div class="tooltip" id="hero-1"></div>
-            <br><div class="tooltip" id="hero-2"></div>
-            <br><div class="tooltip" id="hero-3"></div>
-        </div>
     </div>
 </body>
 
