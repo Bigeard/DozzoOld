@@ -19,9 +19,7 @@ function pageAffichageCurseur(positionCurseur) {
 
     //1 ON RECUPERE LE SLOT
 
-    var listeSlot =
-    [currentPage.Slot1, currentPage.Slot2, currentPage.Slot3,
-    currentPage.Slot4, currentPage.Slot5, currentPage.Slot6];
+    var listeSlot = currentPage.Slots.nom;
 
     currentSlotName = listeSlot[positionCurseur - 1];
 
