@@ -1,4 +1,3 @@
-
 function Menu(nom, emplacements) {
     this.nom = nom;
     this.emplacements = emplacements;
@@ -24,8 +23,8 @@ var Inventaire = new Menu("Inventaire", [Equipements, Objets])
 var Attaque = new Menu("Attaque", ["AttaqueA", "AttaqueB", "AttaqueC", "AttaqueD", "AttaqueE"]);
 var Apropos = new Menu("A Propos",[])
 var Options = new Menu("Options", ["Difficultee", "Son", "Retour"]);
-var NouvellePartie = new Menu("Nouvelle Partie", [Attaque, "Concentration", "Capacité", Inventaire]);
-var MenuPrincipal = new Menu("menu", [NouvellePartie, Options, Apropos]);
+var NouvellePartie = new Menu("Nouvelle Partie", [Attaque, "Concentration", "Capacité", Inventaire, "Retour"]);
+var MenuPrincipal = new Menu("menu", [NouvellePartie, Options, Apropos, "Retour"]);
 
 
 
@@ -51,14 +50,13 @@ var Selection = {
 
     setPage: function (page) {
         if (page === "Menu") {
-            this.nom = "Menu";
-            this.nombreDeSlot = 3;
-            for (i = 0; i < MenuPrincipal.emplacements.lentgh; i++){
-                this.Slots[i] = MenuPrincipal.emplacements[i]; 
-            }
+            this.nom = "Menu"
+            this.nombreDeSlot = 3
+            this.Slot1 = NouvellePartie.nom
+            this.Slot2 = Options.nom
+            this.Slot3 = Apropos.nom
             this.LastSlot = "Menu"
-            }
-
+        }
         else if (page === "Nouvelle partie") {
             this.nom = "Combat"
             this.nombreDeSlot = 4

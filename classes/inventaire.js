@@ -1,20 +1,10 @@
-function Inventaire(nom, Objet) {
-    this.Objet = Objet;
-}
-
-Inventaire.prototype = Object.create(Inventaire.prototype);
-Inventaire.prototype.constructor = Inventaire;
-
-var InventaireConsommable = new Inventaire([PotionDeSoin]);
-var InventaireEquipement = new Inventaire([Rapiere]);
-
-function OuvrirInventaire(Inventaire) {
+/*function OuvrirInventaire(Inventaire) {
     
     for(i = 0; i < Inventaire.Objet.length; i++) {
         console.log(Inventaire.Objet[i].nom)
     }
 
-}
+}µ*/
 
 function AjouterObjet(Inventaire, Objet){
     if (Inventaire.length < 5){
