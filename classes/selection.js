@@ -31,6 +31,7 @@ var Selection = {
             this.Slot2 = "Options"
             this.Slot3 = "A propos"
             this.LastSlot = "Menu"
+            SetMenu(MenuPrincipal)
         }
         else if (page === "Nouvelle partie") {
             this.nom = "Combat"
@@ -40,6 +41,7 @@ var Selection = {
             this.Slot3 = "Capacité"
             this.Slot4 = "Inventaire"
             this.LastSlot = "Menu"
+            SetMenu(NouvellePartie)
         }
         else if (page === "Options") {
             this.nom = "Options"
@@ -98,13 +100,31 @@ var Selection = {
     }
 }
 
-function Menu(nom, emplacements){
+function Menu(nom, emplacements) {
     this.nom = nom;
     this.emplacements = emplacements;
 }
 
+function Retour(Menu) {
+
+}
+
+function SetMenu(Menu){
+    console.clear();
+    for (i = 0; i < Menu.emplacements.length; i++) {
+    console.log(Menu.emplacements[i].nom);
+    }
+}
+
 Menu.prototype = Object.create(Menu.prototype);
 Menu.prototype.constructor = Menu;
-var Menu = new Menu("menu", [NouvellePartie, Options, Apropos])
-var NouvellePartie = new Menu("menu", [NouvellePartie, Options, Apropos])
-var Menu = new Menu("menu", [NouvellePartie, Options, Apropos])
+
+var Equipements = new Menu ("Equipements", [Rapiere]);
+var Objets = new Menu ("Objets", [PotionDeSoin]);
+var Inventaire = new Menu("Inventaire", [Equipements, Objets])
+var Attaque = new Menu("Attaque", ["AttaqueA", "AttaqueB", "AttaqueC", "AttaqueD", "AttaqueE"]);
+var Apropos = new Menu("A Propos",[])
+var Options = new Menu("Options", ["Difficultee", "Son", "Retour"]);
+var NouvellePartie = new Menu("NouvellePartie", [Attaque, "Concentration", "Capacité", Inventaire]);
+var MenuPrincipal = new Menu("menu", [NouvellePartie, Options, Apropos]);
+

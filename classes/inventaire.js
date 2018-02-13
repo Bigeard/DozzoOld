@@ -1,4 +1,4 @@
-function Inventaire(Objet) {
+function Inventaire(nom, Objet) {
     this.Objet = Objet;
 }
 
