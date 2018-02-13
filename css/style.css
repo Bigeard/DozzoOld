@@ -50,16 +50,6 @@ kbd {
     padding: 6px 8px;
 }
 
-#error{
-    display: none;
-    background-color: salmon;
-    color: white;
-    padding: 12px;
-    margin-top: 0;
-    position: fixed;
-    width: 100%;
-}
-
 .img-class{
     height: 114px;
 }
