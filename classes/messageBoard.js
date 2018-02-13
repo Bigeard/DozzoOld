@@ -6,4 +6,4 @@ function Message (contenu) {
 
 Message.prototype = Object.create(Message.prototype);
 
-var messageTest = new Message("<div class=\"nesBox messageBox\">Je suis un message de test.<br>Je suis la deuxième ligne !</div><br>");
+var messageTest = new Message("<div class=\"nesBox messageBox\">Je suis un message de test askip.<br>Je suis la deuxième ligne !</div><br>");

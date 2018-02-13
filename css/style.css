@@ -185,6 +185,9 @@ kbd {
   }
 
   .messageBox {
+    display: flex;
+    padding: 10px 0 0 20px;
+    text-align: left;
     height: 44px;
   }
 

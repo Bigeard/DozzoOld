@@ -41,7 +41,7 @@ function pageAffichageCurseur(positionCurseur) {
     document.getElementById(currentSlotName).style.color = "white"
     //AFFICHAGE DE LA POSITION DU CURSEUR DANS LE HTML
 
-    document.getElementById('select').innerHTML = "[posCurseur : " +positionCurseur + "] [nomPage : " + currentPage.nom + "] [nonSlot : " + currentSlotName + "]";
+    document.getElementById('select').innerHTML = "[posCurseur : " +positionCurseur + "]<br>[nomPage : " + currentPage.nom + "]<br>[nonSlot : " + currentSlotName + "]";
 
     return currentSlotName
 }

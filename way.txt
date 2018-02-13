@@ -1,0 +1,19 @@
+main.js
+
+main() {
+
+	gameIntro()
+	gameMenu()
+	
+	
+}
+
+intro() {	
+}
+afficherEcranAccueil() {
+}
+afficherSelection(SLECTION) {
+	1 Récupérer la position du curseur
+	2 Récupérer le slot à la position du curseur
+}
+afichage() {
