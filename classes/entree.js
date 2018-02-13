@@ -29,10 +29,4 @@ document.addEventListener('keydown', (event) => {
     else if (keyName == 'ArrowRight' && positionCurseur != selectTotal) {
         pageAffichageCurseur(positionCurseur += 1)
     }
-    else if (keyName != 'Enter' && keyName != 'ArrowUp' && keyName != 'ArrowDown' && keyName != 'ArrowLeft' && keyName != 'ArrowRight') {
-        document.getElementById('error').style.display = "block"
-    }
-    else{
-        document.getElementById('error').style.display = "none"
-    }
 });
