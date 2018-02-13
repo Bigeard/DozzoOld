@@ -15,12 +15,13 @@
 html, body{
     text-align: center;
     font-family: Disposable;
-    font-size: 13px;
+    font-size: 14px;
     width: 100%;
     height: 100%;
     margin: 0;
     image-rendering: pixelated;
-    background-color: #607EA5;
+    background-image: url('../img/land.png');
+    background-size: 100%;
     color: white;
 }
 
@@ -51,7 +52,7 @@ kbd {
 
 #error{
     display: none;
-    background-color: #607EA5;
+    background-color: salmon;
     color: white;
     padding: 12px;
     margin-top: 0;
@@ -67,18 +68,21 @@ kbd {
     position: relative;
     display: inline-block;
     background-color: black;
-    color: white;
+    color: grey;
     padding: 10px 15px; 
-    margin: 10px;
+}
+
+.tooltip:hover{
+    color: white;
+
 }
 
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 150px;
-    background-color: grey;
+    background-color: black;
     color: #fff;
     text-align: center;
-    border-radius: 6px;
     padding: 5px 0;
     position: absolute;
     z-index: 1;
@@ -87,18 +91,10 @@ kbd {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.4s;
+    border: 10px solid transparent;
+    border-image:  url('../img/nesBox.png') 10 10 repeat;
 }
 
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: grey transparent transparent transparent;
-}
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
@@ -121,9 +117,9 @@ kbd {
     background-color: #000;
     height: 512px;
     width: 480px;
-    border: 40px solid transparent;
-    border-image:  url('../img/nesBox.png') 40 40 repeat;
-    margin: 60px auto auto;
+    border: 10px solid transparent;
+    border-image:  url('../img/nesBox.png') 10 10 repeat;
+    margin: auto;
 }
 
 .combat-img{
@@ -191,6 +187,10 @@ input:checked + .slider:before {
 
 .nesBox {
     background-color: black;
-    border: 40px solid transparent;
-    border-image:  url('../img/nesBox.png') 40 40 repeat;
-}
+    border: 10px solid transparent;
+    border-image:  url('../img/nesBox.png') 10 10 repeat;
+  }
+
+  .nesBoxContainer {
+    width: 50%;
+  }
