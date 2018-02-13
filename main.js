@@ -41,7 +41,7 @@ function pageAffichageCurseur(positionCurseur) {
     document.getElementById(currentSlotName).style.color = "white"
     //AFFICHAGE DE LA POSITION DU CURSEUR DANS LE HTML
 
-    document.getElementById('select').innerHTML = "[posCurseur : " +positionCurseur + "] [nomPage : " + currentPage.nom + "] [nonSlot : " + currentSlotName + "]";
+    document.getElementById('select').innerHTML = "[posCurseur : " +positionCurseur + "]<br>[nomPage : " + currentPage.nom + "]<br>[nonSlot : " + currentSlotName + "]";
 
     return currentSlotName
 }
@@ -71,7 +71,7 @@ function affichage(affichagePageAvecCurseur) {
     else if (page == "Option") {
         var son = "ON"
         var difficulter = "Normal"
-        document.getElementById("Dozzo").innerHTML = 
+        document.getElementById("Dozzo").innerHTML =
         "<div class=\"option\"><br><p class\"son-option\" >Son : " + son + " &nbsp;&nbsp;<label class=\"switch\"><input type=\"checkbox\"><span class=\"slider\"></span></label></p>" +
         "<p class\"\" >Difficulter : " + difficulter + " &nbsp;&nbsp;</p></div>" +
         "                         " + currentPage.nom + "                         <br><br>" +
@@ -79,7 +79,7 @@ function affichage(affichagePageAvecCurseur) {
     }
     else if (page == "A propos") {
         document.getElementById("Dozzo").innerHTML = 
-        "<br><p class=\"a-propos\" ><br><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>" +
+        "<br><p class=\"a-propos nesBox\" ><br><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>" +
         "                         " + currentPage.nom + "                         <br><br>" +
         affichagePageAvecCurseur ;
     }
@@ -97,16 +97,18 @@ function affichage(affichagePageAvecCurseur) {
         healthBar += "<img src=\"img/barRight.png\">"
 
         document.getElementById("Dozzo").innerHTML = 
-        "<br>" + healthBar + " VS " + healthBar +
-        "<br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
-        "<img class=\"combat-img\" src=\"img/abomination.gif\"><br>" +
-        "                         " + currentPage.nom + "                         <br><br>" +
-        affichagePageAvecCurseur ;
+        "<div class=\"fightBackground\"><br>" + healthBar + " VS " + healthBar +
+        "<br><br><br><br><br><br><br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
+        "<img class=\"combat-img\" src=\"img/abomination.gif\"></div>" + messageTest.contenu + affichagePageAvecCurseur ;
+    }
+    else if (page == "Options" || page == "Difficulter" || page == "Son") {
+        document.getElementById("Dozzo").innerHTML = affichagePageAvecCurseur;
     }
     else {
-        document.getElementById("Dozzo").innerHTML = 
-        "                         " + currentPage.nom + "                         <br><br>" +
-        affichagePageAvecCurseur ;
+        document.getElementById("Dozzo").innerHTML =
+        "<div class=\"fightBackground\"><br>" + healthBar + " VS " + healthBar +
+        "<br><br><br><br><br><br><br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
+        "<img class=\"combat-img\" src=\"img/abomination.gif\"></div>" + messageTest.contenu +  affichagePageAvecCurseur ;
     }
 }
 

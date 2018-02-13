@@ -11,17 +11,19 @@
     <script src="classes/selection.js"></script>
     <script src="classes/unite.js"></script>
     <script src="classes/inventaire.js"></script>
+    <script src="classes/messageBoard.js"></script>
     
     <script src="main.js"></script>
 </head>
 
 <body onload="affichageHero(); main(); affichageStats()">
 
-    <p id="error" role="alert">Les touches utilisables sont :  &nbsp;<kbd>▲</kbd> <kbd>▼</kbd> <kbd>◄</kbd> <kbd>►</kbd> <kbd>Enter</kbd> <kbd>Espace</kbd> <kbd>w</kbd></p>
-
     <div class="flex-container">
 
         <div class="gameInfo">
+            <div class="nesBox">
+                <p>Message Log</p>
+            </div>
             <div class="nesBox">
                 <p id="key"></p>
                 <p id="select"></p>
@@ -45,7 +47,7 @@
         <div class="gameInfo">
 
         <div class="nesBox">
-            <p>Informations :</p><br>
+            <p>Statistiques :</p><br>
             <div class="flex-container">
                 <div class="nesBoxContainer" id="unit-0"></div>
                 <div class="nesBoxContainer" id="unit-1"></div>
