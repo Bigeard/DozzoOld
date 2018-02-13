@@ -21,7 +21,7 @@ html, body{
     margin: 0;
     image-rendering: pixelated;
     background-image: url('../img/land.png');
-    background-size: 100%;
+    background-position:top center;
     color: white;
 }
 
