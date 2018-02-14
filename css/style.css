@@ -20,7 +20,8 @@ html, body{
     height: 100%;
     margin: 0;
     image-rendering: pixelated;
-    background-color: #607EA5;
+    background-image: url('../img/land.png');
+    background-position:top center;
     color: white;
 }
 
@@ -43,20 +44,9 @@ kbd {
     border: 1px solid #b4b4b4;
     color: #333;
     display: inline-block;
-    font-size: .85em;
-    font-weight: 700;
+    font-size: 17px;
     line-height: 1;
     padding: 6px 8px;
-}
-
-#error{
-    display: none;
-    background-color: #607EA5;
-    color: white;
-    padding: 12px;
-    margin-top: 0;
-    position: fixed;
-    width: 100%;
 }
 
 .img-class{
@@ -67,38 +57,33 @@ kbd {
     position: relative;
     display: inline-block;
     background-color: black;
-    color: white;
+    color: grey;
     padding: 10px 15px; 
-    margin: 10px;
+}
+
+.tooltip:hover{
+    color: white;
+
 }
 
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 150px;
-    background-color: grey;
+    background-color: black;
     color: #fff;
     text-align: center;
-    border-radius: 6px;
     padding: 5px 0;
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 35%;
+    left: 25%;
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.4s;
+    border: 10px solid transparent;
+    border-image:  url('../img/nesBox.png') 10 10 repeat;
 }
 
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: grey transparent transparent transparent;
-}
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
@@ -106,7 +91,6 @@ kbd {
 }
 
 .flex-container {
-    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -119,11 +103,12 @@ kbd {
 
 #Dozzo {
     background-color: #000;
+    color: #fff;
     height: 512px;
     width: 480px;
-    border: 40px solid transparent;
-    border-image:  url('../img/nesBox.png') 40 40 repeat;
-    margin: 60px auto auto;
+    margin: auto;
+    border-color: #fff;
+    border: 2px solid transparent;
 }
 
 .combat-img{
@@ -191,6 +176,23 @@ input:checked + .slider:before {
 
 .nesBox {
     background-color: black;
-    border: 40px solid transparent;
-    border-image:  url('../img/nesBox.png') 40 40 repeat;
-}
+    border: 10px solid transparent;
+    border-image:  url('../img/nesBox.png') 10 10 repeat;
+
+  }
+
+  .nesBoxContainer {
+    width: 50%;
+  }
+
+  .messageBox {
+    display: flex;
+    padding: 10px 0 0 20px;
+    text-align: left;
+    height: 44px;
+  }
+
+  .fightBackground {
+    background-image: url("../img/background.png");
+    height: 256px;
+  }

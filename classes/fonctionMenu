@@ -1,0 +1,10 @@
+function SetMenu(Menu){
+    console.clear();
+    for (i = 0; i < Menu.emplacements.length; i++) {
+    console.log(Menu.emplacements[i].nom);
+    }
+}
+
+function recuperermenu(Menu)[
+    return Menu;
+]

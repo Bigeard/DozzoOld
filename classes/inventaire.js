@@ -1,10 +1,14 @@
-/*function OuvrirInventaire(Inventaire) {
+function AfficherMenu(Menu) {
     
-    for(i = 0; i < Inventaire.Objet.length; i++) {
-        console.log(Inventaire.Objet[i].nom)
+    for(i = 0; i < Menu.emplacements.length; i++) {
+        console.log(Menu.emplacements[i].nom)
     }
 
-}µ*/
+    if (Retour != undifined) {
+        console.log(Retour)
+    }
+
+}
 
 function AjouterObjet(Inventaire, Objet){
     if (Inventaire.length < 5){

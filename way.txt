@@ -1,0 +1,24 @@
+main.js
+
+main() {
+
+	gameIntro()
+	EcranTitre()
+	
+}
+
+intro() {	
+}
+afficherEcranAccueil() {
+}
+afficherSelection(SLECTION) {
+	1 Récupérer la position du curseur
+	2 Récupérer le slot à la position du curseur
+}
+
+
+getAffichaage(OojetAffichage ){
+	return affichage
+}
+affichage() {
+}

@@ -3,16 +3,6 @@ function Menu(nom, emplacements) {
     this.emplacements = emplacements;
 }
 
-function Retour(Menu) {
-
-}
-
-function SetMenu(Menu){
-    console.clear();
-    for (i = 0; i < Menu.emplacements.length; i++) {
-    console.log(Menu.emplacements[i].nom);
-    }
-}
 
 Menu.prototype = Object.create(Menu.prototype);
 Menu.prototype.constructor = Menu;
@@ -20,15 +10,15 @@ Menu.prototype.constructor = Menu;
 var Equipements = new Menu ("Equipements", [Rapiere]);
 var Objets = new Menu ("Objets", [PotionDeSoin]);
 var Inventaire = new Menu("Inventaire", [Equipements, Objets])
-var Attaque = new Menu("Attaque", ["AttaqueA", "AttaqueB", "AttaqueC", "AttaqueD", "AttaqueE"]);
-var Apropos = new Menu("A Propos",[])
+var Attaque = new Menu("Attaque", ["Attaque A", "Attaque B", "Attaque C", "Attaque D", "Attaque E"]);
+var Apropos = new Menu("A Propos",["TextAPropos"])
 var Options = new Menu("Options", ["Difficultee", "Son", "Retour"]);
-var NouvellePartie = new Menu("Nouvelle Partie", [Attaque, "Concentration", "Capacité", Inventaire, "Retour"]);
-var MenuPrincipal = new Menu("menu", [NouvellePartie, Options, Apropos, "Retour"]);
+var NouvellePartie = new Menu("Nouvelle Partie", [Attaque, "Concentration", "Capacité", Inventaire, EcranTitre]);
+var EcranTitre = new Menu("menu", [NouvellePartie, Options, Apropos]);
 
 
 
-var Selection = {
+/*var Selection = {
 
     init: function (nom, nombreDeSlot, Slots, LastSlot) {
 
@@ -121,4 +111,4 @@ var Selection = {
 
         }
     }
-}
+}*/
