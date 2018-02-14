@@ -1,19 +1,73 @@
 main.js
 
 main() {
-
-	gameIntro()
-	gameMenu()
-	
-	
+	afficherIntroduction();
+	afficherJeu();
+	afficherFin();
 }
 
-intro() {	
+------------------------------------------------------------------------------
+
+1 - AFFICHAGE
+
+afficherIntroduction() {
+	1. afficher une suite d'animations
 }
-afficherEcranAccueil() {
+
+afficherFin() {
+	1. afficher une suite d'animations
 }
-afficherSelection(SLECTION) {
-	1 Récupérer la position du curseur
-	2 Récupérer le slot à la position du curseur
+
+afficherJeu() {
+	afficherMenu( positionCurseur )
+	afficherVisuel()
+	afficherMessage( message.contenu )
 }
-afichage() {
+
+afficherMenu( positionCurseur ) {
+	1. afficher le tableau
+}
+afficherVisuel( ) {
+}
+afficherMessage( message.contenu ) {
+}
+
+chercherNouvelAffichage( positionDuCurseur ) {
+	1. récupérer le nom du menu correspondant à la position du curseur
+	return nouveauMenu;
+}
+
+------------------------------------------------------------------------------
+
+gameNouvellePartie() {
+	if (joueur = undefined) {
+		creerJoueur();
+	}
+	while (pv joueur != 0 || pv ennemi != 0) {
+		tourJoueur();
+		tourEnnemi();
+	}
+}
+
+creerJoueur() {
+	1. demander de donner un nom au joueur
+	2. demander de choisir une classe
+	3. demander une faiblesse?force?personnalisation?
+	4. assigner ces valeurs au joueur
+}
+
+tourJoueur(){
+	gameFight();
+}
+tourEnnemi(){
+}
+gameFight(){
+	fightAction();
+	fightInventaire();
+}
+
+fightAction() {
+}
+fightInventaire() {
+}
+
