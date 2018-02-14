@@ -19,5 +19,3 @@ function OuvrirInventaire() {
 function AjouterObjet(Inventaire, Objet){
     InventaireJoueur.Objet[InventaireJoueur.Objet.length ++] = Objet;
 }
-
-    
