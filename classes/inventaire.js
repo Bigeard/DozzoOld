@@ -17,12 +17,5 @@ function OuvrirInventaire(Inventaire) {
 }
 
 function AjouterObjet(Inventaire, Objet){
-    if (Inventaire.length < 5){
-    Inventaire.Objet[Inventaire.Objet.length ++] = Objet;
-    }
-    /*else{
-        afficher un message du style "trop d'objet dans l'inventaire"
-    }*/
+    InventaireJoueur.Objet[InventaireJoueur.Objet.length ++] = Objet;
 }
-
-    

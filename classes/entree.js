@@ -14,8 +14,8 @@ document.addEventListener('keydown', (event) => {
     var selectTotal = currentPage.nombreDeSlot;
 
     if (keyName == 'Enter' || keyName == 'w' || keyName == ' ') {
-        pageSelected(currentSlotName)
-        pageAffichageCurseur(1)
+        changerAffichage()
+        afficherJeu(menuActuel)
     }
     else if (keyName == 'ArrowDown' && positionCurseur != selectTotal) {
         pageAffichageCurseur(positionCurseur += 1)

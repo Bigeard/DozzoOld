@@ -1,154 +1,100 @@
-//INITIALISATION DU JEU
+/*
+main
 
-var currentPage = Object.create(Selection)
-    currentPage.init(undefined, 0, undefined, undefined, undefined, undefined, undefined, undefined, undefined)
-var currentSlotName = undefined;
+afficherJeu
+afficherIntroductionJeu
+afficherFin Jeu
 
-var positionCurseur = 1;
+afficherMenu
+afficherMessage
+afficherVisuel
 
-var page = "Menu";
-currentPage.setPage(page)
+changerMenu
+changerMessage
+changerVisuel
+*/
 
-//MAIN
+var positionDuCurseur = 1;
 
-function main() {
-    pageAffichageCurseur(1);
+var main = function() {
+	afficherIntroductionJeu();
+	afficherJeu(EcranTitre, EcranTitre, EcranTitre);
+	afficherFinJeu();
 }
 
-function pageAffichageCurseur(positionCurseur) {
 
-    //1 ON RECUPERE LE SLOT
-
-    var listeSlot =
-    [currentPage.Slot1, currentPage.Slot2, currentPage.Slot3,
-    currentPage.Slot4, currentPage.Slot5, currentPage.Slot6];
-
-    currentSlotName = listeSlot[positionCurseur - 1];
-
-    //2 ON CREE L'AFFICHAGE
-
-    var affichagePage = ''
-    for (let i = 1; i < currentPage.nombreDeSlot + 1; i++) {
-        if (page == "Menu"){
-            affichagePage += "<br>"
-        } 
-        affichagePage += '<button class=\"selection\" id=\"' + listeSlot[i-1] + '\">' + listeSlot[i-1] + '</button>'
-    }
-
-    //3 ON CHOISI LA PAGE A AFFICHER
-
-    affichage(affichagePage);
-    document.getElementById(currentSlotName).style.color = "white"
-    //AFFICHAGE DE LA POSITION DU CURSEUR DANS LE HTML
-
-    document.getElementById('select').innerHTML = "[posCurseur : " +positionCurseur + "]<br>[nomPage : " + currentPage.nom + "]<br>[nonSlot : " + currentSlotName + "]";
-
-    return currentSlotName
+var afficherIntroductionJeu = function() {
+    //INSTRUCTIONS
 }
 
-function pageSelected(currentSlotName) {
 
-    //1 ON PREPARE LA PROCHAINE PAGE A AFFICHER
-
-    if (currentSlotName == "Retour") {
-        page = currentPage.LastSlot;
-    }
-    else {
-        page = currentSlotName
-    }
-
-    currentPage.setPage(page)
-    positionCurseur = 1;
+var afficherJeu = function(menuActuel, messageActuel, visuelActuel) {
+	afficherMenu(menuActuel, positionDuCurseur);
+	afficherMessage(messageActuel);
+	afficherVisuel(visuelActuel);
 }
 
-//AFFICHAGE TYPE
 
-function affichage(affichagePageAvecCurseur) {
-
-    if (page == "Menu") {
-        document.getElementById("Dozzo").innerHTML = "<img src=\"img/BannerDozzo.png\"><br>" + affichagePageAvecCurseur;
-    }
-    else if (page == "Option") {
-        var son = "ON"
-        var difficulter = "Normal"
-        document.getElementById("Dozzo").innerHTML =
-        "<div class=\"option\"><br><p class\"son-option\" >Son : " + son + " &nbsp;&nbsp;<label class=\"switch\"><input type=\"checkbox\"><span class=\"slider\"></span></label></p>" +
-        "<p class\"\" >Difficulter : " + difficulter + " &nbsp;&nbsp;</p></div>" +
-        "                         " + currentPage.nom + "                         <br><br>" +
-        affichagePageAvecCurseur ;
-    }
-    else if (page == "A propos") {
-        document.getElementById("Dozzo").innerHTML = 
-        "<br><p class=\"a-propos nesBox\" ><br><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>" +
-        "                         " + currentPage.nom + "                         <br><br>" +
-        affichagePageAvecCurseur ;
-    }
-    else if (page == "Nouvelle partie") {
-
-        /* Cette fonction permet de d"afficher dans la console
-        la scène de combat en fonction des PV de l'héro, du monstre,
-        du nom de la sélection de la page, sélection disponible, etc... */
-
-        var healthBar = '';
-        healthBar += "<img src=\"img/barLeft.png\">"
-        for (var i = 0; i < 50; i++) {
-            healthBar += "<img src=\"img/barMiddle.png\">"
-        }
-        healthBar += "<img src=\"img/barRight.png\">"
-
-        document.getElementById("Dozzo").innerHTML = 
-        "<div class=\"fightBackground\"><br>" + healthBar + " VS " + healthBar +
-        "<br><br><br><br><br><br><br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
-        "<img class=\"combat-img\" src=\"img/abomination.gif\"></div>" + messageTest.contenu + affichagePageAvecCurseur ;
-    }
-    else if (page == "Options" || page == "Difficulter" || page == "Son") {
-        document.getElementById("Dozzo").innerHTML = affichagePageAvecCurseur;
-    }
-    else {
-        document.getElementById("Dozzo").innerHTML =
-        "<div class=\"fightBackground\"><br>" + healthBar + " VS " + healthBar +
-        "<br><br><br><br><br><br><br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
-        "<img class=\"combat-img\" src=\"img/abomination.gif\"></div>" + messageTest.contenu +  affichagePageAvecCurseur ;
-    }
+var afficherFinJeu = function() {
+	//INSTRUCTIONS
 }
 
-//HTML PAGE CLASSE
 
-function affichageHero() {
-
-    var chowClasse = Object.create(Unite)
-    var changeClasse = ["Guerrier", "Mage", "Assassin", "Mage noir"]
-    
-    for (var x = 0; x < changeClasse.length; x++) {
-        chowClasse.init("undefined", 0, 0, 0, "undefined", "undefined", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        chowClasse.setClasse(changeClasse[x])
-        document.getElementById("hero-"+x).innerHTML = chowClasse.classe + "<span class=\"tooltiptext\">" + 
-        chowClasse.classe +
-        "<br><img class=\"img-class\" src=\"img/" + chowClasse.classe + ".gif\">" +
-        "<br> PV : " + chowClasse.ptsVieMax + 
-        "<br> Mana : " + chowClasse.ptsManaMax + 
-        "<br> ATK : " + chowClasse.attaqueMax +
-        "<br> MAG : " + chowClasse.magieMax +
-        "<br> DEF : " + chowClasse.defenseMax +
-        "<br> RES : " + chowClasse.resistanceMax +
-        "<br>---------------" + "<br> Capacité :<br>" + chowClasse.competance + "</p></span>" ;
+var afficherMenu = function(menuActuel, positionDuCurseur) {
+//ON INDEX LES EMPLACEMENTS DU MENU
+    var contenuDuMenu;
+    for (var i = 0; i < menuActuel.emplacements.length; i++) {
+        contenuDuMenu += '<button class=\"selection\"id=\"'
+        + menuActuel.emplacements[i].nom
+        + '\">'
+        + menuActuel.emplacements[i].nom
+        + '</button>';
     }
+//ON AFFICHE LE MENU
+    document.getElementById("affichageMenu").innerHTML = contenuDuMenu;
+//ON RECUPERE LE NOM DE L'EMPLACEMENT DU CURSEUR ET ON LE MET EN BLANC
+    var nomEmplacementActuel = menuActuel.emplacements[positionDuCurseur];
+    document.getElementById(nomEmplacementActuel).style.color = "white";
+//AIDE DEV SUR L'AFFICHAGE EXTERNE
+    document.getElementById('select').innerHTML = "[posCurseur : "
+    +positionDuCurseur
+    +"]<br>[nomPage : "
+    +currentPage.nom
+    +"]<br>[nonSlot : "
+    +nomEmplacementActuel
+    +"]";
+//ON REVOIT L'EMPLACEMENT DELECTIONNE
+    return nomEmplacementActuel;
 }
 
-function affichageStats() {
 
-    var chowUnit = Object.create(Unite)
-    var changeUnit = ["Guerrier", "Abomination"]
-    
-    for (var x = 0; x < changeUnit.length; x++) {
-        chowUnit.init("undefined", 0, 0, 0, "undefined", "undefined", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        chowUnit.setClasse(changeUnit[x])
-        document.getElementById("unit-"+x).innerHTML = chowUnit.classe + "<span>" + 
-        "<br> PV : " + chowUnit.ptsVieMax + 
-        "<br> Mana : " + chowUnit.ptsManaMax + 
-        "<br> ATK : " + chowUnit.attaqueMax +
-        "<br> MAG : " + chowUnit.magieMax +
-        "<br> DEF : " + chowUnit.defenseMax +
-        "<br> RES : " + chowUnit.resistanceMax +"</p>" ;
-    }
+var afficherMessage = function(messageActuel) {
+	document.getElementById("affichageMessage").innerHTML = messageActuel.contenu;
+}
+
+
+var afficherVisuel = function(visuelActuel) {
+	document.getElementById("affichageVisuel").innerHTML = visuelActuel.visuel;
+}
+
+
+var changerMenu = function(nomEmplacementActuel) {
+    //ON CHANGE LE MENU EN PRENANT L'ENPLACEMENT ACTUEL DU CURSEUR
+    menuActuel = nomEmplacementActuel;
+    //ON RESET LA POSITION DU CURSEUR
+    positionDuCurseur = 1;
+	//ON RETOURNE LE NOUVEAU MENU
+	return menuActuel;
+}
+
+
+var changerMessage = function(nouveauMessage) {
+    messageActuel = nouveauMessage;
+    return messageActuel;
+}
+
+
+var changerVisuel = function(nouveauVisuel) {
+    visuelActuel = nouveauVisuel;
+    return visuelActuel;
 }

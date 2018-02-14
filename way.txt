@@ -1,5 +1,7 @@
 main.js
 
+main();
+
 main() {
 	afficherIntroduction();
 	afficherJeu();
@@ -39,7 +41,7 @@ chercherNouvelAffichage( positionDuCurseur ) {
 
 ------------------------------------------------------------------------------
 
-gameNouvellePartie() {
+gamePartie() {
 	if (joueur = undefined) {
 		creerJoueur();
 	}
@@ -70,4 +72,3 @@ fightAction() {
 }
 fightInventaire() {
 }
-
