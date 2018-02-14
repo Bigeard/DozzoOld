@@ -24,9 +24,6 @@ function pageAffichageCurseur(positionCurseur) {
     currentPage.Slot4, currentPage.Slot5, currentPage.Slot6];
 
     currentSlotName = listeSlot[positionCurseur - 1];
-
-    //2 ON CREE L'AFFICHAGE
-
     var affichagePage = ''
     for (let i = 1; i < currentPage.nombreDeSlot + 1; i++) {
         if (page == "Menu"){
