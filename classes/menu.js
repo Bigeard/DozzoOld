@@ -1,20 +1,19 @@
-function Menu(nom, emplacements) {
+function ConstructeurMenu(nom, emplacements) {
     this.nom = nom;
     this.emplacements = emplacements;
 }
 
-Menu.prototype = Object.create(Menu.prototype);
-Menu.prototype.constructor = Menu;
+ConstructeurMenu.prototype = Object.create(ConstructeurMenu.prototype);
+ConstructeurMenu.prototype.constructor = ConstructeurMenu;
 
-var Equipements = new Menu ("Equipements", [Rapiere]);
-var Objets = new Menu ("Objets", [PotionDeSoin]);
-var Inventaire = new Menu("Inventaire", [Equipements, Objets])
-var Attaque = new Menu("Attaque", ["AttaqueA", "AttaqueB", "AttaqueC", "AttaqueD", "AttaqueE"]);
-var Apropos = new Menu("A Propos",[])
-var Options = new Menu("Options", ["Difficultee", "Son", "Retour"]);
-var NouvellePartie = new Menu("Nouvelle Partie", [Attaque, "Concentration", "Capacité", Inventaire, "Retour"]);
-var MenuPrincipal = new Menu("menu", [NouvellePartie, Options, Apropos, "Retour"]);
+var Equipements = new ConstructeurMenu ('Equipements', [Rapiere]);
+var Objets = new ConstructeurMenu('Objets', [PotionDeSoin]);
+var Inventaire = new ConstructeurMenu('Inventaire', [Equipements, Objets])
+var Attaque = new ConstructeurMenu('Attaque', ['AttaqueA', 'AttaqueB', 'AttaqueC', 'AttaqueD', 'AttaqueE']);
+var Apropos = new ConstructeurMenu('A Propos',[])
+var Options = new ConstructeurMenu('Options', ['Difficultee', 'Son', 'Retour']);
+var NouvellePartie = new ConstructeurMenu('Nouvelle Partie', [Attaque, 'Concentration', 'Capacité', Inventaire, EcranTitre]);
+var EcranTitre = new ConstructeurMenu('Menu', [NouvellePartie, Options, Apropos,]);
 
-
-var InventaireConsommable = new Menu("Consommable",[PotionDeSoin]);
-var InventaireEquipement = new Menu("Equipement",[Rapiere]);
+var InventaireConsommable = new ConstructeurMenu('Consommable',[PotionDeSoin]);
+var InventaireEquipement = new ConstructeurMenu('Equipement',[Rapiere]);
