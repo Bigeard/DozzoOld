@@ -15,7 +15,7 @@ document.addEventListener('keydown', (event) => {
 
     if (keyName == 'Enter' || keyName == 'w' || keyName == ' ') {
         changerAffichage()
-        pageAffichageCurseur(1)
+        afficherJeu(menuActuel)
     }
     else if (keyName == 'ArrowDown' && positionCurseur != selectTotal) {
         pageAffichageCurseur(positionCurseur += 1)
