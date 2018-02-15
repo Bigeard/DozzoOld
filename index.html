@@ -6,18 +6,20 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="img/favicon.ico" />
 
-    <script src="classes/entree.js"></script>
     <script src="classes/objet.js"></script>
-    <script src="classes/selection.js"></script>
     <script src="classes/unite.js"></script>
     <script src="classes/inventaire.js"></script>
-    <script src="classes/messageBoard.js"></script>
+    <script src="classes/menu.js"></script>
+    <script src="classes/message.js"></script>
+    <script src="classes/visuel.js"></script>
+    
+    <script src="classes/entree.js"></script>
     
     <script src="affichageExterne.js"></script>
     <script src="main.js"></script>
 </head>
 
-<body onload="affichageHero(); main(); affichageStats()">
+<body onload="affichageHero(); affichageStats(); main();">
 
     <div class="flex-container">
 
@@ -27,7 +29,7 @@
             </div>
             <div class="nesBox">
                 <p id="key"></p>
-                <p id="select"></p>
+                <p id="aideDev"></p>
             </div>
 
             <div class="nesBox">

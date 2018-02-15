@@ -6,15 +6,21 @@ function Menu(nom, emplacements) {
 Menu.prototype = Object.create(Menu.prototype);
 Menu.prototype.constructor = Menu;
 
-var Equipements = new Menu ("Equipements", [Rapiere]);
-var Objets = new Menu ("Objets", [PotionDeSoin]);
-var Inventaire = new Menu("Inventaire", [Equipements, Objets])
-var Attaque = new Menu("Attaque", ["AttaqueA", "AttaqueB", "AttaqueC", "AttaqueD", "AttaqueE"]);
-var Apropos = new Menu("A Propos",[])
-var Options = new Menu("Options", ["Difficultee", "Son", "Retour"]);
-var NouvellePartie = new Menu("Nouvelle Partie", [Attaque, "Concentration", "Capacité", Inventaire, "Retour"]);
-var EcranTitre = new Menu("menu", [NouvellePartie, Options, Apropos, "Retour"]);
+
+var menuNouvellePartie = new Menu("Nouvelle Partie", [menuAttaque, "Concentration", "Capacité", menuInventaire, "Retour"]);
+var menuOptions = new Menu("Options", ["Difficultee", "Son", menuEcranTitre]);
+var menuApropos = new Menu("A Propos",[menuEcranTitre])
+
+var menuEcranTitre = new Menu("EcranTitre", [menuNouvellePartie, menuOptions, menuApropos]);
+
+var menuEquipements = new Menu ("Equipements", [Rapiere]);
+var menuObjets = new Menu ("Objets", [PotionDeSoin]);
+var menuInventaire = new Menu("Inventaire", [menuEquipements, menuObjets])
+var menuAttaque = new Menu("Attaque", ["AttaqueA", "AttaqueB", "AttaqueC", "AttaqueD", "AttaqueE"]);
 
 
-var InventaireConsommable = new Menu("Consommable",[PotionDeSoin]);
-var InventaireEquipement = new Menu("Equipement",[Rapiere]);
+var menuInventaireConsommable = new Menu("Consommable",[PotionDeSoin]);
+var menuInventaireEquipement = new Menu("Equipement",[Rapiere]);
+
+
+var positionDuCurseur = 0;

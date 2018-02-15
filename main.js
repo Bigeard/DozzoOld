@@ -14,11 +14,9 @@ changerMessage
 changerVisuel
 */
 
-var positionDuCurseur = 1;
-
 var main = function() {
 	afficherIntroductionJeu();
-	afficherJeu(EcranTitre, EcranTitre, EcranTitre);
+	afficherJeu(menuEcranTitre, messageEcranTitre, visuelEcranTitre);
 	afficherFinJeu();
 }
 
@@ -29,9 +27,20 @@ var afficherIntroductionJeu = function() {
 
 
 var afficherJeu = function(menuActuel, messageActuel, visuelActuel) {
-	afficherMenu(menuActuel, positionDuCurseur);
+	afficherMenu(menuActuel);
 	afficherMessage(messageActuel);
 	afficherVisuel(visuelActuel);
+
+    if (onPeutAppuyerSurLesTouches) {
+        controleJoueur(menuActuel, messageActuel, visuelActuel);
+    }
+}
+
+
+var changerJeu = function(menuActuel, messageActuel, visuelActuel) {
+    changerMenu(menuActuel);
+    changerMessage(messageActuel);
+    changerVisuel(visuelActuel);
 }
 
 
@@ -40,9 +49,9 @@ var afficherFinJeu = function() {
 }
 
 
-var afficherMenu = function(menuActuel, positionDuCurseur) {
+var afficherMenu = function(menuActuel) {
 //ON INDEX LES EMPLACEMENTS DU MENU
-    var contenuDuMenu;
+    var contenuDuMenu = '';
     for (var i = 0; i < menuActuel.emplacements.length; i++) {
         contenuDuMenu += '<button class=\"selection\"id=\"'
         + menuActuel.emplacements[i].nom
@@ -53,18 +62,19 @@ var afficherMenu = function(menuActuel, positionDuCurseur) {
 //ON AFFICHE LE MENU
     document.getElementById("affichageMenu").innerHTML = contenuDuMenu;
 //ON RECUPERE LE NOM DE L'EMPLACEMENT DU CURSEUR ET ON LE MET EN BLANC
-    var nomEmplacementActuel = menuActuel.emplacements[positionDuCurseur];
-    document.getElementById(nomEmplacementActuel).style.color = "white";
+    document.getElementById(menuActuel.emplacements[positionDuCurseur].nom).style.color = "white";
+
 //AIDE DEV SUR L'AFFICHAGE EXTERNE
-    document.getElementById('select').innerHTML = "[posCurseur : "
+    document.getElementById('aideDev').innerHTML = "[posCurseur : "
     +positionDuCurseur
-    +"]<br>[nomPage : "
-    +currentPage.nom
-    +"]<br>[nonSlot : "
-    +nomEmplacementActuel
+    +"]<br>[Menu : "
+    +menuActuel.nom
+    +"]<br>[Slot : "
+    +menuActuel.emplacements[positionDuCurseur].nom
     +"]";
+
 //ON REVOIT L'EMPLACEMENT DELECTIONNE
-    return nomEmplacementActuel;
+    return menuActuel.emplacements[positionDuCurseur];
 }
 
 
@@ -74,15 +84,13 @@ var afficherMessage = function(messageActuel) {
 
 
 var afficherVisuel = function(visuelActuel) {
-	document.getElementById("affichageVisuel").innerHTML = visuelActuel.visuel;
+	document.getElementById("affichageVisuel").innerHTML = visuelActuel.contenu;
 }
 
 
-var changerMenu = function(nomEmplacementActuel) {
+var changerMenu = function(objetEmplacementActuel) {
     //ON CHANGE LE MENU EN PRENANT L'ENPLACEMENT ACTUEL DU CURSEUR
-    menuActuel = nomEmplacementActuel;
-    //ON RESET LA POSITION DU CURSEUR
-    positionDuCurseur = 1;
+    menuActuel = objetEmplacementActuel;
 	//ON RETOURNE LE NOUVEAU MENU
 	return menuActuel;
 }
