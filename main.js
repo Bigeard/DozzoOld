@@ -14,6 +14,7 @@ changerMessage
 changerVisuel
 */
 
+
 var main = function() {
 	afficherIntroductionJeu();
 	afficherJeu(menuEcranTitre, messageEcranTitre, visuelEcranTitre);
@@ -39,8 +40,10 @@ var afficherJeu = function(menuActuel, messageActuel, visuelActuel) {
 
 var changerJeu = function(menuActuel, messageActuel, visuelActuel) {
     changerMenu(menuActuel);
+    console.log(nouveauMenu);
     changerMessage(messageActuel);
     changerVisuel(visuelActuel);
+    return nouveauMenu, messageActuel, visuelActuel;
 }
 
 
@@ -88,21 +91,19 @@ var afficherVisuel = function(visuelActuel) {
 }
 
 
-var changerMenu = function(objetEmplacementActuel) {
-    //ON CHANGE LE MENU EN PRENANT L'ENPLACEMENT ACTUEL DU CURSEUR
-    menuActuel = objetEmplacementActuel;
-	//ON RETOURNE LE NOUVEAU MENU
-	return menuActuel;
+var changerMenu = function(menuActuel) {
+    var nouveauMenu = menuActuel.emplacements[positionDuCurseur];
+    return nouveauMenu;
 }
 
 
-var changerMessage = function(nouveauMessage) {
-    messageActuel = nouveauMessage;
+var changerMessage = function(messageActuel) {
+    //var messageActuel = nouveauMessage;
     return messageActuel;
 }
 
 
-var changerVisuel = function(nouveauVisuel) {
-    visuelActuel = nouveauVisuel;
+var changerVisuel = function(visuelActuel) {
+    //var visuelActuel = nouveauVisuel;
     return visuelActuel;
 }
