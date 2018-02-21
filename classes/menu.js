@@ -17,10 +17,11 @@ var menuAction = new Menu("Action", [actionA, actionB, actionC, actionD, actionE
 var menuDifficultee = new Menu("Difficultée", [facile, medium, difficile]);
 
 var menuNouvellePartie = new Menu("Nouvelle Partie", [menuAction, concentration, competence, menuInventaire]);
-var menuOptions = new Menu("Options", [menuDifficultee, Son, menuEcranTitre]);
-var menuApropos = new Menu("A Propos",[menuEcranTitre])
+var menuOptions = new Menu("Options", [menuDifficultee, son]);
 
-var menuEcranTitre = new Menu("EcranTitre", [menuNouvellePartie, menuOptions, menuApropos]);
+var menuEcranTitre = new Menu("EcranTitre", [menuNouvellePartie, menuOptions, aPropos]);
 
+var menuActuel = new Menu((undefined, undefined));
 
 var positionDuCurseur = 0;
+menuActuel = menuEcranTitre;

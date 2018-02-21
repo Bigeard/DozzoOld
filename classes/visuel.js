@@ -1,10 +1,25 @@
-function Visuel (contenu) {
-
-    this.contenu = contenu;
+var visuelEcranTitre = {
+    
+    contenu: function() {
+    	document.getElementById("affichageVisuel").innerHTML = "<img src=\"img/BannerDozzo.png\"><br>"
+    }
 }
 
-Visuel.prototype = Object.create(Visuel.prototype);
-Visuel.prototype.constructor = Visuel;
+var visuelNouvellePartie = {
 
+	contenu: function() {
+		var healthBar = '';
+        healthBar += "<img src=\"img/barLeft.png\">"
+        for (var i = 0; i < 50; i++) {
+            healthBar += "<img src=\"img/barMiddle.png\">"
+        }
+        healthBar += "<img src=\"img/barRight.png\">"
 
-var visuelEcranTitre = new Visuel("<img src=\"img/BannerDozzo.png\"><br>");
+        document.getElementById("Dozzo").innerHTML = 
+        "<div class=\"fightBackground\"><br>" + healthBar + " VS " + healthBar +
+        "<br><br><br><br><br><br><br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
+        "<img class=\"combat-img\" src=\"img/abomination.gif\"></div>"
+	}
+}
+
+var visuelActuel = visuelEcranTitre;

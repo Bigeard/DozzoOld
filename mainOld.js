@@ -1,8 +1,5 @@
 function affichage(affichagePageAvecCurseur) {
 
-    if (page == "Menu") {
-        document.getElementById("Dozzo").innerHTML = "<img src=\"img/BannerDozzo.png\"><br>" + affichagePageAvecCurseur;
-    }
     else if (page == "Option") {
         var son = "ON"
         var difficulter = "Normal"
@@ -24,17 +21,7 @@ function affichage(affichagePageAvecCurseur) {
         la scène de combat en fonction des PV de l'héro, du monstre,
         du nom de la sélection de la page, sélection disponible, etc... */
 
-        var healthBar = '';
-        healthBar += "<img src=\"img/barLeft.png\">"
-        for (var i = 0; i < 50; i++) {
-            healthBar += "<img src=\"img/barMiddle.png\">"
-        }
-        healthBar += "<img src=\"img/barRight.png\">"
-
-        document.getElementById("Dozzo").innerHTML = 
-        "<div class=\"fightBackground\"><br>" + healthBar + " VS " + healthBar +
-        "<br><br><br><br><br><br><br><img class=\"combat-img\" src=\"img/guerrier.gif\">" +
-        "<img class=\"combat-img\" src=\"img/abomination.gif\"></div>" + messageTest.contenu + affichagePageAvecCurseur ;
+         + messageTest.contenu + affichagePageAvecCurseur ;
     }
     else if (page == "Options" || page == "Difficulter" || page == "Son") {
         document.getElementById("Dozzo").innerHTML = affichagePageAvecCurseur;
