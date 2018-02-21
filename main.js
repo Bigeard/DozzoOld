@@ -1,3 +1,9 @@
+var positionDuCurseur = 0;
+
+menuActuel = menuEcranTitre;
+messageActuel = messageEcranTitre;
+visuelActuel = visuelEcranTitre;
+
 var main = function() {
 	afficherJeu();
 }
@@ -7,8 +13,6 @@ var afficherIntroductionJeu = function() {
     //INSTRUCTIONS
     console.log("coucou de la mort begin");
 }
-
-
 var afficherFinJeu = function() {
     //INSTRUCTIONS
     console.log("coucou de la mort end");
@@ -25,13 +29,9 @@ var changerJeu = function() {
 var changerMenu = function() {
     menuActuel = menuActuel.emplacements[positionDuCurseur];
 }
-
-
 var changerMessage = function() {
-    //messageActuel = ?;
+    messageActuel = menuActuel.message;
 }
-
-
 var changerVisuel = function() {
-    //var visuelActuel = nouveauVisuel;
+    visuelActuel = menuActuel.visuel
 }

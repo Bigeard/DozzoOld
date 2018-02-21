@@ -125,10 +125,6 @@ kbd {
     margin: auto auto auto;
 }
 
-.option{
-    margin: 50px auto auto;
-}
-
 .son-option{
     margin: 0px 0px 0px 0px;
 }
@@ -165,7 +161,7 @@ kbd {
   }
   
   input:checked + .slider {
-    background-color: black;
+    background-color: white;
   }
   
   
@@ -174,6 +170,7 @@ kbd {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+    background-color: grey;
   }
 
   .nesBox {

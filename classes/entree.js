@@ -11,7 +11,7 @@
         //INPUTS
     
         if (keyName === 'Enter' || keyName === 'w' || keyName === ' ') {
-            changerMenu();
+            changerJeu();
             positionDuCurseur = 0;
         }
         else if (keyName === 'ArrowUp' && positionDuCurseur != 0 || keyName === 'ArrowLeft' && positionDuCurseur != 0) {
