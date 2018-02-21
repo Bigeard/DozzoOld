@@ -4,34 +4,34 @@ menuActuel = menuEcranTitre;
 messageActuel = messageEcranTitre;
 visuelActuel = visuelEcranTitre;
 
-var main = function() {
-	afficherJeu();
+var main = function () {
+    afficherJeu();
 }
 
 
-var afficherIntroductionJeu = function() {
-    //INSTRUCTIONS
-    console.log("coucou de la mort begin");
+var afficherIntroductionJeu = function () {
+    //INTRODUCTION
+    console.log("Introduction Du Jeu");
 }
-var afficherFinJeu = function() {
-    //INSTRUCTIONS
-    console.log("coucou de la mort end");
+var afficherFinJeu = function () {
+    //FIN
+    console.log("Fin Du Jeu");
 }
 
 
-var changerJeu = function() {
+var changerJeu = function () {
     changerMenu();
     changerMessage();
     changerVisuel();
 }
 
 
-var changerMenu = function() {
+var changerMenu = function () {
     menuActuel = menuActuel.emplacements[positionDuCurseur];
 }
-var changerMessage = function() {
+var changerMessage = function () {
     messageActuel = menuActuel.message;
 }
-var changerVisuel = function() {
+var changerVisuel = function () {
     visuelActuel = menuActuel.visuel
 }

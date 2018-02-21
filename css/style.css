@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Disposable';
+    font-family: 'Pixel';
     src: url('../font/Pixel_NES.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -9,7 +9,7 @@
     }
 
 @media (max-width: 1230px) {
-    .gameInfo {
+    .jeu-info {
         display: none;
     }
 }
@@ -18,7 +18,7 @@
 html, body{
     
     text-align: center;
-    font-family: Disposable;
+    font-family: Pixel;
     font-size: 14px;
     width: 100%;
     height: 100%;
@@ -31,20 +31,28 @@ html, body{
     justify-content: center;
 }
 
+.dozzo {
+    /* background-color: #000; */
+    /* color: #fff; */
+    height: 512px;
+    width: 480px;
+    margin: auto;
+}
+
 .selection {
     background-color: black;
     color: grey;
     padding: 10px 15px; 
     margin: 6px;
     border: none;
-    font-family: Disposable;
+    font-family: Pixel;
 }
 
-.selection:hover{
+/* .selection:hover{
     color: white;
-}
+} */
 
-kbd {
+/* kbd {
     background-color: #eee;
     border-radius: 3px;
     border: 1px solid #b4b4b4;
@@ -52,9 +60,31 @@ kbd {
     display: inline-block;
     line-height: 1;
     padding: 6px 8px;
+} */
+
+.message {
+    /* display: flex; */
+    padding: 10px 0 0 20px;
+    text-align: left;
+    height: 44px;
+  }
+
+/* ZONE GAUCHE ET DROITE */
+.jeu-info {
+    width: 25%;
+    padding-top: 100px;
+    margin: auto;
 }
 
-.img-class{
+.nes-boite {
+    background-color: black;
+    border: 10px solid transparent;
+    border-image:  url('../img/nes-boite.png') 10 10 repeat;
+  }
+
+/* ZONE GAUCHE  */
+
+.img-classe{
     height: 114px;
 }
 
@@ -68,7 +98,6 @@ kbd {
 
 .tooltip:hover{
     color: white;
-
 }
 
 .tooltip .tooltiptext {
@@ -86,9 +115,8 @@ kbd {
     opacity: 0;
     transition: opacity 0.4s;
     border: 10px solid transparent;
-    border-image:  url('../img/nesBox.png') 10 10 repeat;
+    border-image:  url('../img/nes-boite.png') 10 10 repeat;
 }
-
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
@@ -99,34 +127,17 @@ kbd {
     display: flex;
     flex-wrap: wrap;
   }
-.gameInfo {
-    width: 25%;
-    padding-top: 100px;
-    margin: auto;
-}
+  
 
-.dozzo {
-    background-color: #000;
-    color: #fff;
-    height: 512px;
-    width: 480px;
-    margin: auto;
-}
-
-.combat-img{
-    width: 100px;
-    margin: 20px 50px 20px 50px;
-}
-
-.a-propos{
+/* .a-propos{
     background-color: black;
     color: white;
     width: 60%;
     margin: auto auto auto;
-}
+} */
 
-.son-option{
-    margin: 0px 0px 0px 0px;
+/* .son-option{
+    margin: 0;
 }
 
 .switch {
@@ -171,27 +182,24 @@ kbd {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
     background-color: grey;
-  }
+  } */
 
-  .nesBox {
-    background-color: black;
-    border: 10px solid transparent;
-    border-image:  url('../img/nesBox.png') 10 10 repeat;
 
-  }
 
-  .nesBoxContainer {
+/* ZONE DROITE */
+  .statistiques {
     width: 50%;
   }
 
-  .messageBox {
-    display: flex;
-    padding: 10px 0 0 20px;
-    text-align: left;
-    height: 44px;
-  }
 
-  .fightBackground {
-    background-image: url("../img/background.png");
+/* ZONE COMBAT */
+  .zone-combat {
+    background-image: url("../img/zone-combat.png");
     height: 256px;
   }
+
+  /* Faire des personages de la bonne dimention  */
+  .img-combat{
+    width: 100px;
+    margin: 20px 50px 20px 50px;
+}

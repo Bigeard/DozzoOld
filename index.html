@@ -25,7 +25,7 @@
     <script src="classes/menu.js"></script>
 
     <script src="classes/entree.js"></script>
-    
+
     <script src="affichageExterne.js"></script>
     <script src="main.js"></script>
 </head>
@@ -34,25 +34,26 @@
 
     <div class="flex-container">
 
-        <div class="gameInfo">
-            <div class="nesBox">
-                <p>Message Log</p>
+        <div class="jeu-info">
+            <div class="nes-boite">
+                <p>Message Info</p>
             </div>
-            <div class="nesBox">
-                <p id="key"></p>
+            <div class="nes-boite">
+                <p id="touche"></p>
                 <p id="aideDev"></p>
             </div>
 
-            <div class="nesBox">
-                <p>Classes disponibles :</p><br>
+            <div class="nes-boite">
+                <p>Classes disponibles :</p>
+                <br>
                 <div class="tooltip" id="hero-0"></div>
                 <div class="tooltip" id="hero-1"></div>
                 <div class="tooltip" id="hero-2"></div>
                 <div class="tooltip" id="hero-3"></div>
-            </div>   
+            </div>
         </div>
 
-        <div class="gameBorder"></div>
+        <!-- <div class="gameBorder"></div> -->
 
         <div class="dozzo">
             <div id="affichageVisuel" style="height: 256px;"></div>
@@ -60,20 +61,19 @@
             <div id="affichageMenu"></div>
         </div>
 
-        <div class="gameBorder"></div>
+        <!-- <div class="gameBorder"></div> -->
 
-        <div class="gameInfo">
-
-        <div class="nesBox">
-            <p>Statistiques :</p><br>
-            <div class="flex-container">
-                <div class="nesBoxContainer" id="unit-0"></div>
-                <div class="nesBoxContainer" id="unit-1"></div>
+        <div class="jeu-info">
+            <div class="nes-boite">
+                <p>Statistiques :</p>
+                <br>
+                <div class="flex-container">
+                    <div class="statistiques" id="unit-0"></div>
+                    <div class="statistiques" id="unit-1"></div>
+                </div>
             </div>
         </div>
-            
 
-    </div>
 </body>
 
 </html>

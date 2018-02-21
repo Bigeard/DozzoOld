@@ -1,7 +1,7 @@
 # Dozzo
 Mini RPG Game
 
-![Logo](img/dozzo.svg)
+![Logo](img/dozzo.png)
 
 <!--
 ▀█████████▄  BINVENUE DANS LE DONJON DU ...
