@@ -38,10 +38,11 @@ html, body{
 }
 
 .selection {
-    background-color: black;
+    background-color: transparent;
+    text-align: left;
     color: grey;
-    padding: 10px 15px; 
-    margin: 6px;
+    width: 240px;
+    height: 35px;
     border: none;
     font-family: Pixel;
 }

@@ -1,12 +1,10 @@
 var visuelEcranTitre = {
-    
     contenu: function() {
-    	document.getElementById("affichageVisuel").innerHTML = "<img src=\"img/dozzo.png\"><br>";
+    	document.getElementById("affichageVisuel").innerHTML = "<img src=\"img/dozzo.png\">";
     }
 }
 
 var visuelNouvellePartie = {
-
 	contenu: function() {
 		var healthBar = '';
         healthBar += "<img src=\"img/barLeft.png\">"
@@ -23,25 +21,17 @@ var visuelNouvellePartie = {
 }
 
 var visuelOptions = {
-    
     contenu: function() {
-        // &nbsp;&nbsp;<label class=\"switch\"><input type=\"checkbox\"><span class=\"slider\"></span></label>
-    	var son = "ON"
-        var difficulter = "Normal"
-        document.getElementById("affichageVisuel").innerHTML =
-        "<div class=\"option\"><br><br><br><br><div class\"son-option\" >Son : " + son + " </div>" +
-        "<br><div class\"\" >Difficultée : " + difficulter + " &nbsp;&nbsp;</div></div>";
+        document.getElementById("affichageVisuel").innerHTML = "";
+        document.getElementById("affichageVisuel").style.height = "0px";
     }
 }
 
 var visuelAPropos = {
-    
     contenu: function() {
     	document.getElementById("affichageVisuel").innerHTML = 
         "<br><p class=\"a-propos bordure-nes\" ><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>";
     }
 }
-
-
 
 var visuelActuel = {contenu:undefined};

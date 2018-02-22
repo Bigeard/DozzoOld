@@ -1,3 +1,7 @@
+
+//A REFAIRE EN PRENANT EXEMPLE DES OBJETS DU FICHIER VISUEL.JS !
+//(C'EST IMPORTANT POUR POUVOIR DEFINIR LES FONCTIONS QUI COMPOSENT L'OBJET D'UNE MEILLEURE MANIERE)
+
 function Objet (nom, ptsVieModif, ptsManaModif, attaqueModif, magieModif, defenseModif, resistanceModif, effet, description) {
 
     this.nom = nom
