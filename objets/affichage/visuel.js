@@ -1,5 +1,6 @@
 var visuelEcranTitre = {
     contenu: function() {
+        document.getElementById("affichageVisuel").style.height = "";
     	document.getElementById("affichageVisuel").innerHTML = "<img src=\"img/dozzo.png\">";
     }
 }
@@ -30,7 +31,7 @@ var visuelOptions = {
 var visuelAPropos = {
     contenu: function() {
     	document.getElementById("affichageVisuel").innerHTML = 
-        "<br><p class=\"a-propos bordure-nes\" ><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>";
+        "<br><br><br><br><br><p class=\"a-propos bordure-nes\" ><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>";
     }
 }
 

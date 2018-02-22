@@ -12,6 +12,7 @@ Action.prototype = Object.create(Action.prototype);
 Action.prototype.constructor = Action;
 
 
+
 var actionA = new Action('ActionA', undefined);
 var actionB = new Action('ActionB', undefined);
 var actionC = new Action('ActionC', undefined);
