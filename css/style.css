@@ -32,8 +32,6 @@ html, body{
 }
 
 .dozzo {
-    /* background-color: #000; */
-    /* color: #fff; */
     height: 512px;
     width: 480px;
     margin: auto;
@@ -48,22 +46,7 @@ html, body{
     font-family: Pixel;
 }
 
-/* .selection:hover{
-    color: white;
-} */
-
-/* kbd {
-    background-color: #eee;
-    border-radius: 3px;
-    border: 1px solid #b4b4b4;
-    color: #333;
-    display: inline-block;
-    line-height: 1;
-    padding: 6px 8px;
-} */
-
 .message {
-    /* display: flex; */
     padding: 10px 0 0 20px;
     text-align: left;
     height: 44px;
@@ -76,10 +59,10 @@ html, body{
     margin: auto;
 }
 
-.nes-boite {
+.bordure-nes {
     background-color: black;
     border: 10px solid transparent;
-    border-image:  url('../img/nes-boite.png') 10 10 repeat;
+    border-image:  url('../img/bordure-nes.png') 10 10 repeat;
   }
 
 /* ZONE GAUCHE  */
@@ -115,7 +98,7 @@ html, body{
     opacity: 0;
     transition: opacity 0.4s;
     border: 10px solid transparent;
-    border-image:  url('../img/nes-boite.png') 10 10 repeat;
+    border-image:  url('../img/bordure-nes.png') 10 10 repeat;
 }
 
 .tooltip:hover .tooltiptext {
@@ -127,64 +110,6 @@ html, body{
     display: flex;
     flex-wrap: wrap;
   }
-  
-
-/* .a-propos{
-    background-color: black;
-    color: white;
-    width: 60%;
-    margin: auto auto auto;
-} */
-
-/* .son-option{
-    margin: 0;
-}
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 20px;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: grey;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 12px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: white;
-  }
-  
-  
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-    background-color: grey;
-  } */
-
-
 
 /* ZONE DROITE */
   .statistiques {
@@ -193,13 +118,12 @@ html, body{
 
 
 /* ZONE COMBAT */
-  .zone-combat {
-    background-image: url("../img/zone-combat.png");
+  .arriere-plan-combat {
+    background-image: url("../img/arriere-plan-combat.png");
     height: 256px;
-  }
+  }     
 
-  /* Faire des personages de la bonne dimention  */
-  .img-combat{
+  .img-unite-combat{
     width: 100px;
     margin: 20px 50px 20px 50px;
 }

@@ -16,9 +16,9 @@ var visuelNouvellePartie = {
         healthBar += "<img src=\"img/barRight.png\">"
 
         document.getElementById("affichageVisuel").innerHTML = 
-        "<div class=\"zone-combat\"><br>" + healthBar + " VS " + healthBar +
-        "<br><br><br><br><br><br><br><img class=\"img-combat\" src=\"img/guerrier.gif\">" +
-        "<img class=\"img-combat\" src=\"img/abomination.gif\"></div>";
+        "<div class=\"arriere-plan-combat\"><br>" + healthBar + " VS " + healthBar +
+        "<br><br><br><br><br><br><br><img class=\"img-unite-combat\" src=\"img/guerrier.gif\">" +
+        "<img class=\"img-unite-combat\" src=\"img/abomination.gif\"></div>";
 	}
 }
 
@@ -38,7 +38,7 @@ var visuelAPropos = {
     
     contenu: function() {
     	document.getElementById("affichageVisuel").innerHTML = 
-        "<br><p class=\"a-propos nes-boite\" ><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>";
+        "<br><p class=\"a-propos bordure-nes\" ><br>Jeu en bêta pour le moment... Crée par :<br><br>Samy Vera<br><br>Robin Bigeard<br><br>Olivier Crochet<br><br><br></p><br>";
     }
 }
 
