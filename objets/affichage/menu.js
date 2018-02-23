@@ -14,10 +14,8 @@ Menu.prototype = Object.create(Menu.prototype);
 Menu.prototype.constructor = Menu;
 
 
-var menuEquipements = new Menu ("Equipements", false, [Rapiere, retour], messageNouvellePartie, visuelNouvellePartie);
-var menuObjets = new Menu ("Objets", false, [PotionDeSoin, retour], messageNouvellePartie, visuelNouvellePartie);
-var menuInventaire = new Menu("Inventaire", false, [menuEquipements, menuObjets, retour], messageInventaire, visuelNouvellePartie)
-var menuAction = new Menu("Action", false, [actionA, actionB, actionC, actionD, actionE, retour], messageAction, visuelNouvellePartie);
+var menuInventaire = new Menu("Objet", false, [PotionDeSoin, retour], messageInventaire, visuelNouvellePartie)
+var menuAction = new Menu("Action", false, [Rapiere, ganteletDeFer, actionC, actionD, actionE, retour], messageAction, visuelNouvellePartie);
 
 var menuNouvellePartie = new Menu("Nouvelle Partie", false, [menuAction, concentration, competence, menuInventaire], messageNouvellePartie, visuelNouvellePartie);
 var menuOptions = new Menu("Configuration", true, [difficulte, commandes, musiques, effetSon, retour], messageOption, visuelOptions);
