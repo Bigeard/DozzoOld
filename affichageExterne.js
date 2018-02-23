@@ -1,38 +1,36 @@
 function affichageHero() {
 
-    var chowClasse = Object.create(Unite)
-    var changeClasse = ["Guerrier", "Mage", "Assassin", "Mage noir"]
+    var changeClasse = [classeGuerrier, classeMage, classeAssassin, classeMageNoir];
+    var chowClasse;
 
     for (var x = 0; x < changeClasse.length; x++) {
-        chowClasse.init("undefined", 0, 0, 0, "undefined", "undefined", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        chowClasse.setClasse(changeClasse[x])
-        document.getElementById("hero-" + x).innerHTML = chowClasse.classe + "<span class=\"tooltiptext\">" +
-            chowClasse.classe +
-            "<br><img class=\"img-classe\" src=\"img/" + chowClasse.classe + ".gif\">" +
-            "<br> PV : " + chowClasse.ptsVieMax +
-            "<br> Mana : " + chowClasse.ptsManaMax +
-            "<br> ATK : " + chowClasse.attaqueMax +
-            "<br> MAG : " + chowClasse.magieMax +
-            "<br> DEF : " + chowClasse.defenseMax +
-            "<br> RES : " + chowClasse.resistanceMax +
-            "<br>---------------" + "<br> Capacité :<br>" + chowClasse.competance + "</p></span>";
+        chowClasse = changeClasse[x];
+        document.getElementById("hero-" + x).innerHTML = chowClasse.nom + "<span class=\"tooltiptext\">" +
+            chowClasse.nom +
+            "<br><img class=\"img-classe\" src=\"img/" + chowClasse.nom + ".gif\">" +
+            "<br> PV : " + chowClasse.ptsVie +
+            "<br> Mana : " + chowClasse.vitesse +
+            "<br> ATK : " + chowClasse.attaque +
+            "<br> MAG : " + chowClasse.magie +
+            "<br> DEF : " + chowClasse.defense +
+            "<br> RES : " + chowClasse.resistance +
+            "<br>---------------" + "<br> Capacité :<br>" + chowClasse.competence.nom + "</p></span>";
     }
 }
 
 function affichageStats() {
 
-    var chowUnit = Object.create(Unite)
-    var changeUnit = ["Guerrier", "Abomination"]
+    var changeUnite = [uniteJoueur, uniteEnnemi];
+    var chowUnite;
 
-    for (var x = 0; x < changeUnit.length; x++) {
-        chowUnit.init("undefined", 0, 0, 0, "undefined", "undefined", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        chowUnit.setClasse(changeUnit[x])
-        document.getElementById("unit-" + x).innerHTML = chowUnit.classe + "<span>" +
-            "<br> PV : " + chowUnit.ptsVieMax +
-            "<br> Mana : " + chowUnit.ptsManaMax +
-            "<br> ATK : " + chowUnit.attaqueMax +
-            "<br> MAG : " + chowUnit.magieMax +
-            "<br> DEF : " + chowUnit.defenseMax +
-            "<br> RES : " + chowUnit.resistanceMax + "</p>";
+    for (var x = 0; x < changeUnite.length; x++) {
+        chowUnite = changeUnite[x]
+        document.getElementById("unit-" + x).innerHTML = chowUnite.nom + "<span>" +
+            "<br> PV : " + chowUnite.ptsVieMax +
+            "<br> Mana : " + chowUnite.vitesseMax +
+            "<br> ATK : " + chowUnite.attaqueMax +
+            "<br> MAG : " + chowUnite.magieMax +
+            "<br> DEF : " + chowUnite.defenseMax +
+            "<br> RES : " + chowUnite.resistanceMax + "</p>";
     }
 }

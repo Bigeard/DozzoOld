@@ -28,7 +28,7 @@ var messageAction = {
 	}
 }
 
-var messageInventaire = {
+var messageObjet = {
 	contenu: function() {
 		document.getElementById("affichageMessage").innerHTML = "<div class=\"bordure-nes message\">Fait un choix vite !?!</div><br>";
 	}

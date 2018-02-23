@@ -1,26 +1,63 @@
-
-//A REFAIRE EN PRENANT EXEMPLE DES OBJETS DU FICHIER VISUEL.JS !
-//(C'EST IMPORTANT POUR POUVOIR DEFINIR LES FONCTIONS QUI COMPOSENT L'OBJET D'UNE MEILLEURE MANIERE)
-
-function Menu(nom, dispositionVertciale, emplacements, message, visuel) {
-    this.nom = nom;
-    this.dispositionVertciale = dispositionVertciale;
-    this.emplacements = emplacements;
-    this.message = message;
-    this.visuel = visuel;
+var menuObjet = {
+    nom: 'Objet',
+    dispositionVertciale: false,
+    emplacements: [potionDeSoin, retour],
+    message: messageObjet,
+    visuel: visuelNouvellePartie,
+    effet: function() {
+    }
 }
-
-Menu.prototype = Object.create(Menu.prototype);
-Menu.prototype.constructor = Menu;
-
-
-var menuInventaire = new Menu("Objet", false, [PotionDeSoin, retour], messageInventaire, visuelNouvellePartie)
-var menuAction = new Menu("Action", false, [Rapiere, ganteletDeFer, actionC, actionD, actionE, retour], messageAction, visuelNouvellePartie);
-
-var menuNouvellePartie = new Menu("Nouvelle Partie", false, [menuAction, concentration, competence, menuInventaire], messageNouvellePartie, visuelNouvellePartie);
-var menuOptions = new Menu("Configuration", true, [difficulte, commandes, musiques, effetSon, retour], messageOption, visuelOptions);
-var menuAPropos = new Menu("A Propos", true, [retour], messageApropos, visuelAPropos)
-
-var menuEcranTitre = new Menu("Ecran Titre", true, [menuNouvellePartie, menuOptions, menuAPropos], visuelEcranTitre, messageEcranTitre);
-
-var menuActuel = new Menu((undefined, undefined, undefined, undefined));
+var menuAction = {
+    nom: 'Action',
+    dispositionVertciale: false,
+    emplacements: [rapiere, ganteletDeFer, actionC, actionD, actionE, retour],
+    message: messageNouvellePartie,
+    visuel: visuelNouvellePartie,
+    effet: function() {
+    }
+}
+var menuCompetence = {
+	nom: 'Compétences',
+	dispositionVertciale: false,
+	emplacements: [retour],
+	message: messageNouvellePartie,
+	visuel: visuelNouvellePartie,
+	effet: function() {
+	}
+}
+var menuCombat = {
+    nom: 'Nouvelle Partie',
+    dispositionVertciale: false,
+    emplacements: [menuAction, concentration, menuCompetence, menuObjet],
+    message: messageNouvellePartie,
+    visuel: visuelNouvellePartie,
+    effet: function() {
+    }
+}
+var menuConfiguration = {
+    nom: 'Configuration',
+    dispositionVertciale: true,
+    emplacements: [difficulte, commandes, fondsSonores, effetsSonores, retour],
+    message: messageOption,
+    visuel: visuelOptions,
+    effet: function() {
+    }
+}
+var menuAPropos = {
+    nom: 'A Propos',
+    dispositionVertciale: true,
+    emplacements: [retour],
+    message: messageApropos,
+    visuel: visuelAPropos,
+    effet: function() {
+    }
+}
+var menuEcranTitre = {
+    nom: 'Ecran Titre',
+    dispositionVertciale: true,
+    emplacements: [menuCombat, menuConfiguration, menuAPropos],
+    message: messageEcranTitre,
+    visuel: visuelEcranTitre,
+    effet: function() {
+    }
+}

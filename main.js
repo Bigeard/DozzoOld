@@ -34,7 +34,6 @@ var changerMenu = function () {
         retour.emplacements[0] = menuActuel;
         menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
-    console.log(retour.emplacements[0].nom);
 }
 var changerMessage = function () {
     messageActuel = menuActuel.message;
