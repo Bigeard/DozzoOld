@@ -10,7 +10,7 @@ var menuObjet = {
 var menuAction = {
     nom: 'Action',
     dispositionVertciale: false,
-    emplacements: [rapiere, ganteletDeFer, actionC, actionD, actionE, retour],
+    emplacements: [rapiere, actionB, actionC, actionD, actionE, retour],
     message: messageNouvellePartie,
     visuel: visuelNouvellePartie,
     effet: function() {

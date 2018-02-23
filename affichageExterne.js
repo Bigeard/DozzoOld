@@ -9,11 +9,11 @@ function affichageHero() {
             chowClasse.nom +
             "<br><img class=\"img-classe\" src=\"img/" + chowClasse.nom + ".gif\">" +
             "<br> PV : " + chowClasse.ptsVie +
-            "<br> Mana : " + chowClasse.vitesse +
             "<br> ATK : " + chowClasse.attaque +
             "<br> MAG : " + chowClasse.magie +
             "<br> DEF : " + chowClasse.defense +
             "<br> RES : " + chowClasse.resistance +
+            "<br> VIT : " + chowClasse.vitesse +
             "<br>---------------" + "<br> Capacité :<br>" + chowClasse.competence.nom + "</p></span>";
     }
 }
@@ -27,10 +27,10 @@ function affichageStats() {
         chowUnite = changeUnite[x]
         document.getElementById("unit-" + x).innerHTML = chowUnite.nom + "<span>" +
             "<br> PV : " + chowUnite.ptsVieMax +
-            "<br> Mana : " + chowUnite.vitesseMax +
             "<br> ATK : " + chowUnite.attaqueMax +
             "<br> MAG : " + chowUnite.magieMax +
             "<br> DEF : " + chowUnite.defenseMax +
-            "<br> RES : " + chowUnite.resistanceMax + "</p>";
+            "<br> RES : " + chowUnite.resistanceMax +
+            "<br> VIT : " + chowUnite.vitesseMax + "</p>";
     }
 }
