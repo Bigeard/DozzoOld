@@ -1,6 +1,8 @@
 var positionDuCurseur = 0;
 
-var tourJoueur = false;
+var tourJoueur = true;
+var uniteTour = uniteJoueur;
+var uniteCible = uniteEnnemi;
 
 menuActuel = menuEcranTitre;
 messageActuel = messageEcranTitre;

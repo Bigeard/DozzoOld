@@ -6,8 +6,9 @@ var rapiere = {
 
   attaque: 4,
   effet: function () {
-    changerUnite();
     uniteCible.ptsVie -= this.attaque;
+    changerUnite();
+
   },
   maitrise: "épée",
   type: 'action'
@@ -19,8 +20,8 @@ var hachette = {
 
   attaque: 4,
   effet: function () {
-    changerUnite();
     uniteCible.ptsVie -= this.attaque;
+    changerUnite();
   },
   maitrise: "hache",
   type: 'action'
@@ -30,35 +31,50 @@ var hachette = {
 
 var potionDeSoin = {
   nom: "Potion de soin",
+  nomOriginel: "Potion de soin",
   description: "Potion qui soigne 10PV",
 
   ptsVie: 10,
-  quantite: 1,
+  quantiteJoueur: 1,
+  quantiteEnnemi: 2,
   effet: function () {
-    if(this.quantite !== 0){
-      console.log("Potion de soin");
+    if (this.quantiteJoueur !== 0 && tourJoueur) {
       uniteJoueur.ptsVie += this.ptsVie;
-      this.quantite --;
-      }
-      else{
-        //instructions
-      }
+      this.quantiteJoueur--;
+      changerUnite();
+    }
+    if (this.quantiteEnnemi !== 0 && tourJoueur === false) {
+      uniteEnnemi.ptsVie += this.ptsVie;
+      this.quantiteEnnemi--;
+      changerUnite();
+    }
+    else {
+      //instructions
+    }
   },
   type: 'objet'
 }
 
 var potionDeForce = {
   nom: "Potion de force",
+  nomOriginel: "Potion de force",
   description: "Potion qui augmente l'attaque",
 
   attaque: 3,
-  quantite: 1,
+  quantiteJoueur: 1,
+  quantiteEnnemi: 5,
   effet: function () {
-    if(this.quantite !== 0){
-    uniteJoueur.ptsVie += this.attaque;
-    this.quantite --;
+    if (this.quantiteJoueur !== 0 && tourJoueur) {
+      uniteJoueur.attaque += this.attaque;
+      this.quantiteJoueur--;
+      changerUnite();
     }
-    else{
+    if (this.quantiteEnnemi !== 0 && tourJoueur === false) {
+      uniteEnnemi.attaque += this.attaque;
+      this.quantiteEnnemi--;
+      changerUnite();
+    }
+    else {
       //instructions
     }
   },

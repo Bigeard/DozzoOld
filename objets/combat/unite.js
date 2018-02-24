@@ -90,17 +90,33 @@ var uniteEnnemi = {
 	}
 }
 
-var uniteTour;
-var uniteCible;
+
 
 changerUnite = function() {
-	if (tourJoueur) {
-    	uniteTour = uniteJoueur;
-    	uniteCible = uniteEnnemi;
+	if (uniteJoueur.ptsVie <= 0){
+		uniteJoueur.ptsVie = 0;
 	}
-	else {
-    	uniteTour = uniteEnnemi;
-    	uniteCible = uniteJoueur
+	if (uniteEnnemi.ptsVie <= 0){
+		uniteEnnemi.ptsVie = 0;
+	}
+	else{
+		if (uniteJoueur.ptsVie > uniteJoueur.ptsVieMax){
+			uniteJoueur.ptsVie = uniteJoueur.ptsVieMax;
+		}
+		if (uniteEnnemi.ptsVie > uniteEnnemi.ptsVieMax){
+			uniteEnnemi.ptsVie = uniteEnnemi.ptsVieMax;
+		}
+		menuActuel = menuCombat;
+		if (tourJoueur) {
+			uniteTour = uniteEnnemi;
+			uniteCible = uniteJoueur;
+			tourJoueur = false;
+		}
+		else {
+			uniteTour = uniteJoueur;
+			uniteCible = uniteEnnemi;
+			tourJoueur = true;
+		}
 	}
 }
 

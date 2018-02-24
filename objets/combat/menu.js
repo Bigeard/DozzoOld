@@ -1,7 +1,7 @@
 var menuObjet = {
     nom: 'Objet',
     dispositionVertciale: false,
-    
+
     emplacements: [retour],
     message: messageObjet,
     visuel: visuelNouvellePartie,
@@ -9,11 +9,16 @@ var menuObjet = {
         changerInventaire();
         menuObjet.emplacements = [retour];
         for (var i = 0; i < inventaireTour.typeObjet.length; i++) {
-            menuObjet.emplacements.length ++;
+            menuObjet.emplacements.length++;
             menuObjet.emplacements[menuObjet.emplacements.length - 1] = retour;
-            menuObjet.emplacements[menuObjet.emplacements.length-2] = inventaireTour.typeObjet[menuObjet.emplacements.length-2];
-            menuObjet.emplacements[menuObjet.emplacements.length-2].nom = menuObjet.emplacements[menuObjet.emplacements.length-2].nomOriginel
-            menuObjet.emplacements[menuObjet.emplacements.length-2].nom += " x" + menuObjet.emplacements[menuObjet.emplacements.length-2].quantite;
+            menuObjet.emplacements[menuObjet.emplacements.length - 2] = inventaireTour.typeObjet[menuObjet.emplacements.length - 2];
+            menuObjet.emplacements[menuObjet.emplacements.length - 2].nom = menuObjet.emplacements[menuObjet.emplacements.length - 2].nomOriginel;
+            if (tourJoueur) {
+                menuObjet.emplacements[menuObjet.emplacements.length - 2].nom += " x" + menuObjet.emplacements[menuObjet.emplacements.length - 2].quantiteJoueur;
+            }
+            else {
+                menuObjet.emplacements[menuObjet.emplacements.length - 2].nom += " x" + menuObjet.emplacements[menuObjet.emplacements.length - 2].quantiteEnnemi;
+            }
         }
     },
     effet: function () {
@@ -32,9 +37,9 @@ var menuAction = {
         changerInventaire();
         menuAction.emplacements = [retour];
         for (var i = 0; i < inventaireTour.typeAction.length; i++) {
-            menuAction.emplacements.length ++;
+            menuAction.emplacements.length++;
             menuAction.emplacements[menuAction.emplacements.length - 1] = retour;
-            menuAction.emplacements[menuAction.emplacements.length-2] = inventaireTour.typeAction[menuAction.emplacements.length-2];
+            menuAction.emplacements[menuAction.emplacements.length - 2] = inventaireTour.typeAction[menuAction.emplacements.length - 2];
         }
     },
     effet: function () {
