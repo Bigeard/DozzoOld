@@ -4,7 +4,9 @@ var menuObjet = {
     emplacements: [potionDeSoin, retour],
     message: messageObjet,
     visuel: visuelNouvellePartie,
-    effet: function() {
+    effet: function () {
+        retour.emplacements[0] = menuActuel;
+        menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }
 var menuAction = {
@@ -13,17 +15,21 @@ var menuAction = {
     emplacements: [rapiere, actionB, actionC, actionD, actionE, retour],
     message: messageNouvellePartie,
     visuel: visuelNouvellePartie,
-    effet: function() {
+    effet: function () {
+        retour.emplacements[0] = menuActuel;
+        menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }
 var menuCompetence = {
-	nom: 'Compétences',
-	dispositionVertciale: false,
-	emplacements: [retour],
-	message: messageNouvellePartie,
-	visuel: visuelNouvellePartie,
-	effet: function() {
-	}
+    nom: 'Compétences',
+    dispositionVertciale: false,
+    emplacements: [retour],
+    message: messageNouvellePartie,
+    visuel: visuelNouvellePartie,
+    effet: function () {
+        retour.emplacements[0] = menuActuel;
+        menuActuel = menuActuel.emplacements[positionDuCurseur];
+    }
 }
 var menuCombat = {
     nom: 'Nouvelle Partie',
@@ -31,7 +37,9 @@ var menuCombat = {
     emplacements: [menuAction, concentration, menuCompetence, menuObjet],
     message: messageNouvellePartie,
     visuel: visuelNouvellePartie,
-    effet: function() {
+    effet: function () {
+        retour.emplacements[0] = menuActuel;
+        menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }
 var menuConfiguration = {
@@ -40,7 +48,9 @@ var menuConfiguration = {
     emplacements: [difficulte, commandes, fondsSonores, effetsSonores, retour],
     message: messageOption,
     visuel: visuelOptions,
-    effet: function() {
+    effet: function () {
+        retour.emplacements[0] = menuActuel;
+        menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }
 var menuAPropos = {
@@ -49,7 +59,9 @@ var menuAPropos = {
     emplacements: [retour],
     message: messageApropos,
     visuel: visuelAPropos,
-    effet: function() {
+    effet: function () {
+        retour.emplacements[0] = menuActuel;
+        menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }
 var menuEcranTitre = {
@@ -58,6 +70,8 @@ var menuEcranTitre = {
     emplacements: [menuCombat, menuConfiguration, menuAPropos],
     message: messageEcranTitre,
     visuel: visuelEcranTitre,
-    effet: function() {
+    effet: function () {
+        retour.emplacements[0] = menuActuel;
+        menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }

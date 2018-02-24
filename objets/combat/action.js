@@ -1,14 +1,17 @@
 var actionA = {
 	nom:'ActionA',
 	effet: function() {
-    	//INSTRUCTION
-    }
+	}
 }
 
 var actionB = {
 	nom:'ActionB',
 	effet: function() {
-    	//INSTRUCTION
+		//ne fonctionne pas bien jsp pour quoi ><
+		console.log("actionB");
+		classeAbomination.ptsVie -= 4;
+		menuActuel = menuCombat;
+		tourEnnemi();
     }
 }
 

@@ -1,4 +1,7 @@
 var retour = {
     nom: 'Retour',
-    emplacements: [undefined]
+    emplacements: [undefined],
+    effet: function () {
+        menuActuel = retour.emplacements[0];
+    }
 }

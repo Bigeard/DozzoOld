@@ -20,7 +20,7 @@ var uniteJoueur = {
 	//STATS INGAME
 	ptsDozzo: 3,
 
-	ptsVie: 12,
+	ptsVie: 20,
 	attaque: 3,
 	magie: 3,
 	defense: 2,
@@ -50,7 +50,7 @@ var uniteEnnemi = {
 	//STATS INGAME
 	ptsDozzo: 3,
 
-	ptsVie: 20,
+	ptsVie: 30,
 	attaque: 7,
 	magie: 0,
 	defense: 5,

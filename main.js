@@ -27,13 +27,7 @@ var changerJeu = function () {
 
 
 var changerMenu = function () {
-
-    if (menuActuel.emplacements[positionDuCurseur] === retour) {
-        menuActuel = retour.emplacements[0];
-    } else {
-        retour.emplacements[0] = menuActuel;
-        menuActuel = menuActuel.emplacements[positionDuCurseur];
-    }
+    menuActuel.emplacements[positionDuCurseur].effet();
 }
 var changerMessage = function () {
     messageActuel = menuActuel.message;
