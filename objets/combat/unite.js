@@ -18,14 +18,14 @@ var uniteJoueur = {
 	vitesseMax: 1,
 
 	//STATS INGAME
-	ptsDozzo: this.ptsDozzoMax,
+	ptsDozzo: 3,
 
-	ptsVie: this.ptsVieMax,
-	attaque: this.attaqueMax,
-	magie: this.magieMax,
-	defense: this.defenseMax,
-	resistance: this.resistanceMax,
-	vitesse: this.vitesseMax
+	ptsVie: 12,
+	attaque: 3,
+	magie: 3,
+	defense: 2,
+	resistance: 2,
+	vitesse: 1
 }
 
 var uniteEnnemi = {
@@ -48,12 +48,12 @@ var uniteEnnemi = {
 	vitesseMax: 1,
 
 	//STATS INGAME
-	ptsDozzo: this.ptsDozzoMax,
+	ptsDozzo: 3,
 
-	ptsVie: this.ptsVieMax,
-	attaque: this.attaqueMax,
-	magie: this.magieMax,
-	defense: this.defenseMax,
-	resistance: this.resistanceMax,
-	vitesse: this.vitesseMax
+	ptsVie: 20,
+	attaque: 7,
+	magie: 0,
+	defense: 5,
+	resistance: 3,
+	vitesse: 1
 }

@@ -25,8 +25,8 @@ function affichageStats() {
 
     for (var x = 0; x < changeUnite.length; x++) {
         chowUnite = changeUnite[x]
-        document.getElementById("unit-" + x).innerHTML = chowUnite.nom + "<span>" +
-            "<br> PV : " + chowUnite.ptsVieMax +
+        document.getElementById("unit-" + x).innerHTML = chowUnite.nom + "<span><br>" +
+            "<br> PV : " + chowUnite.ptsVie + "/" + chowUnite.ptsVieMax +
             "<br> ATK : " + chowUnite.attaqueMax +
             "<br> MAG : " + chowUnite.magieMax +
             "<br> DEF : " + chowUnite.defenseMax +

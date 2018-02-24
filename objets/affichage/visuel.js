@@ -7,15 +7,27 @@ var visuelEcranTitre = {
 
 var visuelNouvellePartie = {
 	contenu: function() {
-		var healthBar = '';
-        healthBar += "<img src=\"img/barLeft.png\">"
-        for (var i = 0; i < 50; i++) {
-            healthBar += "<img src=\"img/barMiddle.png\">"
+
+        var healthBar1;
+        var healthBar2;
+
+        var healthBars = [healthBar1, healthBar2];
+        var unites = [uniteJoueur, uniteEnnemi];
+
+        for (var i = 0; i < healthBars.length; i++) {
+            healthBars[i] = '';
+            healthBars[i] += "<img src=\"img/barLeft.png\">"
+            for (var j = 0; j < Math.round(unites[i].ptsVie*50/unites[i].ptsVieMax); j++) {
+                healthBars[i] += "<img src=\"img/barMiddle.png\">"
+            }
+            for (var k = 0; k < Math.round(50-(unites[i].ptsVie*50/unites[i].ptsVieMax)); k++) {
+                healthBars[i] += "<img src=\"img/barEmpty.png\">"
+            }
+            healthBars[i] += "<img src=\"img/barRight.png\">"
         }
-        healthBar += "<img src=\"img/barRight.png\">"
 
         document.getElementById("affichageVisuel").innerHTML = 
-        "<div class=\"arriere-plan-combat\"><br>" + healthBar + " VS " + healthBar +
+        "<div class=\"arriere-plan-combat\"><br>" + healthBars[0] + " VS " + healthBars[1] +
         "<br><br><br><br><br><br><br><img class=\"img-unite-combat\" src=\"img/guerrier.gif\">" +
         "<img class=\"img-unite-combat\" src=\"img/abomination.gif\"></div>";
 	}
