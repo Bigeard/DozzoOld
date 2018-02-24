@@ -6,12 +6,17 @@ var menuObjet = {
     message: messageObjet,
     visuel: visuelNouvellePartie,
     setObjet: function () {
-        if(tourJoueur) {
-            this.emplacements.length ++; 
+        changerInventaire();
+        menuObjet.emplacements = [retour];
+        for (var i = 0; i < inventaireTour.typeObjet.length; i++) {
+            menuObjet.emplacements.length ++;
+            menuObjet.emplacements[menuObjet.emplacements.length - 1] = retour;
+            menuObjet.emplacements[menuObjet.emplacements.length-2] = inventaireTour.typeObjet[menuObjet.emplacements.length-2];
         }
     },
     effet: function () {
         retour.emplacements[0] = menuActuel;
+        menuObjet.setObjet();
         menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }
@@ -21,8 +26,18 @@ var menuAction = {
     emplacements: [rapiere, retour],
     message: messageNouvellePartie,
     visuel: visuelNouvellePartie,
+    setAction: function () {
+        changerInventaire();
+        menuAction.emplacements = [retour];
+        for (var i = 0; i < inventaireTour.typeAction.length; i++) {
+            menuAction.emplacements.length ++;
+            menuAction.emplacements[menuAction.emplacements.length - 1] = retour;
+            menuAction.emplacements[menuAction.emplacements.length-2] = inventaireTour.typeAction[menuAction.emplacements.length-2];
+        }
+    },
     effet: function () {
         retour.emplacements[0] = menuActuel;
+        menuAction.setAction();
         menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }

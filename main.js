@@ -1,12 +1,13 @@
 var positionDuCurseur = 0;
 
-var tourJoueur = true;
+var tourJoueur = false;
 
 menuActuel = menuEcranTitre;
 messageActuel = messageEcranTitre;
 visuelActuel = visuelEcranTitre;
 
 var main = function () {
+    initialisationUniteJoueur();
     afficherJeu();
 }
 
@@ -30,6 +31,7 @@ var changerJeu = function () {
 
 var changerMenu = function () {
     menuActuel.emplacements[positionDuCurseur].effet();
+    affichageStats();
 }
 var changerMessage = function () {
     messageActuel = menuActuel.message;

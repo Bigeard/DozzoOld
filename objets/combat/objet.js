@@ -6,7 +6,8 @@ var rapiere = {
 
   attaque: 4,
   effet: function () {
-    uniteEnnemi.ptsVie -= this.attaque;
+    changerUnite();
+    uniteCible.ptsVie -= this.attaque;
   },
   maitrise: "épée",
   type: 'action'
@@ -18,7 +19,8 @@ var hachette = {
 
   attaque: 4,
   effet: function () {
-    uniteEnnemi.ptsVie -= this.attaque;
+    changerUnite();
+    uniteCible.ptsVie -= this.attaque;
   },
   maitrise: "hache",
   type: 'action'

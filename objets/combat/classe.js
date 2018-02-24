@@ -3,13 +3,12 @@ var classeMage = {
 	maitriseArmes: ['magie'],
 	competence: competenceIncantation,
 
-	ptsVieMax: 0,
 	ptsVie: 0,
 	attaque: 0,
 	magie: 8,
 	defense: 2,
 	resistance: 4,
-	vitesse: 3
+	vitesse: 3,
 }
 
 var classeGuerrier = {
@@ -17,7 +16,6 @@ var classeGuerrier = {
 	maitriseArmes: ['épée','hache'],
 	competence: competenceRage,
 
-	ptsVieMax: 10,
 	ptsVie: 10,
 	attaque: 10,
 	magie: 0,
@@ -31,7 +29,6 @@ var classeAssassin = {
 	maitriseArmes: ['épée','dague'],
 	competence: competenceCamouflage,
 
-	ptsVieMax: 0,
 	ptsVie: 0,
 	attaque: 15,
 	magie: 0,
@@ -45,7 +42,6 @@ var classeMageNoir = {
 	maitriseArmes: ['magie','magieNoire'],
 	competence: competenceEntrave,
 
-	ptsVieMax: 0,
 	ptsVie: 0,
 	attaque: 0,
 	magie: 10,
@@ -59,7 +55,6 @@ var classeAbomination = {
 	maitriseArmes: ['hache','magieNoire'],
 	competence: competenceEmpoisonnement,
 
-	ptsVieMax: 10,
 	ptsVie: 10,
 	attaque: 12,
 	magie: 10,
