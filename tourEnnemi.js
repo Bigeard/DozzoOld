@@ -11,7 +11,7 @@ var tourEnnemi = function () {
         console.log("******* Ennemi mort *******");
     }
     else{
-        uniteJoueur.ptsVie -= 2;
+        uniteJoueur.ptsVie -= 4;
         console.log("tourEnnemi");
         console.log("PV Ennemi = ", uniteEnnemi.ptsVie);
         console.log("PV Guerrier = ", uniteJoueur.ptsVie);

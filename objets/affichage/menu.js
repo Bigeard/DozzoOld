@@ -1,9 +1,15 @@
 var menuObjet = {
     nom: 'Objet',
     dispositionVertciale: false,
-    emplacements: [potionDeSoin, retour],
+    
+    emplacements: [retour],
     message: messageObjet,
     visuel: visuelNouvellePartie,
+    setObjet: function () {
+        if(tourJoueur) {
+            this.emplacements.length ++; 
+        }
+    },
     effet: function () {
         retour.emplacements[0] = menuActuel;
         menuActuel = menuActuel.emplacements[positionDuCurseur];
@@ -12,7 +18,7 @@ var menuObjet = {
 var menuAction = {
     nom: 'Action',
     dispositionVertciale: false,
-    emplacements: [rapiere, actionB, actionC, actionD, actionE, retour],
+    emplacements: [rapiere, retour],
     message: messageNouvellePartie,
     visuel: visuelNouvellePartie,
     effet: function () {

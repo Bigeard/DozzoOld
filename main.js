@@ -1,5 +1,7 @@
 var positionDuCurseur = 0;
 
+var tourJoueur = true;
+
 menuActuel = menuEcranTitre;
 messageActuel = messageEcranTitre;
 visuelActuel = visuelEcranTitre;
