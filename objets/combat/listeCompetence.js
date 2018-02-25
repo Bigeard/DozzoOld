@@ -5,7 +5,7 @@ var competenceRage = {
     quantiteDozzo: 3,
     attaque: 15,
     effet: function () {
-        if (uniteTour.ptsDozzo === this.quantiteDozzo) {
+        if (uniteTour.ptsDozzo >= this.quantiteDozzo) {
             uniteCible.ptsVie -= this.attaque;
             uniteTour.ptsDozzo -= this.quantiteDozzo+1;
             changerUnite();
@@ -22,7 +22,7 @@ var competenceIncantation = {
     attaque: 10,
     ptsVie: 5,
     effet: function () {
-        if (uniteTour.ptsDozzo === this.quantiteDozzo) {
+        if (uniteTour.ptsDozzo >= this.quantiteDozzo) {
             uniteCible.ptsVie -= this.attaque;
             uniteTour.ptsVie += this.ptsVie;
             uniteTour.ptsDozzo -= this.quantiteDozzo+1;
@@ -55,7 +55,7 @@ var competenceEmpoisonnement = {
     quantiteDozzo: 2,
     attaque: 8,
     effet: function () {
-        if (uniteTour.ptsDozzo === this.quantiteDozzo) {
+        if (uniteTour.ptsDozzo >= this.quantiteDozzo) {
             uniteCible.ptsVie -= this.attaque;
             uniteTour.ptsDozzo -= this.quantiteDozzo+1;
             changerUnite();
