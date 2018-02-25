@@ -5,7 +5,7 @@ var visuelEcranTitre = {
     }
 }
 
-var visuelNouvellePartie = {
+var visuelCombat = {
 	contenu: function() {
 
         var unites = [uniteJoueur, uniteEnnemi];
@@ -48,6 +48,19 @@ var visuelNouvellePartie = {
         "<img class=\"img-unite-combat\" src=\"img/abomination.gif\"></div>";
 	}
 }
+
+var visuelSelectionClasse = {
+    contenu: function() {
+        document.getElementById("affichageVisuel").innerHTML = "Sélectionne ta classe !";
+    }
+}
+
+var visuelNouvellePartie = {
+    contenu: function() {
+        document.getElementById("affichageVisuel").innerHTML = "";
+    }
+}
+
 
 var visuelOptions = {
     contenu: function() {

@@ -4,7 +4,7 @@ var menuObjet = {
     
     emplacements: [retour],
     message: messageObjet,
-    visuel: visuelNouvellePartie,
+    visuel: visuelCombat,
     setObjet: function () {
         changerInventaire();
         menuObjet.emplacements = [retour];
@@ -32,7 +32,7 @@ var menuAction = {
     dispositionVertciale: false,
     emplacements: [retour],
     message: messageNouvellePartie,
-    visuel: visuelNouvellePartie,
+    visuel: visuelCombat,
     setAction: function () {
         changerInventaire();
         menuAction.emplacements = [retour];
@@ -53,7 +53,7 @@ var menuCompetence = {
     dispositionVertciale: false,
     emplacements: [retour],
     message: messageNouvellePartie,
-    visuel: visuelNouvellePartie,
+    visuel: visuelCombat,
     setCompetence: function () {
         changerCompetence();
         menuCompetence.emplacements = [retour];
@@ -70,10 +70,42 @@ var menuCompetence = {
     }
 }
 var menuCombat = {
-    nom: 'Nouvelle Partie',
+    nom: 'Combat',
     dispositionVertciale: false,
     emplacements: [menuAction, concentration, menuCompetence, menuObjet],
     message: messageNouvellePartie,
+    visuel: visuelCombat,
+    effet: function () {
+        retour.emplacements[0] = menuActuel;
+        menuActuel = menuActuel.emplacements[positionDuCurseur];
+    }
+}
+var menuContinuer = {
+    nom: 'Continuer',
+    dispositionVertciale: true,
+    emplacements: [],
+    message: messageNouvellePartie,
+    visuel: visuelCombat,
+    effet: function () {
+        menuActuel = menuCombat;
+    }
+}
+var menuSelectionClasse = {
+    nom: 'Suivant',
+    dispositionVertciale: true,
+    emplacements: [menuContinuer, retour],
+    message: messageOption,
+    visuel: visuelSelectionClasse,
+    effet: function () {
+        retour.emplacements[0] = menuActuel;
+        menuActuel = menuActuel.emplacements[positionDuCurseur];
+    }
+}
+var menuNouvellePartie = {
+    nom: 'Nouvelle Partie',
+    dispositionVertciale: true,
+    emplacements: [menuSelectionClasse],
+    message: messageOption,
     visuel: visuelNouvellePartie,
     effet: function () {
         retour.emplacements[0] = menuActuel;
@@ -105,7 +137,7 @@ var menuAPropos = {
 var menuEcranTitre = {
     nom: 'Ecran Titre',
     dispositionVertciale: true,
-    emplacements: [menuCombat, menuConfiguration, menuAPropos],
+    emplacements: [menuNouvellePartie, menuConfiguration, menuAPropos],
     message: messageEcranTitre,
     visuel: visuelEcranTitre,
     effet: function () {
