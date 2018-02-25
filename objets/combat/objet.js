@@ -38,12 +38,12 @@ var potionDeSoin = {
   quantiteJoueur: 1,
   quantiteEnnemi: 2,
   effet: function () {
-    if (this.quantiteJoueur !== 0 && tourJoueur) {
+    if (this.quantiteJoueur !== 0 && uniteTour.ptsVie !== uniteTour.ptsVieMax && tourJoueur) {
       uniteTour.ptsVie += this.ptsVie;
       this.quantiteJoueur--;
       changerUnite();
     }
-    else if (this.quantiteEnnemi !== 0 && tourJoueur === false) {
+    else if (this.quantiteEnnemi !== 0 && uniteTour.ptsVie !== uniteTour.ptsVieMax /* a re voir car imaginom on doit faire un message trop de pv*/ && tourJoueur === false) {
       uniteTour.ptsVie += this.ptsVie;
       this.quantiteEnnemi--;
       changerUnite();
