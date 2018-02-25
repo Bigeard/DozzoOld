@@ -10,7 +10,7 @@ document.addEventListener('keydown', (event) => {
 
     if (keyboard) {
         if (touche === 'Enter') {
-            menuActuel = menuSelectionClasse;
+            changerJeu();
             keyboard = false;
         }
         if (touche === 'Backspace' || touche === 'Delete') {

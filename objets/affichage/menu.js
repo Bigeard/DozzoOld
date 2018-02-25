@@ -92,8 +92,8 @@ var menuContinuer = {
 }
 var menuSelectionClasse = {
     nom: 'Suivant',
-    dispositionVertciale: true,
-    emplacements: [menuContinuer, retour],
+    dispositionVertciale: false,
+    emplacements: [classeMage, classeGuerrier, classeAssassin, classeMageNoir, retour, menuContinuer],
     message: messageOption,
     visuel: visuelSelectionClasse,
     effet: function () {
@@ -109,7 +109,6 @@ var menuNouvellePartie = {
     visuel: visuelNouvellePartie,
     effet: function () {
         keyboard = true;
-        retour.emplacements[0] = menuActuel;
         menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }

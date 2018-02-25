@@ -2,6 +2,9 @@ var classeMage = {
 	nom: 'Mage',
 	maitriseArmes: ['magie'],
 	competence: competenceIncantation,
+	effet: function () {
+		uniteJoueur.ajoutStatsClasse();
+	},
 
 	ptsVie: 0,
 	attaque: 0,
@@ -13,8 +16,11 @@ var classeMage = {
 
 var classeGuerrier = {
 	nom: 'Guerrier',
-	maitriseArmes: ['épée','hache'],
+	maitriseArmes: ['épée', 'hache'],
 	competence: competenceRage,
+	effet: function () {
+		uniteJoueur.ajoutStatsClasse();
+	},
 
 	ptsVie: 10,
 	attaque: 10,
@@ -26,8 +32,11 @@ var classeGuerrier = {
 
 var classeAssassin = {
 	nom: 'Assassin',
-	maitriseArmes: ['épée','dague'],
+	maitriseArmes: ['épée', 'dague'],
 	competence: competenceCamouflage,
+	effet: function () {
+		uniteJoueur.ajoutStatsClasse();
+	},
 
 	ptsVie: 0,
 	attaque: 15,
@@ -39,8 +48,11 @@ var classeAssassin = {
 
 var classeMageNoir = {
 	nom: 'Mage noir',
-	maitriseArmes: ['magie','magieNoire'],
+	maitriseArmes: ['magie', 'magieNoire'],
 	competence: competenceEntrave,
+	effet: function () {
+		uniteJoueur.ajoutStatsClasse();
+	},
 
 	ptsVie: 0,
 	attaque: 0,
@@ -52,7 +64,7 @@ var classeMageNoir = {
 
 var classeAbomination = {
 	nom: 'Abomination',
-	maitriseArmes: ['hache','magieNoire'],
+	maitriseArmes: ['hache', 'magieNoire'],
 	competence: competenceEmpoisonnement,
 
 	ptsVie: 10,
