@@ -57,7 +57,7 @@ var visuelSelectionClasse = {
 
 var visuelNouvellePartie = {
     contenu: function() {
-        document.getElementById("affichageVisuel").innerHTML = "";
+        document.getElementById("affichageVisuel").innerHTML = "<p> Qui es-tu ? <br><br><br>" + uniteJoueur.nom + "</p>";
     }
 }
 

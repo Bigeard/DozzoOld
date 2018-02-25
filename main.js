@@ -1,5 +1,7 @@
 var positionDuCurseur = 0;
 
+var keyboard = false;
+
 var tourJoueur = true;
 var uniteTour = uniteJoueur;
 var uniteCible = uniteEnnemi;

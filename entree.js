@@ -1,13 +1,29 @@
 
 //KEY DETECTION
 
-    document.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', (event) => {
 
-        //AFFICHAGE DE L'INPUT DANS LE HTML
+    //AFFICHAGE DE L'INPUT DANS LE HTML
+    var letters = /^[a-zA-Z]+$/;
+    const touche = event.key;
+    document.getElementById('touche').innerHTML = 'Touche: ' + touche
 
-        const touche = event.key;
-        document.getElementById('touche').innerHTML = 'Touche: ' + touche
-
+    if (keyboard) {
+        if (touche === 'Enter') {
+            menuActuel = menuSelectionClasse;
+            keyboard = false;
+        }
+        if (touche === 'Backspace' || touche === 'Delete') {
+            uniteJoueur.nom = uniteJoueur.nom.substr(0, uniteJoueur.nom.length -1);
+        }
+        else if ( touche.match(letters) && touche.length < 2 && uniteJoueur.nom.length <= 8 ){
+            uniteJoueur.nom += touche;
+        }
+        else {
+            console.log("On peut utiliser que les touches de l'alphabets et peut que avoir 8 charactre dans tom nom")
+        }
+    }
+    else {
         //INPUTS
         if (menuActuel.dispositionVertciale === true) {
             //DISPOSITION VERTICALE
@@ -41,5 +57,7 @@
                 positionDuCurseur += 2;
             }
         }
-        afficherJeu();
-    });
+    }
+
+    afficherJeu();
+});

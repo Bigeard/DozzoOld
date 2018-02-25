@@ -108,6 +108,7 @@ var menuNouvellePartie = {
     message: messageOption,
     visuel: visuelNouvellePartie,
     effet: function () {
+        keyboard = true;
         retour.emplacements[0] = menuActuel;
         menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
