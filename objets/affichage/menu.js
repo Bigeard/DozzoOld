@@ -9,11 +9,16 @@ var menuObjet = {
         changerInventaire();
         menuObjet.emplacements = [retour];
         for (var i = 0; i < inventaireTour.typeObjet.length; i++) {
-            menuObjet.emplacements.length ++;
+            menuObjet.emplacements.length++;
             menuObjet.emplacements[menuObjet.emplacements.length - 1] = retour;
-            menuObjet.emplacements[menuObjet.emplacements.length-2] = inventaireTour.typeObjet[menuObjet.emplacements.length-2];
-            menuObjet.emplacements[menuObjet.emplacements.length-2].nom = menuObjet.emplacements[menuObjet.emplacements.length-2].nomOriginel
-            menuObjet.emplacements[menuObjet.emplacements.length-2].nom += " x" + menuObjet.emplacements[menuObjet.emplacements.length-2].quantite;
+            menuObjet.emplacements[menuObjet.emplacements.length - 2] = inventaireTour.typeObjet[menuObjet.emplacements.length - 2];
+            menuObjet.emplacements[menuObjet.emplacements.length - 2].nom = menuObjet.emplacements[menuObjet.emplacements.length - 2].nomOriginel;
+            if (tourJoueur) {
+                menuObjet.emplacements[menuObjet.emplacements.length - 2].nom += " x" + menuObjet.emplacements[menuObjet.emplacements.length - 2].quantiteJoueur;
+            }
+            else {
+                menuObjet.emplacements[menuObjet.emplacements.length - 2].nom += " x" + menuObjet.emplacements[menuObjet.emplacements.length - 2].quantiteEnnemi;
+            }
         }
     },
     effet: function () {
@@ -25,7 +30,7 @@ var menuObjet = {
 var menuAction = {
     nom: 'Action',
     dispositionVertciale: false,
-    emplacements: [rapiere, retour],
+    emplacements: [retour],
     message: messageNouvellePartie,
     visuel: visuelNouvellePartie,
     setAction: function () {
@@ -49,8 +54,18 @@ var menuCompetence = {
     emplacements: [retour],
     message: messageNouvellePartie,
     visuel: visuelNouvellePartie,
+    setCompetence: function () {
+        changerCompetence();
+        menuCompetence.emplacements = [retour];
+        for (var i = 0; i < competenceTour.competence.length; i++) {
+            menuCompetence.emplacements.length ++;
+            menuCompetence.emplacements[menuCompetence.emplacements.length - 1] = retour;
+            menuCompetence.emplacements[menuCompetence.emplacements.length-2] = competenceTour.competence[menuCompetence.emplacements.length-2];
+        }
+    },
     effet: function () {
         retour.emplacements[0] = menuActuel;
+        menuCompetence.setCompetence();
         menuActuel = menuActuel.emplacements[positionDuCurseur];
     }
 }

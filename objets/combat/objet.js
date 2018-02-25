@@ -39,12 +39,12 @@ var potionDeSoin = {
   quantiteEnnemi: 2,
   effet: function () {
     if (this.quantiteJoueur !== 0 && tourJoueur) {
-      uniteJoueur.ptsVie += this.ptsVie;
+      uniteTour.ptsVie += this.ptsVie;
       this.quantiteJoueur--;
       changerUnite();
     }
-    if (this.quantiteEnnemi !== 0 && tourJoueur === false) {
-      uniteEnnemi.ptsVie += this.ptsVie;
+    else if (this.quantiteEnnemi !== 0 && tourJoueur === false) {
+      uniteTour.ptsVie += this.ptsVie;
       this.quantiteEnnemi--;
       changerUnite();
     }
@@ -65,12 +65,12 @@ var potionDeForce = {
   quantiteEnnemi: 5,
   effet: function () {
     if (this.quantiteJoueur !== 0 && tourJoueur) {
-      uniteJoueur.attaque += this.attaque;
+      uniteTour.attaque += this.attaque;
       this.quantiteJoueur--;
       changerUnite();
     }
-    if (this.quantiteEnnemi !== 0 && tourJoueur === false) {
-      uniteEnnemi.attaque += this.attaque;
+    else if (this.quantiteEnnemi !== 0 && tourJoueur === false) {
+      uniteTour.attaque += this.attaque;
       this.quantiteEnnemi--;
       changerUnite();
     }

@@ -6,7 +6,7 @@ var inventaireJoueur = {
 
 var inventaireEnnemi = {
     typeAction: [ hachette ],
-    typeObjet: [ potionDeForce ],
+    typeObjet: [ potionDeForce, potionDeSoin ],
     typeEquipement: [ casqueDeFer ]
 }
 

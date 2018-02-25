@@ -8,11 +8,11 @@ var visuelEcranTitre = {
 var visuelNouvellePartie = {
 	contenu: function() {
 
+        var unites = [uniteJoueur, uniteEnnemi];
+
         var healthBar1;
         var healthBar2;
-
         var healthBars = [healthBar1, healthBar2];
-        var unites = [uniteJoueur, uniteEnnemi];
 
         for (var i = 0; i < healthBars.length; i++) {
             healthBars[i] = '';
@@ -26,9 +26,25 @@ var visuelNouvellePartie = {
             healthBars[i] += "<img src=\"img/barRight.png\">"
         }
 
+        var dozzoBar1;
+        var dozzoBar2;
+        var dozzoBars = [dozzoBar1, dozzoBar2];
+
+        for (var i = 0; i < dozzoBars.length; i++) {
+            dozzoBars[i] = '';
+            for (var j = 0; j < Math.round(unites[i].ptsDozzo*3/unites[i].ptsDozzoMax); j++) {
+                dozzoBars[i] += "<img src=\"img/barreDozzo.png\">"
+            }
+            for (var k = 0; k < Math.round(3-(unites[i].ptsDozzo*3/unites[i].ptsDozzoMax)); k++) {
+                dozzoBars[i] += "<img src=\"img/barreDozzoVide.png\">"
+            }
+        }
+
         document.getElementById("affichageVisuel").innerHTML = 
-        "<div class=\"arriere-plan-combat\"><br>" + healthBars[0] + " VS " + healthBars[1] +
-        "<br><br><br><br><br><br><br><img class=\"img-unite-combat\" src=\"img/guerrier.gif\">" +
+        "<div class=\"arriere-plan-combat\"><br>" +
+        healthBars[0] + " VS " + healthBars[1] +
+        dozzoBars[0] + " &nbsp&nbsp " + dozzoBars[1] +
+        "<br><br><br><br><br><br><img class=\"img-unite-combat\" src=\"img/guerrier.gif\">" +
         "<img class=\"img-unite-combat\" src=\"img/abomination.gif\"></div>";
 	}
 }

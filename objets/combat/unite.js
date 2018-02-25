@@ -18,7 +18,7 @@ var uniteJoueur = {
 	vitesseMax: 1,
 
 	//STATS INGAME
-	ptsDozzo: 3,
+	ptsDozzo: 0,
 
 	ptsVie: 20,
 	attaque: 3,
@@ -64,7 +64,7 @@ var uniteEnnemi = {
 	vitesseMax: 1,
 
 	//STATS INGAME
-	ptsDozzo: 3,
+	ptsDozzo: 0,
 
 	ptsVie: 30,
 	attaque: 7,
@@ -95,9 +95,11 @@ var uniteEnnemi = {
 changerUnite = function() {
 	if (uniteJoueur.ptsVie <= 0){
 		uniteJoueur.ptsVie = 0;
+		//game over
 	}
 	if (uniteEnnemi.ptsVie <= 0){
 		uniteEnnemi.ptsVie = 0;
+		//win
 	}
 	else{
 		if (uniteJoueur.ptsVie > uniteJoueur.ptsVieMax){
@@ -105,6 +107,13 @@ changerUnite = function() {
 		}
 		if (uniteEnnemi.ptsVie > uniteEnnemi.ptsVieMax){
 			uniteEnnemi.ptsVie = uniteEnnemi.ptsVieMax;
+		}
+		uniteTour.ptsDozzo ++;
+		if (uniteTour.ptsDozzo > uniteTour.ptsDozzoMax) {
+			uniteTour.ptsDozzo = uniteTour.ptsDozzoMax;
+		}
+		if (uniteTour.ptsDozzo < 0) {
+			uniteTour.ptsDozzo = 0;
 		}
 		menuActuel = menuCombat;
 		if (tourJoueur) {

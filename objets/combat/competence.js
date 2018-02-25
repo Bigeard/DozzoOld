@@ -1,34 +1,18 @@
-var competenceRage = {
-	nom: 'Rage',
-    effet: function() {
-    	//INSTRUCTION
-    }
+var competenceJoueur = {
+    competence: [ classeGuerrier.competence ]
 }
 
-var competenceIncantation = {
-	nom: 'Incantation',
-    effet: function() {
-    	//INSTRUCTION
-    }
+var competenceEnnemi = {
+    competence: [ classeAbomination.competence ]
 }
 
-var competenceCamouflage = {
-	nom: 'Camouflage',
-    effet: function() {
-    	//INSTRUCTION
-    }
-}
+var competenceTour;
 
-var competenceEntrave = {
-	nom: 'Entrave',
-    effet: function() {
-    	//INSTRUCTION
+changerCompetence = function() {
+    if (tourJoueur) {
+        competenceTour = competenceJoueur;
     }
-}
-
-var competenceEmpoisonnement = {
-	nom: 'Empoisonnement',
-    effet: function() {
-    	//INSTRUCTION
+    else {
+        competenceTour = competenceEnnemi;
     }
 }

@@ -25,6 +25,7 @@ var afficherMenu = function () {
     document.getElementById("affichageMenu").innerHTML = contenuDuMenu;
     //ON RECUPERE LE NOM DE L'EMPLACEMENT DU CURSEUR ET ON LE MET EN BLANC
     document.getElementById(menuActuel.emplacements[positionDuCurseur].nom).innerHTML = "► " + menuActuel.emplacements[positionDuCurseur].nom;
+    
     document.getElementById(menuActuel.emplacements[positionDuCurseur].nom).style.color = "white";
 
     //STYLE DIFFERENCES EN F0NCTION DE LA DISPOSITION
