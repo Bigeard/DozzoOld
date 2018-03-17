@@ -1,4 +1,4 @@
-# Dozzo  :space_invader:
+# Dozzo  :space_invader: :space_invader:
 Mini RPG Game
 -----------------
 ![Dozzo Logo](img/dozzo.png "Dozzo Logo")
